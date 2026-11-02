@@ -25,13 +25,32 @@ jobs:
       - name: Set up SSH key
         env:
           SG_SSH_KEY: ${{ secrets.SG_SSH_KEY }}
+          SG_SSH_PASSPHRASE: ${{ secrets.SG_SSH_PASSPHRASE }}
           SG_HOST: ${{ secrets.SG_HOST }}
           SG_PORT: ${{ secrets.SG_PORT }}
         run: |
           mkdir -p ~/.ssh
-          printf '%s\n' "$SG_SSH_KEY" > ~/.ssh/id_sg
+          # Strip Windows line endings that sneak in when pasting the key.
+          printf '%s\n' "$SG_SSH_KEY" | tr -d '\r' > ~/.ssh/id_sg
           chmod 600 ~/.ssh/id_sg
           ssh-keyscan -p "${SG_PORT:-18765}" "$SG_HOST" >> ~/.ssh/known_hosts
+          # Load the key into an agent, unlocking it if SiteGround gave it a passphrase.
+          eval "$(ssh-agent -s)"
+          echo "SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$GITHUB_ENV"
+          echo "SSH_AGENT_PID=$SSH_AGENT_PID" >> "$GITHUB_ENV"
+          printf '#!/bin/sh\nprintf "%%s" "$SG_SSH_PASSPHRASE"\n' > ~/.ssh/askpass
+          chmod 700 ~/.ssh/askpass
+          DISPLAY=:0 SSH_ASKPASS=~/.ssh/askpass SSH_ASKPASS_REQUIRE=force ssh-add ~/.ssh/id_sg < /dev/null
+
+      - name: Test SSH connection
+        env:
+          SG_HOST: ${{ secrets.SG_HOST }}
+          SG_USER: ${{ secrets.SG_USER }}
+          SG_PORT: ${{ secrets.SG_PORT }}
+          SG_PATH: ${{ secrets.SG_PATH }}
+        run: |
+          ssh -p "${SG_PORT:-18765}" -o BatchMode=yes "$SG_USER@$SG_HOST" \
+            "echo connected; test -d \"$SG_PATH\" && echo 'web root found' || { echo 'web root NOT found: check SG_PATH'; ls -la ~ ~/www 2>/dev/null; exit 1; }"
 
       - name: Upload with rsync
         env:
@@ -45,5 +64,5 @@ jobs:
           rsync -avz --delete \
             --exclude='.well-known/' \
             --exclude='cgi-bin/' \
-            -e "ssh -i ~/.ssh/id_sg -p ${SG_PORT:-18765} -o IdentitiesOnly=yes" \
+            -e "ssh -p ${SG_PORT:-18765} -o BatchMode=yes" \
             dist/ "$SG_USER@$SG_HOST:$SG_PATH/"
