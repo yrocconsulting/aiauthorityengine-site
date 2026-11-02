@@ -29,6 +29,6 @@ Required GitHub Actions secrets:
 | `SG_PORT` | SSH port (usually `18765`) |
 | `SG_SSH_KEY` | Private key (full text, including BEGIN/END lines) |
 | `SG_SSH_PASSPHRASE` | Key passphrase (only if the key has one; SiteGround-generated keys do) |
-| `SG_PATH` | Web root, e.g. `www/aiauthorityengine.org/public_html` |
+| `SG_PATH` | Optional. Web root; defaults to `www/aiauthorityengine.org/public_html` |
 
 The rsync uses `--delete`, so anything in the web root that isn't part of this site will be removed (except `.well-known/` and `cgi-bin/`).
