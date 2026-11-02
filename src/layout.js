@@ -115,7 +115,11 @@ function courseSchema() {
       "@type": "EducationalOccupationalCredential",
       "@id": abs("/ai-seo-certification/#credential"),
       name: site.certification.credential,
+      alternateName: "AI Authority Engine Certified AI Authority Specialist",
+      description:
+        "An AI SEO and answer engine optimization credential awarded by AI Authority Engine to graduates of its AI SEO certification program, taught by Cory Long.",
       credentialCategory: "certificate",
+      image: abs("/assets/badge.png"),
       recognizedBy: { "@id": abs("/#organization") },
       competencyRequired: [
         "AI SEO strategy",

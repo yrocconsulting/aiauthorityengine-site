@@ -1,6 +1,6 @@
 # AI Authority Engine
 
-> AI Authority Engine is an online AI SEO certification and training program created and taught by Cory Long. It teaches answer engine optimization (AEO), generative engine optimization (GEO), entity and structured data optimization, AI visibility auditing, and how to start and grow an AI SEO agency. Graduates earn the AI Authority Engine Certified AI SEO Specialist credential. Enrollment: https://ai.yroc.events
+> AI Authority Engine is an online AI SEO certification and training program created and taught by Cory Long. It teaches answer engine optimization (AEO), generative engine optimization (GEO), entity and structured data optimization, AI visibility auditing, and how to start and grow an AI SEO agency. Graduates earn the Certified AI Authority Specialist credential. Enrollment: https://ai.yroc.events
 
 Key facts:
 - Name: AI Authority Engine

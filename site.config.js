@@ -14,7 +14,7 @@ module.exports = {
   certification: {
     name: "AI Authority Engine Certification",
     shortName: "AI SEO Certification",
-    credential: "AI Authority Engine Certified AI SEO Specialist",
+    credential: "Certified AI Authority Specialist",
   },
 
   founder: {

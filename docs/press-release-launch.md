@@ -27,7 +27,7 @@ The AI Authority Engine certification covers:
 - Running AI visibility audits for clients
 - How to start an AI SEO agency and get clients
 
-Graduates earn the **AI Authority Engine Certified AI SEO Specialist** credential. The program is delivered online and is designed for beginners as well as experienced SEO professionals and agency owners.
+Graduates earn the **Certified AI Authority Specialist** credential. The program is delivered online and is designed for beginners as well as experienced SEO professionals and agency owners.
 
 Long brings more than two decades of digital marketing experience to the program. He is the creator of Digital Storefronts, host of the E-Forge Podcast, and author of *To Love Is To Give*. Long also publishes the open AI Search Optimization Framework, a public reference on how AI systems evaluate and recommend businesses.
 
