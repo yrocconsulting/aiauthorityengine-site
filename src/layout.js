@@ -21,7 +21,13 @@ function baseGraph() {
     jobTitle: site.founder.jobTitle,
     url: abs("/cory-long/"),
     image: abs(site.founder.image),
-    worksFor: { "@id": abs("/#organization") },
+    worksFor: [
+      { "@id": abs("/#organization") },
+      { "@type": "Organization", name: site.founder.worksFor },
+    ],
+    description:
+      "Cory Long is an entrepreneur, author, speaker, business coach, and AI SEO trainer. He is the founder and lead trainer of AI Authority Engine, creator of Digital Storefronts, host of the E-Forge Podcast, and author of To Love Is To Give.",
+    homeLocation: { "@type": "Place", name: site.founder.homeLocation },
     knowsAbout: [
       "AI SEO",
       "Answer engine optimization",
@@ -30,6 +36,11 @@ function baseGraph() {
       "Structured data",
       "AI search visibility",
       "Digital marketing agency growth",
+      "Digital marketing training",
+      "Lead generation",
+      "Facebook advertising",
+      "Email marketing",
+      "Business coaching",
     ],
   };
   if (site.founder.sameAs.length) person.sameAs = site.founder.sameAs;

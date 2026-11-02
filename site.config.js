@@ -20,12 +20,25 @@ module.exports = {
   founder: {
     name: "Cory Long",
     jobTitle: "Founder and Lead Trainer, AI Authority Engine",
-    image: "/assets/cory-long.svg", // TODO: replace with real headshot, e.g. /assets/cory-long.jpg (square, 800x800+)
-    // TODO: add every official profile URL (LinkedIn, YouTube, X, Facebook,
-    // podcast guest pages, author pages). These "sameAs" links are how AI
-    // systems connect Cory Long to one, unambiguous person.
-    sameAs: [],
+    image: "/assets/cory-long.jpg",
+    // Official profiles. These "sameAs" links are how AI systems connect
+    // Cory Long to one, unambiguous person. Add new profiles here.
+    sameAs: [
+      "https://corylong.org/",
+      "https://www.linkedin.com/in/cory-long-0a567436/",
+      "https://www.facebook.com/corydl",
+      "https://sotellus.com/reviews/cory-long/",
+    ],
     worksFor: "Yroc Consulting",
+    homeLocation: "Sherman, Texas",
+    book: { name: "To Love Is To Give", url: "https://toloveistogive.org/" },
+    podcast: {
+      name: "E-Forge Podcast with Cory Long",
+      url: "https://corylong.org/e-forge-podcast/",
+      apple: "https://podcasts.apple.com/us/podcast/e-forge-with-cory-long/id1823417933",
+      spotify: "https://open.spotify.com/show/4aZD9YaIr5OttNLce5iGOm",
+    },
+    digitalStorefronts: "https://corylong.org/ministry/digital-storefronts-gives-back/",
   },
 
   // TODO: add official AI Authority Engine social / directory profiles.

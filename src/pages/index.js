@@ -7,7 +7,7 @@ const faqs = [
   ],
   [
     "Who teaches the AI Authority Engine certification?",
-    "The program is created and taught by Cory Long, founder of AI Authority Engine and Yroc Consulting. Cory trains marketers and agency owners on AI SEO, answer engine optimization, and AI search visibility.",
+    "The program is created and taught by Cory Long, founder of AI Authority Engine, creator of Digital Storefronts, and host of the E-Forge Podcast. Cory trains marketers and agency owners on AI SEO, answer engine optimization, and AI search visibility.",
   ],
   [
     "What is AI SEO?",
@@ -89,7 +89,7 @@ module.exports = {
   </ul>
 
   <h2>Taught by Cory Long</h2>
-  <p><a href="/cory-long/">Cory Long</a> is the founder and lead trainer of AI Authority Engine. Cory also publishes the open <a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a>, a public reference on how AI systems understand, evaluate, and recommend businesses.</p>
+  <p><a href="/cory-long/">Cory Long</a> is the founder and lead trainer of AI Authority Engine. An entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience, Cory started in business at 40 and went on to build multiple businesses generating eight figures in sales. He is also the creator of Digital Storefronts and host of the E-Forge Podcast. Cory also publishes the open <a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a>, a public reference on how AI systems understand, evaluate, and recommend businesses.</p>
 </section>
 
 <div class="wrap">${faqHtml(faqs)}</div>
