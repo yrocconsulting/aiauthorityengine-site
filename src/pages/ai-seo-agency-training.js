@@ -28,6 +28,11 @@ module.exports = {
   about: "/ai-seo-certification/#course",
   course: true,
   faqs,
+  sources: [
+    ["Google Search Central: AI features and your website", "https://developers.google.com/search/docs/appearance/ai-features"],
+    ["Google Search Central: Creating helpful, reliable, people-first content", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"],
+    ["AI Search Optimization Framework (open reference)", "https://github.com/yrocconsulting/ai-search-optimization-framework"],
+  ],
   body: `
 <section class="page-head">
   <div class="wrap">

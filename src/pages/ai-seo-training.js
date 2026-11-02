@@ -1,4 +1,4 @@
-const { faqHtml, cta, site } = require("../layout");
+const { faqHtml, cta, videosHtml, site } = require("../layout");
 
 const faqs = [
   [
@@ -28,6 +28,13 @@ module.exports = {
   about: "/ai-seo-certification/#course",
   course: true,
   faqs,
+  videos: true,
+  sources: [
+    ["Google Search Central: AI features and your website", "https://developers.google.com/search/docs/appearance/ai-features"],
+    ["Schema.org: Organization", "https://schema.org/Organization"],
+    ["llms.txt proposal", "https://llmstxt.org/"],
+    ["AI Search Optimization Framework (open reference)", "https://github.com/yrocconsulting/ai-search-optimization-framework"],
+  ],
   body: `
 <section class="page-head">
   <div class="wrap">
@@ -80,6 +87,7 @@ module.exports = {
   </ul>
 </section>
 
+<div class="wrap">${videosHtml("Watch the training in action")}</div>
 <div class="wrap">${faqHtml(faqs, "AI SEO training FAQ")}</div>
 ${cta("Start your AI SEO training")}
 `,

@@ -29,6 +29,13 @@ module.exports = {
   about: "/ai-seo-certification/#course",
   course: true,
   faqs,
+  sources: [
+    ["Google Search Central: AI features and your website", "https://developers.google.com/search/docs/appearance/ai-features"],
+    ["Google Search Central: Creating helpful, reliable, people-first content", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"],
+    ["OpenAI: Overview of OpenAI crawlers", "https://platform.openai.com/docs/bots"],
+    ["Perplexity: Perplexity crawlers", "https://docs.perplexity.ai/guides/bots"],
+    ["Anthropic: Does Anthropic crawl data from the web?", "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"],
+  ],
   body: `
 <section class="page-head">
   <div class="wrap">
@@ -55,6 +62,19 @@ module.exports = {
     <li><strong>Current.</strong> Information is maintained and dated.</li>
   </ul>
   <p>The AEO portion of the certification teaches you to engineer each of these properties deliberately, for your own business or for clients.</p>
+
+  <h2>AEO vs. GEO vs. traditional SEO</h2>
+  <table class="compare">
+    <thead><tr><th></th><th>Traditional SEO</th><th>Answer engine optimization (AEO)</th><th>Generative engine optimization (GEO)</th></tr></thead>
+    <tbody>
+      <tr><td>Goal</td><td>Rank pages in search results</td><td>Be selected as the direct answer</td><td>Be included and cited in AI-generated responses</td></tr>
+      <tr><td>Where it shows up</td><td>Google and Bing results pages</td><td>AI assistants, AI Overviews, voice assistants</td><td>ChatGPT, Gemini, Perplexity, Copilot, Claude</td></tr>
+      <tr><td>Core unit</td><td>Keywords and pages</td><td>Questions and answers</td><td>Entities and sources</td></tr>
+      <tr><td>Key signals</td><td>Relevance, links, technical health</td><td>Clear answers, structure, schema</td><td>Entity clarity, corroboration, authority</td></tr>
+      <tr><td>Success metric</td><td>Rankings and clicks</td><td>Answer inclusion</td><td>Mentions, citations, and recommendations</td></tr>
+    </tbody>
+  </table>
+  <p>The AI Authority Engine certification teaches all three as one system, because AI answer engines still depend on crawlable, well-structured websites.</p>
 
   <h2>AEO skills you'll learn</h2>
   <ul>

@@ -30,6 +30,11 @@ module.exports = {
   about: "/ai-seo-certification/#course",
   course: true,
   faqs,
+  sources: [
+    ["Google Search Central: AI features and your website", "https://developers.google.com/search/docs/appearance/ai-features"],
+    ["Google Search Central: Creating helpful, reliable, people-first content", "https://developers.google.com/search/docs/fundamentals/creating-helpful-content"],
+    ["AI Search Optimization Framework (open reference)", "https://github.com/yrocconsulting/ai-search-optimization-framework"],
+  ],
   body: `
 <section class="page-head">
   <div class="wrap">
@@ -45,6 +50,16 @@ module.exports = {
 </section>
 
 <section class="wrap prose">
+  <div class="takeaways">
+    <h2>Key takeaways</h2>
+    <ul class="checks">
+      <li>A real AI SEO certification teaches entities, answer engine optimization, structured data, and AI visibility measurement.</li>
+      <li>Look for a named, verifiable instructor and applied, hands-on work.</li>
+      <li>Avoid programs that promise guaranteed ChatGPT rankings.</li>
+      <li>AI Authority Engine, taught by Cory Long, also covers building an AI SEO agency.</li>
+    </ul>
+  </div>
+
   <h2>7 criteria for choosing an AI SEO certification</h2>
   <ol class="modules">
     <li><strong>AI-specific curriculum.</strong> Does it explain retrieval, entities, and how assistants like ChatGPT and Perplexity form recommendations, or is it a traditional keyword course with "AI" in the title?</li>

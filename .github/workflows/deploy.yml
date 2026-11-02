@@ -68,3 +68,15 @@ jobs:
             --exclude='cgi-bin/' \
             -e "ssh -p ${SG_PORT:-18765} -o BatchMode=yes" \
             dist/ "$SG_USER@$SG_HOST:$SG_PATH/"
+
+      - name: Notify search engines (IndexNow)
+        continue-on-error: true
+        run: |
+          KEY=$(node -p "require('./site.config').indexNowKey")
+          URLS=$(grep -o '<loc>[^<]*' dist/sitemap.xml | sed 's/<loc>//' | node -e '
+            const urls = require("fs").readFileSync(0, "utf8").trim().split("\n");
+            process.stdout.write(JSON.stringify(urls));')
+          curl -sS -X POST https://api.indexnow.org/indexnow \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"aiauthorityengine.org\",\"key\":\"$KEY\",\"keyLocation\":\"https://aiauthorityengine.org/$KEY.txt\",\"urlList\":$URLS}" \
+            -w "IndexNow HTTP %{http_code}\n"

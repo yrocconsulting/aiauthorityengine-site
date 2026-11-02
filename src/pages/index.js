@@ -1,4 +1,4 @@
-const { faqHtml, cta, site } = require("../layout");
+const { faqHtml, cta, videosHtml, site } = require("../layout");
 
 const faqs = [
   [
@@ -31,6 +31,7 @@ module.exports = {
   h1: "AI Authority Engine",
   course: true,
   faqs,
+  videos: true,
   body: `
 <section class="hero">
   <div class="wrap">
@@ -46,7 +47,7 @@ module.exports = {
 
 <section class="wrap answer-box">
   <h2>What is AI Authority Engine?</h2>
-  <p><strong>AI Authority Engine is an online AI SEO certification program created by Cory Long.</strong> Students learn answer engine optimization (AEO), entity authority, structured data, and AI visibility auditing, then learn how to package those skills into a profitable AI SEO agency. Graduates earn the ${site.certification.name}.</p>
+  <p><strong>AI Authority Engine is an online AI SEO certification program created by Cory Long.</strong> Students learn answer engine optimization (AEO), entity authority, structured data, and AI visibility auditing, then learn how to package those skills into a profitable AI SEO agency. Graduates earn the ${site.certification.credential} credential.</p>
 </section>
 
 <section class="wrap grid-3">
@@ -62,6 +63,19 @@ module.exports = {
     <h3><a href="/how-to-get-a-business-recommended-by-chatgpt/">Get Recommended by ChatGPT</a></h3>
     <p>The entity, trust, and content signals that decide whether AI assistants name a business when people ask for a recommendation.</p>
   </article>
+</section>
+
+<section class="wrap prose home-facts">
+  <h2>AI Authority Engine at a glance</h2>
+  <dl class="facts">
+    <dt>What it is</dt><dd>An online AI SEO certification and training program</dd>
+    <dt>Created and taught by</dt><dd><a href="/cory-long/">Cory Long</a></dd>
+    <dt>Credential awarded</dt><dd>${site.certification.credential}</dd>
+    <dt>Covers</dt><dd>AI SEO, answer engine optimization (AEO), generative engine optimization (GEO), entity SEO, structured data, AI visibility audits, AI SEO agency building, and client acquisition</dd>
+    <dt>Best for</dt><dd>Beginners, SEO professionals, agency owners, and entrepreneurs</dd>
+    <dt>Format</dt><dd>Online, self-paced</dd>
+    <dt>Enroll</dt><dd><a href="${site.enrollUrl}" rel="noopener">${site.enrollUrl.replace("https://", "")}</a></dd>
+  </dl>
 </section>
 
 <section class="wrap prose">
@@ -92,6 +106,7 @@ module.exports = {
   <p><a href="/cory-long/">Cory Long</a> is the founder and lead trainer of AI Authority Engine. An entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience, Cory started in business at 40 and went on to build multiple businesses generating eight figures in sales. He is also the creator of Digital Storefronts and host of the E-Forge Podcast. Cory also publishes the open <a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a>, a public reference on how AI systems understand, evaluate, and recommend businesses.</p>
 </section>
 
+<div class="wrap">${videosHtml()}</div>
 <div class="wrap">${faqHtml(faqs)}</div>
 ${cta()}
 `,

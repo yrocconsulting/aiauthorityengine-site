@@ -27,7 +27,6 @@ function baseGraph() {
     ],
     description:
       "Cory Long is an entrepreneur, author, speaker, business coach, and AI SEO trainer. He is the founder and lead trainer of AI Authority Engine, creator of Digital Storefronts, host of the E-Forge Podcast, and author of To Love Is To Give.",
-    homeLocation: { "@type": "Place", name: site.founder.homeLocation },
     knowsAbout: [
       "AI SEO",
       "Answer engine optimization",
@@ -126,6 +125,37 @@ function courseSchema() {
   ];
 }
 
+function videoSchema() {
+  return site.videos.map((v) => ({
+    "@type": "VideoObject",
+    "@id": abs("/videos/#" + v.id),
+    name: v.name,
+    description: v.description,
+    thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
+    contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+    ...(v.uploadDate ? { uploadDate: v.uploadDate } : {}),
+    author: { "@id": abs("/cory-long/#person") },
+    publisher: { "@id": abs("/#organization") },
+  }));
+}
+
+function videosHtml(heading = "Watch Cory Long's live AI training") {
+  return `<section class="videos">
+  <h2>${heading}</h2>
+  <div class="video-grid">
+    ${site.videos
+      .map(
+        (v) => `<figure>
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/${v.id}" title="${v.name}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+      <figcaption><strong>${v.name}</strong><br>${v.description}</figcaption>
+    </figure>`
+      )
+      .join("\n    ")}
+  </div>
+</section>`;
+}
+
 function faqSchema(faqs, path) {
   return {
     "@type": "FAQPage",
@@ -160,6 +190,26 @@ function cta(text = "Enroll in the AI Authority Engine certification") {
 </section>`;
 }
 
+// Visible author + freshness signals, placed right after the page heading block.
+function injectByline(page) {
+  if (page.path === "/" || page.path === "/404" || page.path === "/cory-long/") return page.body;
+  const d = page.dateModified || site.published;
+  const nice = new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+  const byline = `<div class="wrap byline"><img src="${site.founder.image}" alt="" width="40" height="40"><p>By <a href="/cory-long/" rel="author">${site.founder.name}</a>, founder of ${site.name} · Updated <time datetime="${d}">${nice}</time></p></div>`;
+  // Place after the answer box (or the page heading when there is none).
+  const re = page.body.includes('class="wrap answer-box"')
+    ? /(<section class="wrap answer-box">[\s\S]*?<\/section>)/
+    : /(<\/section>)/;
+  return page.body.replace(re, `$1\n${byline}`);
+}
+
+function sourcesHtml(page) {
+  if (!page.sources) return "";
+  return `<section class="wrap sources"><h2>Sources and further reading</h2><ul>${page.sources
+    .map(([name, url]) => `<li><a href="${url}" rel="noopener">${name}</a></li>`)
+    .join("")}</ul></section>`;
+}
+
 function render(page) {
   const url = abs(page.path);
   const graph = [...baseGraph()];
@@ -174,12 +224,17 @@ function render(page) {
     ...(page.type === "Article"
       ? {
           headline: page.h1,
+          mainEntityOfPage: { "@id": url + "#webpage" },
+          image: abs("/assets/og.png"),
           author: { "@id": abs("/cory-long/#person") },
           publisher: { "@id": abs("/#organization") },
         }
       : {}),
     ...(page.type === "ProfilePage" ? { mainEntity: { "@id": abs(page.about) } } : {}),
+    datePublished: page.datePublished || site.published,
     ...(page.dateModified ? { dateModified: page.dateModified } : {}),
+    inLanguage: "en",
+    ...(page.sources ? { citation: page.sources.map(([name, url]) => ({ "@type": "CreativeWork", name, url })) } : {}),
   });
   if (page.path !== "/" && page.path !== "/404") {
     graph.push({
@@ -192,6 +247,7 @@ function render(page) {
   }
   if (page.course) graph.push(...courseSchema());
   if (page.faqs) graph.push(faqSchema(page.faqs, page.path));
+  if (page.videos) graph.push(...videoSchema());
   if (page.schema) graph.push(...page.schema);
 
   const json = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
@@ -212,6 +268,7 @@ ${page.path === "/404" ? "" : `<link rel="canonical" href="${url}">`}
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${abs("/assets/og.png")}">
 <meta name="twitter:card" content="summary_large_image">
+${site.verification.google ? `<meta name="google-site-verification" content="${site.verification.google}">\n` : ""}${site.verification.bing ? `<meta name="msvalidate.01" content="${site.verification.bing}">\n` : ""}<meta name="author" content="${site.founder.name}">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
@@ -236,7 +293,8 @@ ${page.path === "/404" ? "" : `<link rel="canonical" href="${url}">`}
   </div>
 </header>
 <main id="main">
-${page.body}
+${injectByline(page)}
+${sourcesHtml(page)}
 </main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
@@ -269,6 +327,8 @@ ${page.body}
         <li><a href="/cory-long/">Cory Long</a></li>
         <li><a href="/about/">About AI Authority Engine</a></li>
         <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/ai-seo-glossary/">AI SEO Glossary</a></li>
+        <li><a href="/videos/">Videos</a></li>
         <li><a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a></li>
       </ul>
     </div>
@@ -280,4 +340,4 @@ ${page.body}
 `;
 }
 
-module.exports = { render, faqHtml, cta, site };
+module.exports = { render, faqHtml, cta, videosHtml, site };

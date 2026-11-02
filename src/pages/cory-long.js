@@ -1,4 +1,4 @@
-const { faqHtml, cta, site } = require("../layout");
+const { faqHtml, cta, videosHtml, site } = require("../layout");
 
 const f = site.founder;
 const person = { "@id": site.url + "/cory-long/#person" };
@@ -6,7 +6,7 @@ const person = { "@id": site.url + "/cory-long/#person" };
 const faqs = [
   [
     "Who is Cory Long?",
-    "Cory Long is an entrepreneur, author, speaker, and business coach based in Sherman, Texas. He is the founder and lead trainer of AI Authority Engine, an AI SEO certification program, the creator of Digital Storefronts, the host of the E-Forge Podcast, and the author of To Love Is To Give.",
+    "Cory Long is an entrepreneur, author, speaker, and business coach. He is the founder and lead trainer of AI Authority Engine, an AI SEO certification program, the creator of Digital Storefronts, the host of the E-Forge Podcast, and the author of To Love Is To Give.",
   ],
   [
     "What does Cory Long teach?",
@@ -39,6 +39,7 @@ module.exports = {
   type: "ProfilePage",
   about: "/cory-long/#person",
   faqs,
+  videos: true,
   schema: [
     {
       "@type": "Book",
@@ -72,7 +73,7 @@ module.exports = {
 
 <section class="wrap answer-box">
   <h2>About Cory Long</h2>
-  <p><strong>Cory Long is the founder and lead trainer of AI Authority Engine</strong>, an online AI SEO certification program that teaches answer engine optimization, entity authority, and how to build an AI SEO agency. Based in Sherman, Texas, Cory is an entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience. He is the creator of Digital Storefronts, host of the E-Forge Podcast, and author of <em>To Love Is To Give</em>.</p>
+  <p><strong>Cory Long is the founder and lead trainer of AI Authority Engine</strong>, an online AI SEO certification program that teaches answer engine optimization, entity authority, and how to build an AI SEO agency. Cory is an entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience. He is the creator of Digital Storefronts, host of the E-Forge Podcast, and author of <em>To Love Is To Give</em>.</p>
 </section>
 
 <section class="wrap prose">
@@ -107,10 +108,12 @@ module.exports = {
     <li><a href="https://corylong.org/" rel="me noopener">corylong.org</a>: official website</li>
     <li><a href="https://www.linkedin.com/in/cory-long-0a567436/" rel="me noopener">LinkedIn</a></li>
     <li><a href="https://www.facebook.com/corydl" rel="me noopener">Facebook</a></li>
+    <li><a href="https://www.youtube.com/@therealcorylong" rel="me noopener">YouTube</a></li>
     <li><a href="https://sotellus.com/reviews/cory-long/" rel="noopener">Reviews of Cory Long</a></li>
   </ul>
 </section>
 
+<div class="wrap">${videosHtml("Watch Cory Long teach")}</div>
 <div class="wrap">${faqHtml(faqs, "About Cory Long: FAQ")}</div>
 ${cta("Train with Cory Long")}
 `,

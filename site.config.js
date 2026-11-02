@@ -27,10 +27,10 @@ module.exports = {
       "https://corylong.org/",
       "https://www.linkedin.com/in/cory-long-0a567436/",
       "https://www.facebook.com/corydl",
+      "https://www.youtube.com/@therealcorylong",
       "https://sotellus.com/reviews/cory-long/",
     ],
     worksFor: "Yroc Consulting",
-    homeLocation: "Sherman, Texas",
     book: { name: "To Love Is To Give", url: "https://toloveistogive.org/" },
     podcast: {
       name: "E-Forge Podcast with Cory Long",
@@ -40,6 +40,32 @@ module.exports = {
     },
     digitalStorefronts: "https://corylong.org/ministry/digital-storefronts-gives-back/",
   },
+
+  // Search engine verification tokens (content="..." values only).
+  // Leave empty if the site is verified via DNS instead.
+  verification: { google: "", bing: "" },
+
+  // IndexNow key (Bing, Yandex, Seznam, Naver). Must match public/<key>.txt.
+  indexNowKey: "201e613aafe8848b9b042148f9583d56",
+
+  published: "2026-11-02",
+
+  // Videos embedded on the site. TODO: add uploadDate (YYYY-MM-DD) for each
+  // so Google can show video rich results.
+  videos: [
+    {
+      id: "Kgcmi70xZYE",
+      name: "AI SEO Live Training with Cory Long: Day 1",
+      description:
+        "Recording of day 1 of Cory Long's live AI training event, presented by AI Authority Engine.",
+    },
+    {
+      id: "JvPC7tDTjb8",
+      name: "AI SEO Live Training with Cory Long: Day 2",
+      description:
+        "Recording of day 2 of Cory Long's live AI training event, presented by AI Authority Engine.",
+    },
+  ],
 
   // TODO: add official AI Authority Engine social / directory profiles.
   orgSameAs: [],

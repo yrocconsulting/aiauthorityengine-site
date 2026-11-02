@@ -38,6 +38,10 @@ module.exports = {
   crumb: "Get AI SEO Clients",
   type: "Article",
   faqs,
+  sources: [
+    ["Google Search Central: AI features and your website", "https://developers.google.com/search/docs/appearance/ai-features"],
+    ["OpenAI: Overview of OpenAI crawlers", "https://platform.openai.com/docs/bots"],
+  ],
   schema: [
     {
       "@type": "HowTo",
@@ -65,6 +69,16 @@ module.exports = {
 </section>
 
 <section class="wrap prose">
+  <div class="takeaways">
+    <h2>Key takeaways</h2>
+    <ul class="checks">
+      <li>The strongest opener is showing a prospect what AI assistants say about them versus competitors.</li>
+      <li>Focus on one niche so every case study reinforces the next.</li>
+      <li>Lead with a paid AI visibility audit, then sell setup and a retainer.</li>
+      <li>Never guarantee AI rankings; report measurable progress monthly.</li>
+    </ul>
+  </div>
+
   <h2>7 ways to get AI SEO clients</h2>
   <ol class="steps">
     ${steps.map(([n, t]) => `<li><h3>${n}</h3><p>${t}</p></li>`).join("\n    ")}

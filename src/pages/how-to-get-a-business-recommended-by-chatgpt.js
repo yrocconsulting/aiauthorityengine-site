@@ -43,6 +43,13 @@ module.exports = {
   crumb: "Get Recommended by ChatGPT",
   type: "Article",
   faqs,
+  sources: [
+    ["OpenAI: Overview of OpenAI crawlers", "https://platform.openai.com/docs/bots"],
+    ["Bing Webmaster Guidelines", "https://www.bing.com/webmasters/help/webmaster-guidelines-30fba23a"],
+    ["Google Search Central: AI features and your website", "https://developers.google.com/search/docs/appearance/ai-features"],
+    ["Schema.org: Organization", "https://schema.org/Organization"],
+    ["AI Search Optimization Framework (open reference)", "https://github.com/yrocconsulting/ai-search-optimization-framework"],
+  ],
   schema: [
     {
       "@type": "HowTo",
@@ -70,6 +77,16 @@ module.exports = {
 </section>
 
 <section class="wrap prose">
+  <div class="takeaways">
+    <h2>Key takeaways</h2>
+    <ul class="checks">
+      <li>ChatGPT recommends businesses it can clearly identify and verify across trusted sources.</li>
+      <li>Consistent facts, structured data, and answer-first pages make a business easy to understand.</li>
+      <li>Independent reviews and mentions matter more than what a business says about itself.</li>
+      <li>Allow AI crawlers like OAI-SearchBot and GPTBot, then track answers monthly.</li>
+    </ul>
+  </div>
+
   <h2>How ChatGPT decides which businesses to recommend</h2>
   <p>ChatGPT draws on two sources: what the model learned during training, and, when search is used, what it retrieves from the web in real time. In both cases it favors businesses that are <strong>unambiguous</strong> (it knows exactly which entity you are), <strong>relevant</strong> (your offerings match the question), and <strong>corroborated</strong> (multiple trusted sources agree you're good at it).</p>
 

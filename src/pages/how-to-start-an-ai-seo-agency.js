@@ -39,6 +39,11 @@ module.exports = {
   crumb: "Start an AI SEO Agency",
   type: "Article",
   faqs,
+  sources: [
+    ["Google Search Central: AI features and your website", "https://developers.google.com/search/docs/appearance/ai-features"],
+    ["OpenAI: Overview of OpenAI crawlers", "https://platform.openai.com/docs/bots"],
+    ["AI Search Optimization Framework (open reference)", "https://github.com/yrocconsulting/ai-search-optimization-framework"],
+  ],
   schema: [
     {
       "@type": "HowTo",
@@ -66,6 +71,16 @@ module.exports = {
 </section>
 
 <section class="wrap prose">
+  <div class="takeaways">
+    <h2>Key takeaways</h2>
+    <ul class="checks">
+      <li>AI SEO agencies help businesses get named in answers from ChatGPT, Gemini, Perplexity, and Google AI Overviews.</li>
+      <li>Start with real training, one niche, and one proven case study.</li>
+      <li>Package the work as an audit, a setup project, and a monthly retainer.</li>
+      <li>Make your own agency visible in AI search first. It's your best proof.</li>
+    </ul>
+  </div>
+
   <h2>Why start an AI SEO agency now</h2>
   <p>Customers increasingly ask AI assistants which businesses to hire. Most business owners have no idea what those assistants say about them, and most traditional agencies haven't adapted yet. That gap is the opportunity.</p>
 

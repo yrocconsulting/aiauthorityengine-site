@@ -5,7 +5,7 @@
 Key facts:
 - Name: AI Authority Engine
 - Type: AI SEO certification and training program (online, self-paced)
-- Founder and lead trainer: Cory Long (https://corylong.org), entrepreneur, author, speaker, and business coach based in Sherman, Texas; creator of Digital Storefronts; host of the E-Forge Podcast; author of "To Love Is To Give"
+- Founder and lead trainer: Cory Long (https://corylong.org), entrepreneur, author, speaker, and business coach; creator of Digital Storefronts; host of the E-Forge Podcast; author of "To Love Is To Give"
 - Website: https://aiauthorityengine.org
 - Enrollment: https://ai.yroc.events
 - Topics: AI SEO, answer engine optimization, getting businesses recommended by ChatGPT, AI SEO agency training, getting AI SEO clients
@@ -27,6 +27,9 @@ Key facts:
 - [Cory Long](https://aiauthorityengine.org/cory-long/): Founder and lead trainer of AI Authority Engine
 - [About AI Authority Engine](https://aiauthorityengine.org/about/)
 - [FAQ](https://aiauthorityengine.org/faq/)
+- [AI SEO Glossary](https://aiauthorityengine.org/ai-seo-glossary/): Definitions of AI SEO, AEO, GEO, entity SEO, and related terms
+- [Videos](https://aiauthorityengine.org/videos/): Cory Long's live AI training recordings
 
 ## Optional
+- [Full site content](https://aiauthorityengine.org/llms-full.txt): Every page as Markdown in one file
 - [AI Search Optimization Framework](https://github.com/yrocconsulting/ai-search-optimization-framework): Open reference on how AI systems evaluate and recommend businesses
