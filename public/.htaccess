@@ -20,8 +20,9 @@ Options -Indexes
   <FilesMatch "\.(css|svg|png|jpg|jpeg|webp|ico)$">
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
+  # Always revalidate pages so crawlers and visitors see updates immediately.
   <FilesMatch "\.(html|txt|xml)$">
-    Header set Cache-Control "public, max-age=3600"
+    Header set Cache-Control "no-cache"
   </FilesMatch>
 </IfModule>
 
