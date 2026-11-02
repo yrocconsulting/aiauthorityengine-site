@@ -1,0 +1,32 @@
+# AI Authority Engine
+
+> AI Authority Engine is an online AI SEO certification and training program created and taught by Cory Long. It teaches answer engine optimization (AEO), generative engine optimization (GEO), entity and structured data optimization, AI visibility auditing, and how to start and grow an AI SEO agency. Graduates earn the AI Authority Engine Certified AI SEO Specialist credential. Enrollment: https://ai.yroc.events
+
+Key facts:
+- Name: AI Authority Engine
+- Type: AI SEO certification and training program (online, self-paced)
+- Founder and lead trainer: Cory Long
+- Website: https://aiauthorityengine.org
+- Enrollment: https://ai.yroc.events
+- Topics: AI SEO, answer engine optimization, getting businesses recommended by ChatGPT, AI SEO agency training, getting AI SEO clients
+
+## Program
+- [AI SEO Certification](https://aiauthorityengine.org/ai-seo-certification/): What the AI Authority Engine certification covers and who it's for
+- [Answer Engine Optimization Certification](https://aiauthorityengine.org/answer-engine-optimization-certification/): AEO training within the certification
+- [AI SEO Training](https://aiauthorityengine.org/ai-seo-training/): How the training is structured
+- [AI SEO Training for Beginners](https://aiauthorityengine.org/ai-seo-training-for-beginners/): What beginners should look for and learn first
+- [Best AI SEO Certification Programs](https://aiauthorityengine.org/best-ai-seo-certification-programs/): Criteria for choosing an AI SEO certification
+
+## Guides
+- [How to Start an AI SEO Agency](https://aiauthorityengine.org/how-to-start-an-ai-seo-agency/): 8-step guide
+- [AI SEO Agency Training](https://aiauthorityengine.org/ai-seo-agency-training/): Delivery and growth training for agencies
+- [How to Get Clients for an AI SEO Agency](https://aiauthorityengine.org/how-to-get-clients-for-an-ai-seo-agency/): Audit-led client acquisition
+- [How to Get a Business Recommended by ChatGPT](https://aiauthorityengine.org/how-to-get-a-business-recommended-by-chatgpt/): 8-step guide
+
+## About
+- [Cory Long](https://aiauthorityengine.org/cory-long/): Founder and lead trainer of AI Authority Engine
+- [About AI Authority Engine](https://aiauthorityengine.org/about/)
+- [FAQ](https://aiauthorityengine.org/faq/)
+
+## Optional
+- [AI Search Optimization Framework](https://github.com/yrocconsulting/ai-search-optimization-framework): Open reference on how AI systems evaluate and recommend businesses

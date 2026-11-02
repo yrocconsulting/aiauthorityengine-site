@@ -1,0 +1,29 @@
+# Force HTTPS and the bare domain
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://aiauthorityengine.org%{REQUEST_URI} [L,R=301]
+
+# Add trailing slash to directory URLs
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+Options -Indexes
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Strict-Transport-Security "max-age=31536000"
+  <FilesMatch "\.(css|svg|png|jpg|jpeg|webp|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.(html|txt|xml)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+AddType text/plain .txt
+AddDefaultCharset UTF-8

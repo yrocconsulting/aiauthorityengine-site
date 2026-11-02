@@ -1,0 +1,49 @@
+name: Deploy to SiteGround
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build site
+        run: node build.js
+
+      - name: Set up SSH key
+        env:
+          SG_SSH_KEY: ${{ secrets.SG_SSH_KEY }}
+          SG_HOST: ${{ secrets.SG_HOST }}
+          SG_PORT: ${{ secrets.SG_PORT }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SG_SSH_KEY" > ~/.ssh/id_sg
+          chmod 600 ~/.ssh/id_sg
+          ssh-keyscan -p "${SG_PORT:-18765}" "$SG_HOST" >> ~/.ssh/known_hosts
+
+      - name: Upload with rsync
+        env:
+          SG_HOST: ${{ secrets.SG_HOST }}
+          SG_USER: ${{ secrets.SG_USER }}
+          SG_PORT: ${{ secrets.SG_PORT }}
+          SG_PATH: ${{ secrets.SG_PATH }}
+        run: |
+          # --delete keeps the server identical to dist/, removing old files.
+          # Server-managed folders are protected from deletion.
+          rsync -avz --delete \
+            --exclude='.well-known/' \
+            --exclude='cgi-bin/' \
+            -e "ssh -i ~/.ssh/id_sg -p ${SG_PORT:-18765} -o IdentitiesOnly=yes" \
+            dist/ "$SG_USER@$SG_HOST:$SG_PATH/"
