@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AI Authority Engine"><rect width="64" height="64" rx="14" fill="#2f4ae0"/><path d="M18 46 L32 16 L46 46" fill="none" stroke="#fff" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><path d="M24 36 H40" stroke="#19c2a0" stroke-width="6" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" role="img" aria-label="AI Authority Engine">
+  <defs>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset=".45" stop-color="#c9d1dc"/><stop offset=".55" stop-color="#8a96a8"/><stop offset="1" stop-color="#e8edf3"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3fd0ff"/><stop offset="1" stop-color="#0a5cff"/>
+    </linearGradient>
+    <linearGradient id="swoosh" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#0a5cff" stop-opacity="0"/><stop offset=".5" stop-color="#1f8bff"/><stop offset="1" stop-color="#7fe3ff"/>
+    </linearGradient>
+  </defs>
+  <path d="M2 78 L36 2 L56 2 L90 78 L68 78 L46 28 L24 78 Z" fill="url(#chrome)"/>
+  <rect x="94" y="2" width="22" height="76" fill="url(#blue)"/>
+  <path d="M12 66 Q58 26 118 24 Q66 36 22 72 Z" fill="url(#swoosh)"/>
+</svg>

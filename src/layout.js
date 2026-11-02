@@ -6,10 +6,12 @@ const nav = [
   ["/how-to-start-an-ai-seo-agency/", "Start an Agency"],
   ["/how-to-get-clients-for-an-ai-seo-agency/", "Get Clients"],
   ["/cory-long/", "Cory Long"],
+  ["/ai-visibility-quiz/", "AI Score Quiz"],
   ["/faq/", "FAQ"],
 ];
 
 const abs = (p) => site.url + p;
+const BUILD = Date.now().toString(36);
 
 // Entity graph shared by every page. Stable @ids let each page reference the
 // same Organization / Person / Course instead of redefining them.
@@ -184,9 +186,15 @@ function faqHtml(faqs, heading = "Frequently asked questions") {
 
 function cta(text = "Enroll in the AI Authority Engine certification") {
   return `<section class="cta">
-  <h2>Ready to get certified in AI SEO?</h2>
-  <p>Learn the exact system Cory Long uses to get businesses recommended by AI answer engines, and how to sell it as an agency service.</p>
-  <a class="btn btn-lg" href="${site.enrollUrl}" rel="noopener">${text}</a>
+  <div class="wrap cta-inner">
+    <img class="cta-badge tilt" src="/assets/badge-sm.webp" alt="AI Authority Engine certification badge" width="300" height="256" loading="lazy">
+    <div>
+      <p class="eyebrow">Build · Rank · Grow</p>
+      <h2>Ready to get certified in AI SEO?</h2>
+      <p>Learn the exact system Cory Long uses to get businesses recommended by AI answer engines, and how to sell it as an agency service.</p>
+      <a class="btn btn-lg btn-glow" href="${site.enrollUrl}" rel="noopener">${text}</a>
+    </div>
+  </div>
 </section>`;
 }
 
@@ -225,7 +233,7 @@ function render(page) {
       ? {
           headline: page.h1,
           mainEntityOfPage: { "@id": url + "#webpage" },
-          image: abs("/assets/og.png"),
+          image: abs("/assets/og.jpg"),
           author: { "@id": abs("/cory-long/#person") },
           publisher: { "@id": abs("/#organization") },
         }
@@ -253,9 +261,10 @@ function render(page) {
   const json = JSON.stringify({ "@context": "https://schema.org", "@graph": graph });
 
   return `<!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.className="js"</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${page.title}</title>
 <meta name="description" content="${page.description}">
@@ -266,11 +275,16 @@ ${page.path === "/404" ? "" : `<link rel="canonical" href="${url}">`}
 <meta property="og:title" content="${page.title}">
 <meta property="og:description" content="${page.description}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${abs("/assets/og.png")}">
+<meta property="og:image" content="${abs("/assets/og.jpg")}">
 <meta name="twitter:card" content="summary_large_image">
 ${site.verification.google ? `<meta name="google-site-verification" content="${site.verification.google}">\n` : ""}${site.verification.bing ? `<meta name="msvalidate.01" content="${site.verification.bing}">\n` : ""}<meta name="author" content="${site.founder.name}">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="/assets/style.css">
+<meta name="theme-color" content="#050914">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/style.css?v=${BUILD}">
+<script src="/assets/site.js?v=${BUILD}" defer></script>
 <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
 <script type="application/ld+json">${json}</script>
 </head>
@@ -278,8 +292,9 @@ ${site.verification.google ? `<meta name="google-site-verification" content="${s
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="/"><img src="${site.logo}" alt="" width="32" height="32"><span>${site.name}</span></a>
-    <nav aria-label="Main">
+    <a class="brand" href="/"><img src="${site.logo}" alt="" width="45" height="30"><span><b>AI Authority</b> Engine</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Main" id="main-nav">
       <ul>
         ${nav
           .map(
@@ -289,7 +304,7 @@ ${site.verification.google ? `<meta name="google-site-verification" content="${s
           .join("\n        ")}
       </ul>
     </nav>
-    <a class="btn btn-sm" href="${site.enrollUrl}" rel="noopener">Enroll</a>
+    <a class="btn btn-sm btn-glow" href="${site.enrollUrl}" rel="noopener">Get Certified</a>
   </div>
 </header>
 <main id="main">
@@ -299,6 +314,7 @@ ${sourcesHtml(page)}
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
+      <img class="foot-badge" src="/assets/badge-sm.webp" alt="Certified AI Authority Specialist badge from AI Authority Engine" width="140" height="119" loading="lazy">
       <p class="brand-foot">${site.name}</p>
       <p>${site.description}</p>
     </div>
@@ -329,6 +345,7 @@ ${sourcesHtml(page)}
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/ai-seo-glossary/">AI SEO Glossary</a></li>
         <li><a href="/videos/">Videos</a></li>
+        <li><a href="/ai-visibility-quiz/">AI Visibility Quiz</a></li>
         <li><a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a></li>
       </ul>
     </div>
