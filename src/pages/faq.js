@@ -5,6 +5,7 @@ const enroll = site.enrollUrl.replace("https://", "");
 const faqs = [
   ["What is AI Authority Engine?", "AI Authority Engine is an online AI SEO certification and training program taught by Cory Long. It teaches how to get businesses found and recommended by AI answer engines such as ChatGPT, Gemini, Perplexity, and Google AI Overviews, and how to build an AI SEO agency."],
   ["Who is the instructor?", "Cory Long, founder and lead trainer of AI Authority Engine."],
+  ["What company is behind AI Authority Engine?", `AI Authority Engine is a program of ${site.company.name} (${site.company.url.replace("https://", "")}), which builds and operates it. The training is created and taught by Cory Long.`],
   ["What is AI SEO?", "AI SEO is the practice of making a business easy for AI systems to identify, understand, trust, and recommend, using entity consistency, structured data, authority signals, and answer-first content."],
   ["What is answer engine optimization?", "Answer engine optimization (AEO) is structuring content and a business's online presence so AI assistants and answer features select it as the direct answer to a question."],
   ["What certification do I receive?", `Graduates earn the ${site.certification.credential} credential from AI Authority Engine.`],

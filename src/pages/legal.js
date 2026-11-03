@@ -21,7 +21,7 @@ const contact = {
 </section>
 <section class="wrap answer-box">
   <h2>How to reach us</h2>
-  <p><strong>Email AI Authority Engine at ${mail}.</strong> We handle questions about enrollment, the Certified AI Authority Specialist credential, partnerships, podcast and speaking requests for Cory Long, and media inquiries.</p>
+  <p><strong>Email AI Authority Engine, a program of ${site.company.name}, at ${mail}.</strong> We handle questions about enrollment, the Certified AI Authority Specialist credential, partnerships, podcast and speaking requests for Cory Long, and media inquiries.</p>
 </section>
 <section class="section">
   <div class="wrap split">
@@ -61,7 +61,7 @@ const privacy = {
 </section>
 <section class="wrap prose">
   <h2>Summary</h2>
-  <p>This website (${site.url.replace("https://", "")}) does not use analytics, advertising trackers, or cookies of its own, and it does not ask you to create an account.</p>
+  <p>This website (${site.url.replace("https://", "")}) is operated by <a href="${site.company.url}" rel="noopener">${site.company.name}</a>. It does not use analytics, advertising trackers, or cookies of its own, and it does not ask you to create an account.</p>
 
   <h2>Information we receive</h2>
   <ul>
@@ -105,7 +105,7 @@ const terms = {
 </section>
 <section class="wrap prose">
   <h2>About these terms</h2>
-  <p>These terms cover your use of the ${site.name} website. Enrollment in the program, membership billing, and course access are governed by the terms presented at checkout on <a href="${site.enrollUrl}" rel="noopener">${site.enrollUrl.replace("https://", "")}</a>.</p>
+  <p>${site.name} is a program of <a href="${site.company.url}" rel="noopener">${site.company.name}</a>, which operates this website. These terms cover your use of the ${site.name} website. Enrollment in the program, membership billing, and course access are governed by the terms presented at checkout on <a href="${site.enrollUrl}" rel="noopener">${site.enrollUrl.replace("https://", "")}</a>.</p>
 
   <h2>Educational content, no guarantees</h2>
   <p>Content on this site is for education and information. No one controls the outputs of AI systems such as ChatGPT, Gemini, Perplexity, or Google AI Overviews, so we do not guarantee that any business will be recommended or ranked by them. Results depend on many factors outside anyone's control.</p>
@@ -114,7 +114,7 @@ const terms = {
   <p>The Certified AI Authority Specialist credential and badge are issued by ${site.name}. A credential is valid only if it appears in the <a href="/certified/">certified directory</a>. Only credential holders may display the badge, and only to represent their own verified credential. We may revoke a credential that was obtained or used improperly.</p>
 
   <h2>Intellectual property</h2>
-  <p>The ${site.name} name, logo, badge, and site content are owned by ${site.name}. You may quote short passages with attribution and a link. Please don't republish full pages or use our marks in a way that suggests endorsement.</p>
+  <p>The ${site.name} name, logo, badge, and site content are owned by ${site.company.name}. You may quote short passages with attribution and a link. Please don't republish full pages or use our marks in a way that suggests endorsement.</p>
 
   <h2>Links</h2>
   <p>We link to other websites for reference. We aren't responsible for their content or practices.</p>

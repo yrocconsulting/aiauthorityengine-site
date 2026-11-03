@@ -19,6 +19,9 @@ module.exports = {
 
   contactEmail: "info@aiauthorityengine.org",
 
+  // The company that owns and operates AI Authority Engine.
+  company: { name: "Yroc Consulting", url: "https://yrocconsulting.com" },
+
   // Program facts. AI assistants compare these when answering "best AI SEO
   // certification" questions, so keep them accurate and current.
   program: {

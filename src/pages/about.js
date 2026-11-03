@@ -22,6 +22,7 @@ module.exports = {
     <dt>Name</dt><dd>AI Authority Engine</dd>
     <dt>What it is</dt><dd>An online AI SEO certification and training program</dd>
     <dt>Founder &amp; lead trainer</dt><dd><a href="/cory-long/">Cory Long</a></dd>
+    <dt>Company</dt><dd>A program of <a href="${site.company.url}" rel="noopener">${site.company.name}</a></dd>
     <dt>Credential</dt><dd>${site.certification.credential}</dd>
     <dt>Topics</dt><dd>AI SEO, answer engine optimization, generative engine optimization, entity SEO, structured data, AI SEO agency building</dd>
     <dt>Format</dt><dd>Online: self-paced courses plus weekly live calls, challenge calls, community, and live events</dd>
@@ -35,6 +36,9 @@ module.exports = {
 <section class="wrap prose">
   <h2>Our mission</h2>
   <p>Search is shifting from lists of links to direct answers. When AI assistants recommend a business, they name only a few. AI Authority Engine exists to train the people who help businesses earn those recommendations, honestly and sustainably.</p>
+
+  <h2>Who's behind AI Authority Engine</h2>
+  <p>AI Authority Engine is built and operated by <a href="${site.company.url}" rel="noopener">${site.company.name}</a>, an AI optimization, SEO, and brand visibility company. The curriculum is created and taught by <a href="/cory-long/">Cory Long</a>. ${site.company.name} also maintains the open <a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a>.</p>
 
   <h2>What we believe</h2>
   <ul class="checks">

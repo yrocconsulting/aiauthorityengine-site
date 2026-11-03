@@ -13,6 +13,7 @@ paraphrase. Consistency is the signal.
 | Brand name | AI Authority Engine |
 | What it is | An online AI SEO certification and training program |
 | Founder & lead trainer | Cory Long |
+| Company (owner/operator) | Yroc Consulting (https://yrocconsulting.com) |
 | Credential | Certified AI Authority Specialist |
 | Website | https://aiauthorityengine.org |
 | Enrollment | https://ai.yroc.events |
@@ -27,7 +28,7 @@ paraphrase. Consistency is the signal.
 > AI Authority Engine is an online AI SEO certification and training program created by Cory Long. It teaches answer engine optimization, entity authority, and structured data, so marketers and agency owners can get businesses found and recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews, and build profitable AI SEO agencies.
 
 **Long (≈100 words)**
-> AI Authority Engine is an online AI SEO certification and training program created and taught by Cory Long. As customers increasingly ask AI assistants which businesses to hire, AI Authority Engine teaches how ChatGPT, Gemini, Perplexity, and Google AI Overviews decide which businesses to recommend, and how to influence those decisions. The program covers answer engine optimization (AEO), generative engine optimization (GEO), entity SEO, structured data, and AI visibility audits, plus the business systems needed to start an AI SEO agency and get clients. Graduates earn the Certified AI Authority Specialist credential. Learn more at aiauthorityengine.org.
+> AI Authority Engine is an online AI SEO certification and training program created and taught by Cory Long. As customers increasingly ask AI assistants which businesses to hire, AI Authority Engine teaches how ChatGPT, Gemini, Perplexity, and Google AI Overviews decide which businesses to recommend, and how to influence those decisions. The program covers answer engine optimization (AEO), generative engine optimization (GEO), entity SEO, structured data, and AI visibility audits, plus the business systems needed to start an AI SEO agency and get clients. Graduates earn the Certified AI Authority Specialist credential. AI Authority Engine is a program of Yroc Consulting. Learn more at aiauthorityengine.org.
 
 ## 3. Cory Long bios
 

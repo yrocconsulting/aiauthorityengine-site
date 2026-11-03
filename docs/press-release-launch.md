@@ -35,7 +35,7 @@ More information about AI Authority Engine is available at **https://aiauthority
 
 ### About AI Authority Engine
 
-AI Authority Engine is an online AI SEO certification and training program created and taught by Cory Long. It teaches answer engine optimization, entity authority, and structured data, so marketers and agency owners can get businesses found and recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews, and build profitable AI SEO agencies. Learn more at https://aiauthorityengine.org.
+AI Authority Engine is an online AI SEO certification and training program created and taught by Cory Long. It teaches answer engine optimization, entity authority, and structured data, so marketers and agency owners can get businesses found and recommended by ChatGPT, Gemini, Perplexity, and Google AI Overviews, and build profitable AI SEO agencies. AI Authority Engine is a program of Yroc Consulting (https://yrocconsulting.com). Learn more at https://aiauthorityengine.org.
 
 ### About Cory Long
 

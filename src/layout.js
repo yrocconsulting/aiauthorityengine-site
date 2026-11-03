@@ -23,10 +23,7 @@ function baseGraph() {
     jobTitle: site.founder.jobTitle,
     url: abs("/cory-long/"),
     image: abs(site.founder.image),
-    worksFor: [
-      { "@id": abs("/#organization") },
-      { "@type": "Organization", name: site.founder.worksFor },
-    ],
+    worksFor: [{ "@id": abs("/#organization") }, { "@id": site.company.url + "/#organization" }],
     description:
       "Cory Long is an entrepreneur, author, speaker, business coach, and AI SEO trainer. He is the founder and lead trainer of AI Authority Engine, creator of Digital Storefronts, host of the E-Forge Podcast, and author of To Love Is To Give.",
     knowsAbout: [
@@ -56,11 +53,21 @@ function baseGraph() {
     founder: { "@id": abs("/cory-long/#person") },
     sameAs: [site.frameworkUrl, ...site.orgSameAs],
     email: site.contactEmail,
+    parentOrganization: { "@id": site.company.url + "/#organization" },
     contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: site.contactEmail, availableLanguage: "en" },
+  };
+
+  const company = {
+    "@type": "Organization",
+    "@id": site.company.url + "/#organization",
+    name: site.company.name,
+    url: site.company.url,
+    subOrganization: { "@id": abs("/#organization") },
   };
 
   return [
     org,
+    company,
     person,
     {
       "@type": "WebSite",
@@ -411,7 +418,7 @@ ${sourcesHtml(page)}
       </ul>
     </div>
   </div>
-  <div class="wrap legal">© ${new Date().getFullYear()} ${site.name}. Training by Cory Long. · <a href="mailto:${site.contactEmail}">${site.contactEmail}</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>
+  <div class="wrap legal">© ${new Date().getFullYear()} ${site.name}. Training by Cory Long. A program of <a href="${site.company.url}" rel="noopener">${site.company.name}</a>. · <a href="mailto:${site.contactEmail}">${site.contactEmail}</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>
 </footer>
 </body>
 </html>
