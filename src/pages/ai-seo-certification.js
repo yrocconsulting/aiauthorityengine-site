@@ -3,7 +3,7 @@ const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("
 const faqs = [
   [
     "How much does the AI Authority Engine certification cost?",
-    `The AI Authority Engine program is ${priceText()}. Membership includes the Getting Started curriculum (a kickoff webinar, 6 core lessons, and 2 bonus lessons), the Optimization Lab, 30-Day Sprints, Podcast Automation, weekly live calls, access to all challenge calls, full community access, and live events.`,
+    `There is no separate fee for the certification itself. The Certified AI Authority Specialist credential is earned by completing the required work inside the AI Authority Engine training program. Program membership is ${priceText()}, and membership includes the Getting Started curriculum (a kickoff webinar, 6 core lessons, and 2 bonus lessons), the Optimization Lab, 30-Day Sprints, Podcast Automation, weekly live calls, access to all challenge calls, full community access, and live events.`,
   ],
   [
     "What's included in the AI Authority Engine program?",

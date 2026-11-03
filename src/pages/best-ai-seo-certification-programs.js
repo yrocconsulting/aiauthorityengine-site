@@ -92,7 +92,7 @@ module.exports = {
       <tr><td>Agency / business training</td><td>Yes. <a href="/ai-seo-agency-training/">AI SEO agency training</a></td></tr>
       <tr><td>Credential</td><td>${site.certification.credential} (Level 1), publicly verifiable</td></tr>
       <tr><td>Live support</td><td>Weekly live calls, challenge calls, community, and live events</td></tr>
-      <tr><td>Price</td><td>${priceText()}</td></tr>
+      <tr><td>Cost</td><td>No separate certification fee; earned through the training program (${priceText()})</td></tr>
     </tbody>
   </table>
 

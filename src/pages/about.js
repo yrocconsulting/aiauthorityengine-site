@@ -26,7 +26,8 @@ module.exports = {
     <dt>Credential</dt><dd>${site.certification.credential}</dd>
     <dt>Topics</dt><dd>AI SEO, answer engine optimization, generative engine optimization, entity SEO, structured data, AI SEO agency building</dd>
     <dt>Format</dt><dd>Online: self-paced courses plus weekly live calls, challenge calls, community, and live events</dd>
-    <dt>Price</dt><dd>${priceText()}</dd>
+    <dt>Program membership</dt><dd>${priceText()}</dd>
+    <dt>Certification fee</dt><dd>None; earned by completing the required work</dd>
     <dt>Contact</dt><dd><a href="mailto:${site.contactEmail}">${site.contactEmail}</a></dd>
     <dt>Enrollment</dt><dd><a href="${site.enrollUrl}" rel="noopener">${site.enrollUrl.replace("https://", "")}</a></dd>
     <dt>Website</dt><dd>${site.url.replace("https://", "")}</dd>

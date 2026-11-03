@@ -260,7 +260,8 @@ function programHtml(heading = "Program details at a glance") {
   <h2>${heading}</h2>
   <table class="program-table">
     <tbody>
-      <tr><th scope="row">Price</th><td>${priceText()}</td></tr>
+      <tr><th scope="row">Program membership</th><td>${priceText()}</td></tr>
+      <tr><th scope="row">Certification fee</th><td>None. The credential is earned by completing the required coursework and assignments.</td></tr>
       <tr><th scope="row">Format</th><td>Online: self-paced courses plus weekly live calls</td></tr>
       <tr><th scope="row">Core curriculum</th><td>Getting Started module: a kickoff webinar, 6 core lessons, and 2 bonus lessons (<a href="/ai-seo-certification/#curriculum">see curriculum</a>)</td></tr>
       <tr><th scope="row">Growth modules</th><td>${p.modules.slice(0, 3).map(([n]) => n).join(", ")}</td></tr>

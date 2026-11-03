@@ -4,7 +4,7 @@ const { simulatorHtml, quizHtml, enginesHtml } = require("../components");
 const faqs = [
   [
     "How much does the AI Authority Engine certification cost?",
-    `The AI Authority Engine program is ${priceText()}. Membership includes the Getting Started curriculum (a kickoff webinar, 6 core lessons, and 2 bonus lessons), the Optimization Lab, 30-Day Sprints, Podcast Automation, weekly live calls, access to all challenge calls, full community access, and live events.`,
+    `There is no separate fee for the certification itself. The Certified AI Authority Specialist credential is earned by completing the required work inside the AI Authority Engine training program. Program membership is ${priceText()}, and membership includes the Getting Started curriculum (a kickoff webinar, 6 core lessons, and 2 bonus lessons), the Optimization Lab, 30-Day Sprints, Podcast Automation, weekly live calls, access to all challenge calls, full community access, and live events.`,
   ],
   [
     "What's included in the AI Authority Engine program?",
@@ -145,7 +145,7 @@ module.exports = {
       <img src="${site.founder.image}" alt="Cory Long, founder of AI Authority Engine" width="160" height="160" loading="lazy">
       <p class="eyebrow">Your instructor</p>
       <h2>Taught by Cory Long</h2>
-      <p><a href="/cory-long/">Cory Long</a> is the founder and lead trainer of AI Authority Engine. An entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience, Cory started in business at 40 and went on to build multiple businesses generating eight figures in sales. He is also the creator of Digital Storefronts and host of the E-Forge Podcast. Cory also publishes the open <a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a>, a public reference on how AI systems understand, evaluate, and recommend businesses.</p>
+      <p><a href="/cory-long/">Cory Long</a> is the founder and lead trainer of AI Authority Engine. An entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience, Cory started his first business of his own at 40 and went on to build multiple businesses generating eight figures in sales. He is also the creator of Digital Storefronts and host of the E-Forge Podcast. Cory also publishes the open <a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a>, a public reference on how AI systems understand, evaluate, and recommend businesses.</p>
       <a class="btn btn-ghost" href="/cory-long/">Meet Cory</a>
     </div>
   </div>

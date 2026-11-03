@@ -14,7 +14,7 @@ const faqs = [
   ],
   [
     "What is Cory Long's background?",
-    "Cory Long started in business at 40 with no business experience and no money, and went on to build multiple businesses generating eight figures in sales. He brings more than two decades of digital marketing experience to his training and coaching.",
+    "Cory Long grew up working in his family's business but didn't start a business of his own until 40. Starting with no money, he went on to build multiple businesses generating eight figures in sales. He brings more than two decades of digital marketing experience to his training and coaching.",
   ],
   [
     "What is the E-Forge Podcast?",
@@ -77,8 +77,8 @@ module.exports = {
 </section>
 
 <section class="wrap prose">
-  <h2>From broke at 40 to eight-figure businesses</h2>
-  <p>Cory Long didn't start in business early. At 40, with no business experience, no money, and heavy responsibilities including ministry work and family health challenges, Cory started over. From there he built multiple businesses that have generated eight figures in sales. That journey shapes how he teaches: practical, honest, and built for people starting from where they actually are.</p>
+  <h2>First business at 40, eight figures since</h2>
+  <p>Cory Long grew up working in his family's business, but he didn't become an entrepreneur until 40. He started his first business of his own with no money and heavy responsibilities, including ministry work and family health challenges. From there he built multiple businesses that have generated eight figures in sales. That journey shapes how he teaches: practical, honest, and built for people starting from where they actually are.</p>
 
   <h2>Two decades of digital marketing training</h2>
   <p>Through <a href="${f.digitalStorefronts}" rel="noopener">Digital Storefronts</a>, a training company built with the resources of ${f.worksFor}, Cory has taught entrepreneurs lead generation, Facebook advertising, and email marketing. Digital Storefronts was built around a giving model, supporting ministries, non-profits, and foster families through its <em>Digital Storefronts Gives Back</em> initiative.</p>

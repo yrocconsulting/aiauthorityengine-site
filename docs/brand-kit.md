@@ -39,7 +39,7 @@ paraphrase. Consistency is the signal.
 > Cory Long is an entrepreneur, author, speaker, and business coach, and the founder and lead trainer of AI Authority Engine, an AI SEO certification program. He is the creator of Digital Storefronts, host of the E-Forge Podcast, and author of *To Love Is To Give*.
 
 **Long (≈110 words)**
-> Cory Long is the founder and lead trainer of AI Authority Engine, an online AI SEO certification program that teaches marketers and agency owners how to get businesses recommended by ChatGPT and other AI answer engines. An entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience, Cory started in business at 40 with no experience and no money, and went on to build multiple businesses generating eight figures in sales. He is the creator of Digital Storefronts, host of the E-Forge Podcast, and author of *To Love Is To Give*. Learn more at aiauthorityengine.org and corylong.org.
+> Cory Long is the founder and lead trainer of AI Authority Engine, an online AI SEO certification program that teaches marketers and agency owners how to get businesses recommended by ChatGPT and other AI answer engines. An entrepreneur, author, speaker, and business coach with more than two decades of digital marketing experience, Cory grew up working in his family's business, started his first business of his own at 40 with no money, and went on to build multiple businesses generating eight figures in sales. He is the creator of Digital Storefronts, host of the E-Forge Podcast, and author of *To Love Is To Give*. Learn more at aiauthorityengine.org and corylong.org.
 
 ## 4. Profiles to create or update (in priority order)
 
