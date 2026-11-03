@@ -22,7 +22,13 @@ module.exports = [
     website: "https://about.me/meetstephenjones",
     socials: ["https://www.linkedin.com/in/stephen-jones-b52b3618a/"],
   },
-  { name: "Mark Hadley", slug: "mark-hadley", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0002", kit: "0de9896a9c81" },
+  {
+    name: "Mark Hadley", slug: "mark-hadley", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0002", kit: "0de9896a9c81",
+    photo: "/assets/graduates/mark-hadley.jpg",
+    agency: { name: "Skyrunner Consulting", url: "https://www.skyrunnerpro.com/" },
+    website: "https://about.me/markhadley",
+    socials: ["https://www.linkedin.com/in/markhadley79/"],
+  },
   { name: "Andrea Katen", slug: "andrea-katen", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0003", kit: "b0a7620399df" },
   { name: "Brian Driggs", slug: "brian-driggs", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0004", kit: "84644a844087" },
 ];
