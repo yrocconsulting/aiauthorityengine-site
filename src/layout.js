@@ -418,6 +418,11 @@ ${sourcesHtml(page)}
         <li><a href="/ai-seo-training/">AI SEO Training</a></li>
         <li><a href="/ai-seo-training-for-beginners/">AI SEO Training for Beginners</a></li>
         <li><a href="/best-ai-seo-certification-programs/">Best AI SEO Certification Programs</a></li>
+        <li><a href="/free-vs-paid-ai-seo-certifications/">Free vs Paid AI SEO Certifications</a></li>
+        <li><a href="/ai-authority-engine-vs-semrush-academy/">vs Semrush Academy</a></li>
+        <li><a href="/ai-authority-engine-vs-hubspot-academy/">vs HubSpot Academy</a></li>
+        <li><a href="/ai-authority-engine-vs-ahrefs-academy/">vs Ahrefs Academy</a></li>
+        <li><a href="/ai-authority-engine-vs-coursera/">vs Coursera</a></li>
       </ul>
     </div>
     <div>

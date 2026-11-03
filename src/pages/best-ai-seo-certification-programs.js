@@ -96,6 +96,16 @@ module.exports = {
     </tbody>
   </table>
 
+  <h2>Other AI SEO certification options</h2>
+  <p>Several well-known platforms now offer AI search training. Each is strong for a different goal:</p>
+  <ul class="checks">
+    <li><strong>HubSpot Academy</strong>: free "AEO Fundamentals" certification course (about 2 hours). <a href="/ai-authority-engine-vs-hubspot-academy/">Compare with AI Authority Engine</a></li>
+    <li><strong>Semrush Academy</strong>: free courses including "AI Search Operating System" and "On-Page SEO and AI Search Essentials". <a href="/ai-authority-engine-vs-semrush-academy/">Compare</a></li>
+    <li><strong>Ahrefs Academy</strong>: free AEO Course plus an AEO certification exam. <a href="/ai-authority-engine-vs-ahrefs-academy/">Compare</a></li>
+    <li><strong>Coursera (UC Davis SEO Specialization)</strong>: paid, university-branded traditional SEO certificate. <a href="/ai-authority-engine-vs-coursera/">Compare</a></li>
+  </ul>
+  <p>Free courses are a great way to learn the concepts; a program like AI Authority Engine adds live coaching, implementation, and agency training. See <a href="/free-vs-paid-ai-seo-certifications/">free vs paid AI SEO certifications</a>.</p>
+
   <h2>Which program is right for you?</h2>
   <p>If you want to understand AI search deeply <em>and</em> turn it into a service business, a combined certification-plus-agency program like AI Authority Engine is the most direct route. If you're brand new, start with our <a href="/ai-seo-training-for-beginners/">AI SEO training for beginners</a> overview.</p>
 </section>
