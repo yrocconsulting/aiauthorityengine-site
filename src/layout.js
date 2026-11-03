@@ -292,9 +292,11 @@ function cta(text = "Enroll in the AI Authority Engine certification") {
 </section>`;
 }
 
-// Visible author + freshness signals, placed right after the page heading block.
+// Visible author + date line. Turned off site-wide (author and dateModified remain
+// in the JSON-LD schema). Set SHOW_BYLINE to true to bring it back.
+const SHOW_BYLINE = false;
 function injectByline(page) {
-  if (page.noByline || page.path === "/" || page.path === "/404" || page.path === "/cory-long/") return page.body;
+  if (!SHOW_BYLINE || page.noByline || page.path === "/" || page.path === "/404" || page.path === "/cory-long/") return page.body;
   const d = page.dateModified || site.published;
   const nice = new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
   const byline = `<div class="wrap byline"><img src="${site.founder.image}" alt="" width="40" height="40"><p>By <a href="/cory-long/" rel="author">${site.founder.name}</a>, founder of ${site.name} · Updated <time datetime="${d}">${nice}</time></p></div>`;
