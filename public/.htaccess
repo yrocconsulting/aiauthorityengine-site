@@ -24,6 +24,10 @@ Options -Indexes
   <FilesMatch "\.(html|txt|xml)$">
     Header set Cache-Control "no-cache"
   </FilesMatch>
+  # Certificates are private files shared via graduates' kit pages: keep them out of search and AI indexes.
+  <FilesMatch "\.pdf$">
+    Header set X-Robots-Tag "noindex, nofollow, noarchive"
+  </FilesMatch>
 </IfModule>
 
 AddType text/plain .txt

@@ -386,6 +386,29 @@ tr:last-child td { border-bottom: 0; }
 .embed { width: 100%; background: rgba(0,0,0,.4); color: #cfe3ff; border: 1px solid var(--line-2); border-radius: 10px; padding: 12px; font: .82rem/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; resize: vertical; margin-bottom: 10px; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3ff; }
 
+/* Graduate photos and professional profile */
+.grad-photo { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(63,208,255,.5); }
+.grad-portrait { position: relative; width: 200px; height: 200px; }
+.grad-portrait > img:first-child { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid transparent; background: var(--electric) border-box; box-shadow: var(--glow); }
+.grad-portrait .mini-badge { position: absolute; right: -14px; bottom: -6px; width: 84px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.6)); }
+.split-top { align-items: start; }
+.agency { display: grid; gap: 2px; margin: 0 0 14px; }
+.agency span { font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-dim); }
+.agency b { font-family: var(--display); font-size: 1.3rem; color: #fff; }
+.agency a { color: #fff; }
+.profile-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.profile-links a { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: rgba(0,0,0,.2); color: #fff; text-decoration: none; font-weight: 600; transition: border-color .2s; }
+.profile-links a:hover { border-color: var(--cyan); }
+.profile-links span { color: var(--ink-dim); font-weight: 400; font-size: .88rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Private kit */
+.kit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.kit-grid .share-card h2 { margin: .1em 0 .3em; font-size: 1.4rem; }
+.kit-wide { grid-column: 1 / -1; }
+.kit-embed { display: flex; gap: 24px; align-items: center; }
+.kit-embed > div { flex: 1; min-width: 0; }
+@media (max-width: 760px) { .kit-grid { grid-template-columns: 1fr; } .kit-embed { flex-direction: column; } }
+
 /* ---------- Contact */
 .contact-card { display: grid; gap: 6px; padding: 26px; border-radius: 20px; background: var(--glass); border: 1px solid var(--line-2); max-width: 620px; }
 .contact-card a.big { font-family: var(--display); font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; color: #fff; text-decoration: none; word-break: break-all; }

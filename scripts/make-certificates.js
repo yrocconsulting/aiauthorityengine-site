@@ -81,7 +81,7 @@ h1 { font-family: "Exo 2"; font-weight: 800; font-size: 33pt; letter-spacing: .0
   const browser = await chromium.launch();
   const page = await browser.newPage();
   for (const g of graduates) {
-    const file = path.join(outDir, `${g.slug}.pdf`);
+    const file = path.join(outDir, `${g.slug}-${g.kit}.pdf`);
     if (fs.existsSync(file) && !force) { console.log(`skip  ${g.slug} (exists)`); continue; }
     await page.setContent(html(g), { waitUntil: "load" });
     await page.evaluate(() => document.fonts.ready);

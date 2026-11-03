@@ -320,8 +320,8 @@ function render(page) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${page.title}</title>
 <meta name="description" content="${page.description}">
-${page.path === "/404" ? "" : `<link rel="canonical" href="${url}">`}
-<meta name="robots" content="${page.path === "/404" ? "noindex" : "index, follow, max-snippet:-1, max-image-preview:large"}">
+${page.path === "/404" || page.noindex ? "" : `<link rel="canonical" href="${url}">`}
+<meta name="robots" content="${page.path === "/404" || page.noindex ? "noindex, nofollow, noarchive" : "index, follow, max-snippet:-1, max-image-preview:large"}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="${site.name}">
 <meta property="og:title" content="${page.title}">

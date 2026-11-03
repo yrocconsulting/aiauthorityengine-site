@@ -25,7 +25,7 @@ for (const page of pages) {
 }
 
 const urls = pages
-  .filter((p) => p.path !== "/404")
+  .filter((p) => p.path !== "/404" && !p.noindex)
   .sort((a, b) => a.path.localeCompare(b.path))
   .map(
     (p) =>
@@ -62,7 +62,7 @@ function toMarkdown(html) {
 }
 const order = ["/", "/ai-seo-certification/", "/cory-long/"];
 const full = pages
-  .filter((p) => p.path !== "/404")
+  .filter((p) => p.path !== "/404" && !p.noindex)
   .sort((a, b) => ((order.indexOf(a.path) + 1 || 99) - (order.indexOf(b.path) + 1 || 99)) || a.path.localeCompare(b.path))
   .map((p) => {
     const html = fs.readFileSync(path.join(out, p.path, "index.html"), "utf8");

@@ -5,6 +5,19 @@ const credential = site.certification.credential;
 const nice = (d) =>
   new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 const pageUrl = (g) => `${site.url}/certified/${g.slug}/`;
+const kitPath = (g) => `/certified/${g.slug}/kit-${g.kit}/`;
+const certPath = (g) => `/certificates/${g.slug}-${g.kit}.pdf`;
+const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const host = (u) => u.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
+
+const socialLabel = (u) => {
+  const h = host(u);
+  const map = [
+    ["linkedin.com", "LinkedIn"], ["x.com", "X"], ["twitter.com", "X"], ["facebook.com", "Facebook"],
+    ["instagram.com", "Instagram"], ["youtube.com", "YouTube"], ["tiktok.com", "TikTok"], ["threads.net", "Threads"],
+  ];
+  return (map.find(([d]) => h.includes(d)) || [null, h])[1];
+};
 
 function linkedInUrl(g) {
   const [y, m] = g.issued.split("-");
@@ -24,8 +37,6 @@ function embedCode(g) {
   return `<a href="${pageUrl(g)}" target="_blank" rel="noopener" title="Verify ${g.name}'s credential"><img src="${site.url}/assets/badge-sm.webp" alt="${credential}: ${g.name}, verified by ${site.name}" width="180" height="153"></a>`;
 }
 
-const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-
 // ------------------------------------------------------------ directory page
 const directory = {
   path: "/certified/",
@@ -40,12 +51,7 @@ const directory = {
       "@type": "ItemList",
       name: `${credential} directory`,
       numberOfItems: graduates.length,
-      itemListElement: graduates.map((g, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        url: pageUrl(g),
-        name: g.name,
-      })),
+      itemListElement: graduates.map((g, i) => ({ "@type": "ListItem", position: i + 1, url: pageUrl(g), name: g.name })),
     },
   ],
   body: `
@@ -65,7 +71,7 @@ const directory = {
 <section class="section">
   <div class="wrap">
     <div class="verify-tools" data-directory>
-      <label class="field"><span>Search by name</span><input type="search" placeholder="e.g. Jones" data-filter autocomplete="off"></label>
+      <label class="field"><span>Search by name or agency</span><input type="search" placeholder="e.g. Jones" data-filter autocomplete="off"></label>
       <form class="field verify-form" data-verify>
         <span>Verify a credential ID</span>
         <div><input type="text" placeholder="AIAE-L1-2026-0001" required autocomplete="off"><button class="btn btn-glow" type="submit">Verify</button></div>
@@ -75,11 +81,11 @@ const directory = {
     <ul class="grad-grid">
       ${graduates
         .map(
-          (g) => `<li class="grad-card reveal" data-name="${g.name.toLowerCase()}" data-id="${g.id}">
-        <img src="/assets/badge-sm.webp" alt="" width="72" height="61" loading="lazy">
+          (g) => `<li class="grad-card reveal" data-name="${esc((g.name + " " + (g.agency?.name || "")).toLowerCase())}" data-id="${g.id}">
+        ${g.photo ? `<img class="grad-photo" src="${g.photo}" alt="" width="72" height="72" loading="lazy">` : `<img src="/assets/badge-sm.webp" alt="" width="72" height="61" loading="lazy">`}
         <div>
           <h2><a href="/certified/${g.slug}/">${g.name}</a></h2>
-          <p>${credential} · Level ${g.level}</p>
+          <p>${credential} · Level ${g.level}${g.agency ? ` · ${esc(g.agency.name)}` : ""}</p>
           <p class="meta">Issued ${nice(g.issued)} · ID ${g.id}</p>
         </div>
         <span class="verified">✓ Verified</span>
@@ -99,13 +105,20 @@ ${cta("Become a Certified AI Authority Specialist")}
 `,
 };
 
-// ------------------------------------------------------------ graduate pages
+// ------------------------------------------------------------ public verification pages
 const profiles = graduates.map((g) => {
   const url = pageUrl(g);
+  const links = [
+    ...(g.website ? [[g.website, "Website"]] : []),
+    ...(g.socials || []).map((u) => [u, socialLabel(u)]),
+  ];
+  const sameAs = [g.website, ...(g.socials || [])].filter(Boolean);
+  const hasProfile = g.photo || g.agency || g.website || (g.socials && g.socials.length);
+
   return {
     path: `/certified/${g.slug}/`,
     title: `${g.name}, ${credential} | Verified`,
-    description: `${g.name} is a ${credential} (Level ${g.level}), credentialed by AI Authority Engine on ${nice(g.issued)}. Credential ID ${g.id}.`,
+    description: `${g.name}${g.agency ? ` of ${g.agency.name}` : ""} is a ${credential} (Level ${g.level}), credentialed by AI Authority Engine on ${nice(g.issued)}. Credential ID ${g.id}.`,
     h1: g.name,
     crumb: g.name,
     type: "ProfilePage",
@@ -118,6 +131,9 @@ const profiles = graduates.map((g) => {
         "@id": url + "#person",
         name: g.name,
         url,
+        ...(g.photo ? { image: site.url + g.photo } : {}),
+        ...(g.agency ? { worksFor: { "@type": "Organization", name: g.agency.name, ...(g.agency.url ? { url: g.agency.url } : {}) } } : {}),
+        ...(sameAs.length ? { sameAs } : {}),
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
           "@id": url + "#credential",
@@ -135,11 +151,15 @@ const profiles = graduates.map((g) => {
     body: `
 <section class="page-head">
   <div class="wrap grad-head">
-    <img class="tilt" src="/assets/badge-sm.webp" alt="${credential} badge" width="200" height="171">
+    ${
+      g.photo
+        ? `<div class="grad-portrait"><img src="${g.photo}" alt="${esc(g.name)}" width="200" height="200"><img class="mini-badge" src="/assets/badge-sm.webp" alt="" width="84" height="72"></div>`
+        : `<img class="tilt" src="/assets/badge-sm.webp" alt="${credential} badge" width="200" height="171">`
+    }
     <div>
       <p class="eyebrow">Credential verification</p>
       <h1>${g.name}</h1>
-      <p class="lede">${credential} · Level ${g.level}</p>
+      <p class="lede">${credential} · Level ${g.level}${g.agency ? ` · ${esc(g.agency.name)}` : ""}</p>
       <span class="verified big">✓ Verified by ${site.name}</span>
     </div>
   </div>
@@ -147,11 +167,11 @@ const profiles = graduates.map((g) => {
 
 <section class="wrap answer-box">
   <h2>Credential status: active</h2>
-  <p><strong>${g.name} is a ${credential} (Level ${g.level}), credentialed by ${site.name} on ${nice(g.issued)}.</strong> This credential was awarded after completing the AI Authority Engine AI SEO certification program taught by Cory Long, including all required coursework.</p>
+  <p><strong>${g.name}${g.agency ? ` of ${esc(g.agency.name)}` : ""} is a ${credential} (Level ${g.level}), credentialed by ${site.name} on ${nice(g.issued)}.</strong> This credential was awarded after completing the AI Authority Engine AI SEO certification program taught by Cory Long, including all required coursework.</p>
 </section>
 
 <section class="section">
-  <div class="wrap split">
+  <div class="wrap ${hasProfile ? "split split-top" : ""}">
     <div>
       <h2>Credential details</h2>
       <dl class="facts">
@@ -165,18 +185,15 @@ const profiles = graduates.map((g) => {
         <dt>Status</dt><dd><span class="verified">✓ Active</span></dd>
       </dl>
     </div>
-    <div class="share-card">
-      <h2>For ${g.name.split(" ")[0]}</h2>
-      <p>Share your credential and link back to this verification page.</p>
-      <div class="share-actions">
-        <a class="btn btn-glow" href="${esc(linkedInUrl(g))}" target="_blank" rel="noopener">Add to LinkedIn</a>
-        <a class="btn btn-ghost" href="/certificates/${g.slug}.pdf" download>Download certificate (PDF)</a>
-      </div>
-      <h3>Website badge</h3>
-      <p class="small">Paste this code on your website to display your verified badge:</p>
-      <textarea class="embed" readonly rows="4">${esc(embedCode(g))}</textarea>
-      <button class="btn btn-sm" type="button" data-copy>Copy code</button>
-    </div>
+    ${
+      hasProfile
+        ? `<div class="share-card">
+      <h2>Professional profile</h2>
+      ${g.agency ? `<p class="agency"><span>Agency</span><b>${g.agency.url ? `<a href="${esc(g.agency.url)}" rel="noopener">${esc(g.agency.name)}</a>` : esc(g.agency.name)}</b></p>` : ""}
+      ${links.length ? `<ul class="profile-links">${links.map(([u, l]) => `<li><a href="${esc(u)}" rel="noopener">${esc(l)}<span>${esc(host(u))}</span></a></li>`).join("")}</ul>` : ""}
+    </div>`
+        : ""
+    }
   </div>
 </section>
 
@@ -189,4 +206,66 @@ ${cta("Become a Certified AI Authority Specialist")}
   };
 });
 
-module.exports = [directory, ...profiles];
+// ------------------------------------------------------------ private share kits (unlisted, noindex)
+const kits = graduates.map((g) => ({
+  path: kitPath(g),
+  title: `Your credential kit: ${g.name} | ${site.name}`,
+  description: `Private credential kit for ${g.name}.`,
+  h1: `${g.name}'s credential kit`,
+  crumb: "Credential kit",
+  noindex: true,
+  noByline: true,
+  body: `
+<section class="page-head">
+  <div class="wrap grad-head">
+    <img class="tilt" src="/assets/badge-sm.webp" alt="${credential} badge" width="200" height="171">
+    <div>
+      <p class="eyebrow">Private: for ${g.name} only</p>
+      <h1>Congratulations, ${g.name.split(" ")[0]}!</h1>
+      <p class="lede">You're officially a ${credential}. Here's everything you need to share your credential.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap answer-box">
+  <h2>Your credential</h2>
+  <p><strong>${credential} · Level ${g.level} · ID ${g.id}</strong>, issued ${nice(g.issued)}. Your public verification page is <a href="/certified/${g.slug}/">${host(pageUrl(g))}</a>. Share that link anywhere you mention the credential. Please keep this kit page private.</p>
+</section>
+
+<section class="section">
+  <div class="wrap kit-grid">
+    <div class="share-card">
+      <p class="eyebrow">Step 1</p>
+      <h2>Download your certificate</h2>
+      <p>A print-ready PDF certificate with your name, credential ID, and verification link.</p>
+      <a class="btn btn-glow" href="${certPath(g)}" download>Download certificate (PDF)</a>
+    </div>
+    <div class="share-card">
+      <p class="eyebrow">Step 2</p>
+      <h2>Add it to LinkedIn</h2>
+      <p>Opens LinkedIn with your credential, issuer, date, ID, and verification link filled in. Just click Save.</p>
+      <a class="btn btn-glow" href="${esc(linkedInUrl(g))}" target="_blank" rel="noopener">Add to LinkedIn</a>
+    </div>
+    <div class="share-card kit-wide">
+      <p class="eyebrow">Step 3</p>
+      <h2>Show your badge on your website</h2>
+      <p>Paste this code into your website (footer, About page, or team page). The badge links to your verification page so clients can confirm it.</p>
+      <div class="kit-embed">
+        <img src="/assets/badge-sm.webp" alt="" width="150" height="128">
+        <div>
+          <textarea class="embed" readonly rows="5">${esc(embedCode(g))}</textarea>
+          <button class="btn btn-sm" type="button" data-copy>Copy code</button>
+        </div>
+      </div>
+    </div>
+    <div class="share-card kit-wide">
+      <p class="eyebrow">Step 4</p>
+      <h2>Complete your directory profile</h2>
+      <p>Send a square headshot, your agency name and website, and your social profile links to <a href="mailto:${site.contactEmail}?subject=Directory%20profile%3A%20${encodeURIComponent(g.name)}">${site.contactEmail}</a>, and we'll add them to your public verification page.</p>
+    </div>
+  </div>
+</section>
+`,
+}));
+
+module.exports = [directory, ...profiles, ...kits];
