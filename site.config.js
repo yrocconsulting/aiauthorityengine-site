@@ -58,7 +58,7 @@ module.exports = {
 
   // Search engine verification tokens (content="..." values only).
   // Leave empty if the site is verified via DNS instead.
-  verification: { google: "", bing: "" },
+  verification: { google: "xP1goteG8YwRyeDUOlJyiT-ZBrAv5KtqOX7eyxEd98s", bing: "" },
 
   // IndexNow key (Bing, Yandex, Seznam, Naver). Must match public/<key>.txt.
   indexNowKey: "201e613aafe8848b9b042148f9583d56",
