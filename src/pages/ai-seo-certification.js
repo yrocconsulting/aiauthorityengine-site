@@ -69,7 +69,7 @@ module.exports = {
   <p>AI search works differently. Answer engines build an understanding of <em>entities</em>, cross-check facts across many sources, and favor businesses whose identity, expertise, and reputation are consistent and verifiable. An AI SEO certification should train you on exactly those mechanics, and that is what this program does.</p>
 
   <h2 id="curriculum">What the certification covers</h2>
-  <p>Every student starts with the Getting Started curriculum, then continues with ongoing modules, live calls, and community support.</p>
+  <p>Every student starts with the Getting Started curriculum, then continues with ongoing modules, live calls, and community support. Everything is taught through <a href="/ai-authority-wheel/">the AI Authority Wheel</a>, with one-on-one training from Cory Long, who also joins students' client meetings to help close sales, and backing from the Yroc Consulting team.</p>
   ${curriculumHtml()}
 
   <h2>Who should get certified</h2>

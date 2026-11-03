@@ -1,5 +1,6 @@
 const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("../layout");
 const { simulatorHtml, quizHtml, enginesHtml } = require("../components");
+const wheel = require("../data/wheel");
 
 const faqs = [
   [
@@ -16,7 +17,7 @@ const faqs = [
   ],
   [
     "Who teaches the AI Authority Engine certification?",
-    "The program is created and taught by Cory Long, founder of AI Authority Engine, creator of Digital Storefronts, and host of the E-Forge Podcast. Cory trains marketers and agency owners on AI SEO, answer engine optimization, and AI search visibility.",
+    "The program is created and taught by Cory Long, founder of AI Authority Engine, creator of Digital Storefronts, and host of the E-Forge Podcast. Cory works with students one-on-one, has joined students' client meetings to help close sales, and is backed by the Yroc Consulting team. Cory trains marketers and agency owners on AI SEO, answer engine optimization, and AI search visibility.",
   ],
   [
     "What is AI SEO?",
@@ -106,6 +107,47 @@ module.exports = {
         <a href="/how-to-start-an-ai-seo-agency/">Start an AI SEO agency →</a>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Not just a course</p>
+      <h2>A real person, and a real team, in your corner</h2>
+      <p>Most AI SEO training stops at the fundamentals. AI Authority Engine goes into hands-on implementation, with personal help when it counts.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <div class="pillar-num">1:1</div>
+        <h3>One-on-one with Cory</h3>
+        <p>Cory Long works with students one-on-one on their own businesses and their clients', not just in group videos.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar-num">$</div>
+        <h3>Help closing clients</h3>
+        <p>Cory has joined students' client meetings to help them make the sale. That's support you won't find in a self-paced course.</p>
+      </article>
+      <article class="pillar reveal">
+        <div class="pillar-num">+</div>
+        <h3>Backed by Yroc Consulting</h3>
+        <p>Behind the program is the full, skilled team at <a href="${site.company.url}" rel="noopener">${site.company.name}</a>, helping students through the technical and business sides.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="prose reveal">
+      <p class="eyebrow">The framework</p>
+      <h2>Taught through the AI Authority Wheel</h2>
+      <p>Everything in AI Authority Engine is built on <a href="/ai-authority-wheel/">the AI Authority Wheel</a>, Cory Long's framework for how AI decides who gets chosen. At the center is the <strong>entity</strong>: who you are, what you do, who you serve, and where you are. Around it are eight authority factors that AI systems weigh before recommending a business.</p>
+      <a class="btn btn-ghost" href="/ai-authority-wheel/">Explore the AI Authority Wheel</a>
+    </div>
+    <ol class="wheel-mini reveal">
+      ${wheel.spokes.map((x) => `<li><a href="/ai-authority-wheel/#${x.slug}">${x.name}</a></li>`).join("\n      ")}
+    </ol>
   </div>
 </section>
 

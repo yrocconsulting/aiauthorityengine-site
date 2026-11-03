@@ -19,6 +19,7 @@ const terms = [
   ["llms.txt", "A proposed plain-text file at the root of a website that summarizes the site and links its most important pages for large language models."],
   ["AI crawler", "A bot that fetches web pages for AI systems, such as OpenAI's OAI-SearchBot and GPTBot, Anthropic's ClaudeBot, and PerplexityBot."],
   ["Zero-click search", "A search where the user gets their answer directly on the results page or in an AI response without clicking through to a website."],
+  ["AI Authority Wheel", "AI Authority Engine's framework for how AI decides which businesses get chosen: the entity (who you are, what you do, who you serve, where you are) at the center, surrounded by eight authority factors: Entity Explanation, Authority Demonstration, External Authority, Reviews & Reputation, Presence & Consistency, Engagement Confirmation, Topical Alignment, and Schema & Data."],
   ["AI Overviews", "Google's AI-generated summaries shown at the top of some search results, which cite supporting web pages."],
   ["E-E-A-T", "Experience, Expertise, Authoritativeness, and Trustworthiness: Google's framework for evaluating content quality, closely related to the trust signals AI systems use."],
 ];

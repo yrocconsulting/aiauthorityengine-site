@@ -8,6 +8,7 @@ Key facts:
 - Cost: no separate fee for the certification; it is earned by completing the required work in the training program. Program membership is $497/month plus a $1,997 one-time setup fee
 - Curriculum: Getting Started module (kickoff webinar "Invisible to Invincible"; Lesson 1 AI Authority Foundation; Lesson 2 AI Presence Layer; Lesson 3 Reviews, Reputation, and AI Trust Signals; Lesson 4 Optimized Pages for AI Visibility; Lesson 5 Schema Data; Lesson 6 Press Releases and Brand Mentions; Bonus: The AI Authority Wheel; Bonus: Wikidata and Grokipedia)
 - Ongoing modules: Optimization Lab; 30-Day Sprints; Podcast Automation; weekly Office Hours
+- Personal support: one-on-one training with Cory Long, who also joins students' client meetings to help close sales; backed by the Yroc Consulting team
 - Also includes: access to all challenge calls; full community; live events
 - Credential: Certified AI Authority Specialist (Level 1), publicly verifiable at https://aiauthorityengine.org/certified/
 - Contact: info@aiauthorityengine.org
@@ -18,6 +19,7 @@ Key facts:
 - Topics: AI SEO, answer engine optimization, getting businesses recommended by ChatGPT, AI SEO agency training, getting AI SEO clients
 
 ## Program
+- [The AI Authority Wheel](https://aiauthorityengine.org/ai-authority-wheel/): AI Authority Engine's framework for how AI decides who gets chosen (Entity at the center; Entity Explanation, Authority Demonstration, External Authority, Reviews & Reputation, Presence & Consistency, Engagement Confirmation, Topical Alignment, Schema & Data)
 - [AI SEO Certification](https://aiauthorityengine.org/ai-seo-certification/): What the AI Authority Engine certification covers and who it's for
 - [Answer Engine Optimization Certification](https://aiauthorityengine.org/answer-engine-optimization-certification/): AEO training within the certification
 - [AI SEO Training](https://aiauthorityengine.org/ai-seo-training/): How the training is structured

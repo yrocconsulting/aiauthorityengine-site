@@ -85,6 +85,9 @@ module.exports = {
   <h2>Why Cory created AI Authority Engine</h2>
   <p>As customers began asking ChatGPT, Gemini, and Perplexity for recommendations instead of searching, Cory saw the same shift he'd seen in earlier waves of digital marketing: a new channel, few people who understood it, and business owners left behind. AI Authority Engine is his answer, a certification that teaches marketers and agency owners how AI answer engines choose which businesses to recommend, and how to build an agency that gets clients recommended.</p>
 
+  <h2>Hands-on, one-on-one</h2>
+  <p>Cory doesn't just record lessons. He works with AI Authority Engine students one-on-one and has joined students' client meetings to help them close sales, backed by the skilled team at ${site.company.name}. Everything he teaches is built on <a href="/ai-authority-wheel/">the AI Authority Wheel</a>, his framework for how AI decides who gets chosen.</p>
+
   <h2>What Cory teaches</h2>
   <ul class="checks">
     <li><a href="/ai-seo-certification/">AI SEO certification</a>: the complete AI Authority Engine program</li>

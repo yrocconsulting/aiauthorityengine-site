@@ -37,7 +37,7 @@ module.exports = {
       ["Lesson 4: Building Optimized Pages for AI Visibility", "Structuring pages answer-first so AI systems can understand, extract, and cite them."],
       ["Lesson 5: Building and Implementing Schema Data", "Adding structured data that tells machines exactly who a business is, what it offers, and who is behind it."],
       ["Lesson 6: Building Press Releases and Brand Mentions", "Earning independent press and brand mentions that corroborate a business across the web."],
-      ["Bonus 1: The AI Authority Wheel", "A framework for seeing how every AI authority signal fits together."],
+      ["Bonus 1: The AI Authority Wheel", "Cory Long's framework for how AI decides who gets chosen: the entity at the center, surrounded by eight authority factors."],
       ["Bonus 2: Building Out Wikidata and Grokipedia", "Creating knowledge-base entries that AI systems use as reference sources."],
     ],
     // Ongoing modules for members.

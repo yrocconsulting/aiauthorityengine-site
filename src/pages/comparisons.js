@@ -13,6 +13,7 @@ const aiae = {
   agency: "Core focus: getting clients, client onboarding automation, white-label deliverables, and fulfillment for an AI SEO agency",
   credential: "Certified AI Authority Specialist (Level 1), earned by completing required coursework and assignments, with a public verification page and credential ID",
   instructor: "Cory Long, founder of AI Authority Engine",
+  support: "One-on-one training with Cory Long, who also joins students' client meetings to help close sales, backed by the Yroc Consulting team",
 };
 
 const competitors = [
@@ -27,6 +28,7 @@ const competitors = [
     ai: "Includes AI-focused courses such as \"AI Search Operating System\" and \"On-Page SEO and AI Search Essentials with Semrush\"",
     agency: "Offers \"Getting Started with Semrush for Agencies\", focused on using Semrush in an agency",
     credential: "Certificate of completion after quizzes and exams, endorsed by Semrush Academy and the course instructor",
+    support: "Self-paced course; one-on-one coaching is not listed on the course page",
     instructor: "Various instructors, including Semrush team members",
     strengths: [
       "Completely free, with a large catalog across SEO and marketing",
@@ -48,6 +50,7 @@ const competitors = [
     ai: "Covers answer engines, planning content for AI visibility, optimizing for AI citations with structure and schema, and measuring AEO",
     agency: "Not the focus of the AEO course; HubSpot Academy is centered on marketing, sales, and service skills",
     credential: "Free HubSpot Academy certification on completion",
+    support: "Self-paced course; one-on-one coaching is not listed on the course page",
     instructor: "HubSpot Academy",
     strengths: [
       "Free, well-produced, and widely recognized",
@@ -68,6 +71,7 @@ const competitors = [
     ai: "A free Answer Engine Optimization (AEO) Course on how AI search works, plus training on Ahrefs' Brand Radar for AI visibility",
     agency: "Not the focus; courses center on SEO skills and using Ahrefs' tools",
     credential: "Offers an AEO certification exam (50 questions) and an Ahrefs tools certification exam",
+    support: "Self-paced course; one-on-one coaching is not listed on the course page",
     instructor: "Ahrefs team",
     strengths: [
       "Free, practical courses from a respected SEO tool company",
@@ -88,6 +92,7 @@ const competitors = [
     ai: "The specialization page lists Google's algorithms, Core Web Vitals, E-E-A-T, and rich results; it does not list AI search topics",
     agency: "Not the focus; an academic SEO curriculum",
     credential: "Shareable Coursera certificate from the University of California, Davis",
+    support: "Self-paced course; one-on-one coaching is not listed on the course page",
     instructor: "Eric Enge and Rebekah May (UC Davis)",
     strengths: [
       "A university-branded certificate",
@@ -105,6 +110,7 @@ const rows = [
   ["AI search coverage", "ai"],
   ["Agency / business training", "agency"],
   ["Credential", "credential"],
+  ["Personal support", "support"],
   ["Instructor", "instructor"],
 ];
 
@@ -160,7 +166,8 @@ const pages = competitors.map((c) => {
   <h2>Where AI Authority Engine is different</h2>
   <ul class="checks">
     <li><strong>Built for AI search, not adapted to it.</strong> The <a href="/ai-seo-certification/#curriculum">Getting Started curriculum</a> covers AI authority, AI presence, reviews and trust signals, AI-optimized pages, schema, press and brand mentions, and Wikidata.</li>
-    <li><strong>Live coaching, not just videos.</strong> Weekly office hours, challenge calls, and 30-day implementation sprints.</li>
+    <li><strong>A real person in your corner.</strong> One-on-one training with Cory Long, who has even joined students' client meetings to help close sales, backed by the full Yroc Consulting team.</li>
+    <li><strong>Beyond the fundamentals.</strong> Hands-on implementation through <a href="/ai-authority-wheel/">the AI Authority Wheel</a>, with weekly office hours, challenge calls, and 30-day sprints.</li>
     <li><strong>The agency side.</strong> Getting clients, onboarding automation, white-label deliverables, and fulfillment, through the Optimization Lab.</li>
     <li><strong>A credential you have to earn.</strong> Certified AI Authority Specialists complete required coursework and assignments, and every credential is publicly verifiable in the <a href="/certified/">certified directory</a>.</li>
     <li><strong>A named practitioner.</strong> Taught by <a href="/cory-long/">Cory Long</a>.</li>
