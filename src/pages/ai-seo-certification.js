@@ -1,13 +1,13 @@
-const { faqHtml, cta, programHtml, priceText, site } = require("../layout");
+const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("../layout");
 
 const faqs = [
   [
     "How much does the AI Authority Engine certification cost?",
-    `The AI Authority Engine program is ${priceText()}. Membership includes the Foundation module (9 core courses), advanced growth modules including the Optimization Lab, weekly live calls, access to all challenge calls, full community access, and live events.`,
+    `The AI Authority Engine program is ${priceText()}. Membership includes the Getting Started curriculum (a kickoff webinar, 6 core lessons, and 2 bonus lessons), the Optimization Lab, 30-Day Sprints, Podcast Automation, weekly live calls, access to all challenge calls, full community access, and live events.`,
   ],
   [
     "What's included in the AI Authority Engine program?",
-    "One primary Foundation module with 9 core courses, multiple advanced growth modules led by the Optimization Lab, weekly live calls, access to all challenge calls, full community access, live events, and the Certified AI Authority Specialist credential (Level 1) on completion.",
+    "The Getting Started curriculum (a kickoff webinar, 6 core lessons on AI authority, AI presence, reviews and trust signals, AI-optimized pages, schema, and press and brand mentions, plus bonuses on the AI Authority Wheel and Wikidata), the Optimization Lab, 30-Day Sprints, Podcast Automation, weekly live calls, access to all challenge calls, full community access, live events, and the Certified AI Authority Specialist credential (Level 1) on completion.",
   ],
   [
     "What is an AI SEO certification?",
@@ -68,18 +68,9 @@ module.exports = {
   <p>Most SEO courses were written for a world of ten blue links. They teach keyword targeting and link building, which still matter, but they don't explain how a large language model decides that one plumber, law firm, or software product deserves a recommendation and another doesn't.</p>
   <p>AI search works differently. Answer engines build an understanding of <em>entities</em>, cross-check facts across many sources, and favor businesses whose identity, expertise, and reputation are consistent and verifiable. An AI SEO certification should train you on exactly those mechanics, and that is what this program does.</p>
 
-  <h2>What the certification covers</h2>
-  <ol class="modules">
-    <li><strong>How AI search works.</strong> Retrieval, entity recognition, and how ChatGPT, Gemini, Perplexity, and Google AI Overviews assemble an answer.</li>
-    <li><strong>AI SEO vs. traditional SEO.</strong> What carries over, what doesn't, and where the new opportunities are.</li>
-    <li><strong>Entity foundations.</strong> Defining a business as a clear, unambiguous entity with consistent facts everywhere it appears.</li>
-    <li><strong>Answer engine optimization.</strong> Writing and structuring content that AI systems extract, quote, and cite.</li>
-    <li><strong>Structured data for AI.</strong> Organization, Person, LocalBusiness, Product, Service, and FAQ schema that machines can trust.</li>
-    <li><strong>Authority and trust signals.</strong> Reviews, citations, third-party mentions, press, and expert profiles.</li>
-    <li><strong>AI visibility audits.</strong> Measuring what AI assistants currently say about a business and tracking change over time.</li>
-    <li><strong>Delivering AI SEO for clients.</strong> Processes, deliverables, reporting, and setting honest expectations.</li>
-    <li><strong>Building the agency.</strong> Offers, pricing, and <a href="/how-to-get-clients-for-an-ai-seo-agency/">client acquisition</a>.</li>
-  </ol>
+  <h2 id="curriculum">What the certification covers</h2>
+  <p>Every student starts with the Getting Started curriculum, then continues with ongoing modules, live calls, and community support.</p>
+  ${curriculumHtml()}
 
   <h2>Who should get certified</h2>
   <ul>

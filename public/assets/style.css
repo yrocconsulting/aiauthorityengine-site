@@ -412,3 +412,10 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 /* ---------- Contact */
 .contact-card { display: grid; gap: 6px; padding: 26px; border-radius: 20px; background: var(--glass); border: 1px solid var(--line-2); max-width: 620px; }
 .contact-card a.big { font-family: var(--display); font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; color: #fff; text-decoration: none; word-break: break-all; }
+
+/* Curriculum */
+.cur-h { font-size: 1.15rem; color: var(--cyan); text-transform: uppercase; letter-spacing: .12em; margin: 34px 0 16px; }
+.mod-cards { margin: 16px 0 0; }
+.mod-cards .card h3 { color: #fff; }
+.modules-grid { align-items: start; }
+.mod-cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }

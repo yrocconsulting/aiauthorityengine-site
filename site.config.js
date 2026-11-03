@@ -28,8 +28,25 @@ module.exports = {
     priceMonthly: 497,
     currency: "USD",
     setupFee: 1997, // one-time setup fee (USD)
-    foundation: { name: "Foundation", courses: 9 },
-    growthModules: ["Optimization Lab"], // add other growth module names here
+    // Getting Started: the core curriculum every student completes.
+    gettingStarted: [
+      ["Invisible to Invincible: The AI Search Transformation Webinar", "The kickoff: how AI search is changing the way customers find businesses, and the opportunity it creates."],
+      ["Lesson 1: Building Your AI Authority Foundation", "Defining a business as a clear, consistent entity that AI systems can identify with confidence."],
+      ["Lesson 2: Building Your AI Presence Layer", "Establishing the profiles and listings across the web where AI systems look for and verify a business."],
+      ["Lesson 3: Building Your Reviews, Reputation, and AI Trust Signals", "Building the reviews and reputation signals AI assistants weigh before recommending a business."],
+      ["Lesson 4: Building Optimized Pages for AI Visibility", "Structuring pages answer-first so AI systems can understand, extract, and cite them."],
+      ["Lesson 5: Building and Implementing Schema Data", "Adding structured data that tells machines exactly who a business is, what it offers, and who is behind it."],
+      ["Lesson 6: Building Press Releases and Brand Mentions", "Earning independent press and brand mentions that corroborate a business across the web."],
+      ["Bonus 1: The AI Authority Wheel", "A framework for seeing how every AI authority signal fits together."],
+      ["Bonus 2: Building Out Wikidata and Grokipedia", "Creating knowledge-base entries that AI systems use as reference sources."],
+    ],
+    // Ongoing modules for members.
+    modules: [
+      ["Optimization Lab", "The main advanced module: continually updated trainings on live AI searches, Reddit, Meta AI, Google Maps, page structure for AI, client onboarding automation, custom dashboards, and white-label deliverables."],
+      ["30-Day Sprints", "Focused implementation sprints with kickoff training and live working sessions."],
+      ["Podcast Automation", "Building an automated podcast content and distribution system that creates brand mentions at scale."],
+      ["Office Hours", "Weekly live calls with recordings of every session."],
+    ],
   },
 
   founder: {

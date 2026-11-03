@@ -15,7 +15,7 @@ const faqs = [
   ["Can AI Authority Engine guarantee ChatGPT recommendations?", "No one can guarantee AI outputs. The program teaches how to strengthen the signals AI systems rely on and how to measure progress honestly."],
   ["Is the training online?", `Yes. The courses are online and self-paced, with weekly live calls, challenge calls, a full community, and live events. Enroll at ${enroll}.`],
   ["How much does it cost?", `The AI Authority Engine program is ${priceText()}.`],
-  ["What's included?", "One primary Foundation module with 9 core courses, multiple advanced growth modules led by the Optimization Lab, weekly live calls, access to all challenge calls, full community access, and live events."],
+  ["What's included?", "The Getting Started curriculum (a kickoff webinar, 6 core lessons on AI authority, AI presence, reviews and trust signals, AI-optimized pages, schema, and press and brand mentions, plus bonuses on the AI Authority Wheel and Wikidata), the Optimization Lab, 30-Day Sprints, Podcast Automation, weekly live calls, access to all challenge calls, full community access, and live events."],
   ["How can I verify someone's certification?", "Every Certified AI Authority Specialist is listed in the public directory at aiauthorityengine.org/certified/ with a verification page and credential ID."],
   ["How do I contact AI Authority Engine?", `Email ${site.contactEmail}.`],
   ["How do I enroll?", `Visit ${enroll} to enroll in the AI Authority Engine certification.`],

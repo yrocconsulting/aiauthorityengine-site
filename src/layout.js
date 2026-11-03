@@ -125,8 +125,8 @@ function courseSchema() {
         availability: "https://schema.org/InStock",
       },
       syllabusSections: [
-        { "@type": "Syllabus", name: "Foundation module", description: "9 core courses covering AI search, entity authority, answer engine optimization, structured data, AI visibility audits, and the agency business." },
-        { "@type": "Syllabus", name: "Optimization Lab", description: "The primary advanced growth module for applying and refining AI SEO on real businesses." },
+        ...site.program.gettingStarted.map(([name, description]) => ({ "@type": "Syllabus", name: `Getting Started: ${name}`, description })),
+        ...site.program.modules.map(([name, description]) => ({ "@type": "Syllabus", name, description })),
       ],
       teaches: [
         "AI SEO",
@@ -216,6 +216,38 @@ function faqHtml(faqs, heading = "Frequently asked questions") {
 </section>`;
 }
 
+// Curriculum: Getting Started lessons + ongoing modules.
+function curriculumHtml({ grid = false } = {}) {
+  const p = site.program;
+  const lessons = p.gettingStarted
+    .map(([t, d], i) =>
+      grid
+        ? `<details class="module reveal"><summary><span class="m-num">${String(i + 1).padStart(2, "0")}</span><h3>${t}</h3></summary><p>${d}</p></details>`
+        : `<li><strong>${t}.</strong> ${d}</li>`
+    )
+    .join("\n      ");
+  const mods = p.modules
+    .map(([t, d]) => `<article class="card reveal"><h3>${t}</h3><p>${d}</p></article>`)
+    .join("\n      ");
+  return grid
+    ? `<h3 class="cur-h">Getting Started: the core curriculum</h3>
+    <div class="modules-grid">
+      ${lessons}
+    </div>
+    <h3 class="cur-h">Then keep growing</h3>
+    <div class="grid-2 mod-cards">
+      ${mods}
+    </div>`
+    : `<h3>Getting Started module</h3>
+  <ol class="modules">
+      ${lessons}
+  </ol>
+  <h3>Ongoing growth modules</h3>
+  <div class="grid-2 mod-cards">
+      ${mods}
+  </div>`;
+}
+
 // Program details table: price, format, and what's included.
 function priceText() {
   const p = site.program;
@@ -230,8 +262,8 @@ function programHtml(heading = "Program details at a glance") {
     <tbody>
       <tr><th scope="row">Price</th><td>${priceText()}</td></tr>
       <tr><th scope="row">Format</th><td>Online: self-paced courses plus weekly live calls</td></tr>
-      <tr><th scope="row">Foundation</th><td>1 primary Foundation module with ${p.foundation.courses} core courses</td></tr>
-      <tr><th scope="row">Growth modules</th><td>Multiple advanced modules for additional growth, led by the ${p.growthModules[0]}</td></tr>
+      <tr><th scope="row">Core curriculum</th><td>Getting Started module: a kickoff webinar, 6 core lessons, and 2 bonus lessons (<a href="/ai-seo-certification/#curriculum">see curriculum</a>)</td></tr>
+      <tr><th scope="row">Growth modules</th><td>${p.modules.slice(0, 3).map(([n]) => n).join(", ")}</td></tr>
       <tr><th scope="row">Live support</th><td>Weekly live calls and access to all challenge calls</td></tr>
       <tr><th scope="row">Community</th><td>Full community access</td></tr>
       <tr><th scope="row">Events</th><td>Live events</td></tr>
@@ -425,4 +457,4 @@ ${sourcesHtml(page)}
 `;
 }
 
-module.exports = { render, faqHtml, cta, videosHtml, programHtml, priceText, site };
+module.exports = { render, faqHtml, cta, videosHtml, programHtml, curriculumHtml, priceText, site };

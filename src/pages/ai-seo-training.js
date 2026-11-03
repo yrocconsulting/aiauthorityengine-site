@@ -7,7 +7,7 @@ const faqs = [
   ],
   [
     "How long does AI SEO training take?",
-    "AI Authority Engine combines self-paced courses with weekly live calls. Many students work through the 9 Foundation courses over a few weeks, then apply them to a real business or client while completing the certification.",
+    "AI Authority Engine combines self-paced courses with weekly live calls. Many students work through the Getting Started lessons over a few weeks, then apply them to a real business or client while completing the certification.",
   ],
   [
     "Can I apply the training to my own business?",
