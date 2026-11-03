@@ -29,6 +29,12 @@ module.exports = [
     website: "https://about.me/markhadley",
     socials: ["https://www.linkedin.com/in/markhadley79/"],
   },
-  { name: "Andrea Katen", slug: "andrea-katen", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0003", kit: "b0a7620399df" },
+  {
+    name: "Andrea Katen", slug: "andrea-katen", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0003", kit: "b0a7620399df",
+    photo: "/assets/graduates/andrea-katen.jpg",
+    agency: { name: "Avenity Business Solutions", url: "https://www.avenitybusinesssolutions.com/" },
+    website: "https://about.me/andrea.katen",
+    socials: ["https://www.linkedin.com/in/andreakaten"],
+  },
   { name: "Brian Driggs", slug: "brian-driggs", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0004", kit: "84644a844087" },
 ];
