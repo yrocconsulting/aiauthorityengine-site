@@ -1,4 +1,4 @@
-const { faqHtml, cta, videosHtml, site } = require("../layout");
+const { faqHtml, cta, videosHtml, programHtml, site } = require("../layout");
 
 const faqs = [
   [
@@ -7,7 +7,7 @@ const faqs = [
   ],
   [
     "How long does AI SEO training take?",
-    "AI Authority Engine is self-paced. Many students work through the core modules over a few weeks, then apply them to a real business or client while completing the certification.",
+    "AI Authority Engine combines self-paced courses with weekly live calls. Many students work through the 9 Foundation courses over a few weeks, then apply them to a real business or client while completing the certification.",
   ],
   [
     "Can I apply the training to my own business?",
@@ -87,6 +87,7 @@ module.exports = {
   </ul>
 </section>
 
+<div class="wrap">${programHtml()}</div>
 <div class="wrap">${videosHtml("Watch the training in action")}</div>
 <div class="wrap">${faqHtml(faqs, "AI SEO training FAQ")}</div>
 ${cta("Start your AI SEO training")}

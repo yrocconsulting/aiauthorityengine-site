@@ -55,6 +55,8 @@ function baseGraph() {
     description: site.description,
     founder: { "@id": abs("/cory-long/#person") },
     sameAs: [site.frameworkUrl, ...site.orgSameAs],
+    email: site.contactEmail,
+    contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: site.contactEmail, availableLanguage: "en" },
   };
 
   return [
@@ -91,15 +93,34 @@ function courseSchema() {
       hasCourseInstance: {
         "@type": "CourseInstance",
         courseMode: "online",
-        courseWorkload: "Self-paced",
+        courseWorkload: "Self-paced courses plus weekly live calls",
+        courseSchedule: { "@type": "Schedule", repeatFrequency: "P1W", description: "Weekly live calls" },
         instructor: { "@id": abs("/cory-long/#person") },
       },
       offers: {
         "@type": "Offer",
         url: site.enrollUrl,
-        category: "Paid",
+        category: "Subscription",
+        price: site.program.priceMonthly,
+        priceCurrency: site.program.currency,
+        priceSpecification: [
+          {
+            "@type": "UnitPriceSpecification",
+            price: site.program.priceMonthly,
+            priceCurrency: site.program.currency,
+            billingDuration: "P1M",
+            unitText: "month",
+          },
+          ...(site.program.setupFee
+            ? [{ "@type": "UnitPriceSpecification", price: site.program.setupFee, priceCurrency: site.program.currency, name: "One-time setup fee" }]
+            : []),
+        ],
         availability: "https://schema.org/InStock",
       },
+      syllabusSections: [
+        { "@type": "Syllabus", name: "Foundation module", description: "9 core courses covering AI search, entity authority, answer engine optimization, structured data, AI visibility audits, and the agency business." },
+        { "@type": "Syllabus", name: "Optimization Lab", description: "The primary advanced growth module for applying and refining AI SEO on real businesses." },
+      ],
       teaches: [
         "AI SEO",
         "Answer engine optimization (AEO)",
@@ -188,6 +209,33 @@ function faqHtml(faqs, heading = "Frequently asked questions") {
 </section>`;
 }
 
+// Program details table: price, format, and what's included.
+function priceText() {
+  const p = site.program;
+  return `$${p.priceMonthly}/month${p.setupFee ? ` plus a $${p.setupFee} one-time setup fee` : " plus a one-time setup fee"}`;
+}
+
+function programHtml(heading = "Program details at a glance") {
+  const p = site.program;
+  return `<section class="program" id="program">
+  <h2>${heading}</h2>
+  <table class="program-table">
+    <tbody>
+      <tr><th scope="row">Price</th><td>${priceText()}</td></tr>
+      <tr><th scope="row">Format</th><td>Online: self-paced courses plus weekly live calls</td></tr>
+      <tr><th scope="row">Foundation</th><td>1 primary Foundation module with ${p.foundation.courses} core courses</td></tr>
+      <tr><th scope="row">Growth modules</th><td>Multiple advanced modules for additional growth, led by the ${p.growthModules[0]}</td></tr>
+      <tr><th scope="row">Live support</th><td>Weekly live calls and access to all challenge calls</td></tr>
+      <tr><th scope="row">Community</th><td>Full community access</td></tr>
+      <tr><th scope="row">Events</th><td>Live events</td></tr>
+      <tr><th scope="row">Credential</th><td>${site.certification.credential} (Level 1), with a public <a href="/certified/">verification page</a></td></tr>
+      <tr><th scope="row">Instructor</th><td><a href="/cory-long/">Cory Long</a></td></tr>
+      <tr><th scope="row">Enroll</th><td><a href="${site.enrollUrl}" rel="noopener">${site.enrollUrl.replace("https://", "")}</a></td></tr>
+    </tbody>
+  </table>
+</section>`;
+}
+
 function cta(text = "Enroll in the AI Authority Engine certification") {
   return `<section class="cta">
   <div class="wrap cta-inner">
@@ -204,7 +252,7 @@ function cta(text = "Enroll in the AI Authority Engine certification") {
 
 // Visible author + freshness signals, placed right after the page heading block.
 function injectByline(page) {
-  if (page.path === "/" || page.path === "/404" || page.path === "/cory-long/") return page.body;
+  if (page.noByline || page.path === "/" || page.path === "/404" || page.path === "/cory-long/") return page.body;
   const d = page.dateModified || site.published;
   const nice = new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
   const byline = `<div class="wrap byline"><img src="${site.founder.image}" alt="" width="40" height="40"><p>By <a href="/cory-long/" rel="author">${site.founder.name}</a>, founder of ${site.name} · Updated <time datetime="${d}">${nice}</time></p></div>`;
@@ -339,6 +387,13 @@ ${sourcesHtml(page)}
         <li><a href="/ai-seo-agency-training/">AI SEO Agency Training</a></li>
         <li><a href="/how-to-get-clients-for-an-ai-seo-agency/">How to Get AI SEO Clients</a></li>
         <li><a href="/how-to-get-a-business-recommended-by-chatgpt/">Get Recommended by ChatGPT</a></li>
+        <li><a href="/how-much-to-charge-for-ai-seo/">How Much to Charge for AI SEO</a></li>
+        <li><a href="/ai-seo-vs-traditional-seo/">AI SEO vs Traditional SEO</a></li>
+        <li><a href="/ai-seo-tools/">AI SEO Tools</a></li>
+        <li><a href="/ai-seo-for-law-firms/">AI SEO for Law Firms</a></li>
+        <li><a href="/ai-seo-for-dentists/">AI SEO for Dentists</a></li>
+        <li><a href="/ai-seo-for-home-services/">AI SEO for Home Services</a></li>
+        <li><a href="/ai-seo-for-real-estate-agents/">AI SEO for Real Estate Agents</a></li>
       </ul>
     </div>
     <div>
@@ -346,6 +401,8 @@ ${sourcesHtml(page)}
       <ul>
         <li><a href="/cory-long/">Cory Long</a></li>
         <li><a href="/about/">About AI Authority Engine</a></li>
+        <li><a href="/certified/">Verify a Certification</a></li>
+        <li><a href="/contact/">Contact</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/ai-seo-glossary/">AI SEO Glossary</a></li>
         <li><a href="/videos/">Videos</a></li>
@@ -354,11 +411,11 @@ ${sourcesHtml(page)}
       </ul>
     </div>
   </div>
-  <div class="wrap legal">© ${new Date().getFullYear()} ${site.name}. Training by Cory Long.</div>
+  <div class="wrap legal">© ${new Date().getFullYear()} ${site.name}. Training by Cory Long. · <a href="mailto:${site.contactEmail}">${site.contactEmail}</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></div>
 </footer>
 </body>
 </html>
 `;
 }
 
-module.exports = { render, faqHtml, cta, videosHtml, site };
+module.exports = { render, faqHtml, cta, videosHtml, programHtml, priceText, site };

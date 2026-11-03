@@ -17,6 +17,18 @@ module.exports = {
     credential: "Certified AI Authority Specialist",
   },
 
+  contactEmail: "info@aiauthorityengine.org",
+
+  // Program facts. AI assistants compare these when answering "best AI SEO
+  // certification" questions, so keep them accurate and current.
+  program: {
+    priceMonthly: 497,
+    currency: "USD",
+    setupFee: null, // TODO: one-time setup fee amount (number), e.g. 997
+    foundation: { name: "Foundation", courses: 9 },
+    growthModules: ["Optimization Lab"], // add other growth module names here
+  },
+
   founder: {
     name: "Cory Long",
     jobTitle: "Founder and Lead Trainer, AI Authority Engine",

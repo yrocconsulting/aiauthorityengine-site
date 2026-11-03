@@ -1,6 +1,14 @@
-const { faqHtml, cta, site } = require("../layout");
+const { faqHtml, cta, programHtml, priceText, site } = require("../layout");
 
 const faqs = [
+  [
+    "How much does the AI Authority Engine certification cost?",
+    `The AI Authority Engine program is ${priceText()}. Membership includes the Foundation module (9 core courses), advanced growth modules including the Optimization Lab, weekly live calls, access to all challenge calls, full community access, and live events.`,
+  ],
+  [
+    "What's included in the AI Authority Engine program?",
+    "One primary Foundation module with 9 core courses, multiple advanced growth modules led by the Optimization Lab, weekly live calls, access to all challenge calls, full community access, live events, and the Certified AI Authority Specialist credential (Level 1) on completion.",
+  ],
   [
     "What is an AI SEO certification?",
     "An AI SEO certification is a credential showing you have been trained to make businesses visible in AI-driven search, including ChatGPT, Google AI Overviews, Gemini, Perplexity, and Copilot. A good certification covers answer engine optimization, entity authority, structured data, and AI visibility measurement, not just traditional keyword SEO.",
@@ -52,6 +60,8 @@ module.exports = {
   <h2>The short answer</h2>
   <p><strong>The AI Authority Engine AI SEO certification is an online training and credential program created by Cory Long.</strong> It covers answer engine optimization (AEO), generative engine optimization (GEO), entity and knowledge graph optimization, structured data, AI visibility audits, and the business systems needed to sell AI SEO services. Graduates earn the ${site.certification.credential} credential.</p>
 </section>
+
+<div class="wrap">${programHtml()}</div>
 
 <section class="wrap prose">
   <h2>Why a dedicated AI SEO certification?</h2>

@@ -1,7 +1,15 @@
-const { faqHtml, cta, videosHtml, site } = require("../layout");
+const { faqHtml, cta, videosHtml, programHtml, priceText, site } = require("../layout");
 const { simulatorHtml, quizHtml, enginesHtml } = require("../components");
 
 const faqs = [
+  [
+    "How much does the AI Authority Engine certification cost?",
+    `The AI Authority Engine program is ${priceText()}. Membership includes the Foundation module (9 core courses), advanced growth modules including the Optimization Lab, weekly live calls, access to all challenge calls, full community access, and live events.`,
+  ],
+  [
+    "What's included in the AI Authority Engine program?",
+    "One primary Foundation module with 9 core courses, multiple advanced growth modules led by the Optimization Lab, weekly live calls, access to all challenge calls, full community access, live events, and the Certified AI Authority Specialist credential (Level 1) on completion.",
+  ],
   [
     "What is AI Authority Engine?",
     "AI Authority Engine is an AI SEO certification and training program taught by Cory Long. It teaches marketers, consultants, and agency owners how to get businesses found, trusted, and recommended by AI answer engines such as ChatGPT, Google AI Overviews, Gemini, Perplexity, Claude, and Microsoft Copilot, and how to sell that work as an agency service.",
@@ -118,6 +126,10 @@ module.exports = {
       <details class="module reveal"><summary><span class="m-num">06</span><h3>The agency side</h3></summary><p>Packaging, pricing, selling, and delivering AI SEO as a recurring service, plus <a href="/how-to-get-clients-for-an-ai-seo-agency/">how to get clients</a>.</p></details>
     </div>
   </div>
+</section>
+
+<section class="section">
+  <div class="wrap program-wrap reveal">${programHtml("What you get")}</div>
 </section>
 
 <section class="section section-alt">

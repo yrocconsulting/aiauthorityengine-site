@@ -11,7 +11,7 @@ const pagesDir = path.join(__dirname, "src/pages");
 const pages = fs
   .readdirSync(pagesDir)
   .filter((f) => f.endsWith(".js"))
-  .map((f) => require(path.join(pagesDir, f)));
+  .flatMap((f) => [].concat(require(path.join(pagesDir, f))));
 
 const today = new Date().toISOString().slice(0, 10);
 for (const page of pages) {

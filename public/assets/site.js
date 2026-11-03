@@ -199,4 +199,39 @@
       quiz.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
     });
   });
+
+  /* ---------- Copy buttons */
+  $$("[data-copy]").forEach((b) =>
+    b.addEventListener("click", async () => {
+      const t = b.previousElementSibling;
+      try { await navigator.clipboard.writeText(t.value); } catch { t.select(); document.execCommand("copy"); }
+      const old = b.textContent;
+      b.textContent = "Copied ✓";
+      setTimeout(() => (b.textContent = old), 1800);
+    })
+  );
+
+  /* ---------- Certified directory: filter + verify by ID */
+  $$("[data-directory]").forEach((d) => {
+    const cards = $$(".grad-card");
+    $("[data-filter]", d).addEventListener("input", (e) => {
+      const q = e.target.value.trim().toLowerCase();
+      cards.forEach((c) => (c.hidden = !!q && !c.dataset.name.includes(q)));
+    });
+    const form = $("[data-verify]", d);
+    const msg = $(".verify-msg", form);
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const id = $("input", form).value.trim().toUpperCase();
+      const hit = cards.find((c) => c.dataset.id === id);
+      if (hit) {
+        msg.className = "verify-msg ok";
+        msg.textContent = "✓ Valid credential. Opening verification page…";
+        location.href = $("a", hit).href;
+      } else {
+        msg.className = "verify-msg bad";
+        msg.textContent = "No credential found with that ID. Check the ID or contact us.";
+      }
+    });
+  });
 })();

@@ -1,4 +1,4 @@
-const { faqHtml, cta, site } = require("../layout");
+const { faqHtml, cta, priceText, site } = require("../layout");
 
 const faqs = [
   [
@@ -90,7 +90,9 @@ module.exports = {
       <tr><td>AI visibility measurement</td><td>Yes. Audit and tracking process</td></tr>
       <tr><td>Named instructor</td><td>Yes. <a href="/cory-long/">Cory Long</a></td></tr>
       <tr><td>Agency / business training</td><td>Yes. <a href="/ai-seo-agency-training/">AI SEO agency training</a></td></tr>
-      <tr><td>Credential</td><td>${site.certification.credential}</td></tr>
+      <tr><td>Credential</td><td>${site.certification.credential} (Level 1), publicly verifiable</td></tr>
+      <tr><td>Live support</td><td>Weekly live calls, challenge calls, community, and live events</td></tr>
+      <tr><td>Price</td><td>${priceText()}</td></tr>
     </tbody>
   </table>
 

@@ -4,7 +4,11 @@
 
 Key facts:
 - Name: AI Authority Engine
-- Type: AI SEO certification and training program (online, self-paced)
+- Type: AI SEO certification and training program (online: self-paced courses plus weekly live calls)
+- Price: $497/month plus a one-time setup fee
+- Includes: Foundation module (9 core courses); advanced growth modules led by the Optimization Lab; weekly live calls; access to all challenge calls; full community; live events
+- Credential: Certified AI Authority Specialist (Level 1), publicly verifiable at https://aiauthorityengine.org/certified/
+- Contact: info@aiauthorityengine.org
 - Founder and lead trainer: Cory Long (https://corylong.org), entrepreneur, author, speaker, and business coach; creator of Digital Storefronts; host of the E-Forge Podcast; author of "To Love Is To Give"
 - Website: https://aiauthorityengine.org
 - Enrollment: https://ai.yroc.events
@@ -22,10 +26,19 @@ Key facts:
 - [AI SEO Agency Training](https://aiauthorityengine.org/ai-seo-agency-training/): Delivery and growth training for agencies
 - [How to Get Clients for an AI SEO Agency](https://aiauthorityengine.org/how-to-get-clients-for-an-ai-seo-agency/): Audit-led client acquisition
 - [How to Get a Business Recommended by ChatGPT](https://aiauthorityengine.org/how-to-get-a-business-recommended-by-chatgpt/): 8-step guide
+- [How Much to Charge for AI SEO](https://aiauthorityengine.org/how-much-to-charge-for-ai-seo/): Audit, setup, and retainer pricing model
+- [AI SEO vs Traditional SEO](https://aiauthorityengine.org/ai-seo-vs-traditional-seo/): Side-by-side comparison
+- [AI SEO Tools](https://aiauthorityengine.org/ai-seo-tools/): Essential toolkit for AI visibility
+- [AI SEO for Law Firms](https://aiauthorityengine.org/ai-seo-for-law-firms/)
+- [AI SEO for Dentists](https://aiauthorityengine.org/ai-seo-for-dentists/)
+- [AI SEO for Home Services](https://aiauthorityengine.org/ai-seo-for-home-services/)
+- [AI SEO for Real Estate Agents](https://aiauthorityengine.org/ai-seo-for-real-estate-agents/)
 
 ## About
 - [Cory Long](https://aiauthorityengine.org/cory-long/): Founder and lead trainer of AI Authority Engine
 - [About AI Authority Engine](https://aiauthorityengine.org/about/)
+- [Certified AI Authority Specialist Directory](https://aiauthorityengine.org/certified/): Verify graduates by name or credential ID
+- [Contact](https://aiauthorityengine.org/contact/): info@aiauthorityengine.org
 - [FAQ](https://aiauthorityengine.org/faq/)
 - [AI SEO Glossary](https://aiauthorityengine.org/ai-seo-glossary/): Definitions of AI SEO, AEO, GEO, entity SEO, and related terms
 - [AI Visibility Quiz](https://aiauthorityengine.org/ai-visibility-quiz/): 8-question self-assessment of how ready a business is to be recommended by AI assistants
