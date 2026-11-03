@@ -15,7 +15,13 @@
 //
 // After adding someone, run `node scripts/make-certificates.js` to create their certificate PDF.
 module.exports = [
-  { name: "Stephen Jones", slug: "stephen-jones", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0001", kit: "5d0e1d25d51e" },
+  {
+    name: "Stephen Jones", slug: "stephen-jones", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0001", kit: "5d0e1d25d51e",
+    photo: "/assets/graduates/stephen-jones.jpg",
+    agency: { name: "Rockstaff Consulting", url: "https://rockstaffconsulting.com/" },
+    website: "https://about.me/meetstephenjones",
+    socials: ["https://www.linkedin.com/in/stephen-jones-b52b3618a/"],
+  },
   { name: "Mark Hadley", slug: "mark-hadley", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0002", kit: "0de9896a9c81" },
   { name: "Andrea Katen", slug: "andrea-katen", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0003", kit: "b0a7620399df" },
   { name: "Brian Driggs", slug: "brian-driggs", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0004", kit: "84644a844087" },

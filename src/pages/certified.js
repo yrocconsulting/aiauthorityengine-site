@@ -85,7 +85,8 @@ const directory = {
         ${g.photo ? `<img class="grad-photo" src="${g.photo}" alt="" width="72" height="72" loading="lazy">` : `<img src="/assets/badge-sm.webp" alt="" width="72" height="61" loading="lazy">`}
         <div>
           <h2><a href="/certified/${g.slug}/">${g.name}</a></h2>
-          <p>${credential} · Level ${g.level}${g.agency ? ` · ${esc(g.agency.name)}` : ""}</p>
+          <p>${credential} · Level ${g.level}</p>
+          ${g.agency ? `<p class="grad-agency">${esc(g.agency.name)}</p>` : ""}
           <p class="meta">Issued ${nice(g.issued)} · ID ${g.id}</p>
         </div>
         <span class="verified">✓ Verified</span>

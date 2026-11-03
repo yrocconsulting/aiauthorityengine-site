@@ -419,3 +419,5 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 .mod-cards .card h3 { color: #fff; }
 .modules-grid { align-items: start; }
 .mod-cards { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.grad-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 460px), 1fr)); }
+.grad-card .grad-agency { color: #fff; font-weight: 600; }
