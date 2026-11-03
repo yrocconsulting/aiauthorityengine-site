@@ -443,3 +443,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 .wheel-mini a::before { content: counter(w, decimal-leading-zero); color: var(--cyan); font-weight: 900; }
 .wheel-mini a:hover { border-color: var(--cyan); transform: translateY(-2px); }
 @media (max-width: 500px) { .wheel-mini { grid-template-columns: 1fr; } }
+
+/* Directory tools: keep both inputs the same height and aligned */
+.field { align-content: start; }
+.field input, .verify-form .btn { height: 50px; }
+.verify-form .btn { padding-top: 0; padding-bottom: 0; }
