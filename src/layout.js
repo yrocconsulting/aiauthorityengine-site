@@ -212,7 +212,7 @@ function faqHtml(faqs, heading = "Frequently asked questions") {
 // Program details table: price, format, and what's included.
 function priceText() {
   const p = site.program;
-  return `$${p.priceMonthly}/month${p.setupFee ? ` plus a $${p.setupFee} one-time setup fee` : " plus a one-time setup fee"}`;
+  return `$${p.priceMonthly}/month${p.setupFee ? ` plus a $${p.setupFee.toLocaleString("en-US")} one-time setup fee` : " plus a one-time setup fee"}`;
 }
 
 function programHtml(heading = "Program details at a glance") {

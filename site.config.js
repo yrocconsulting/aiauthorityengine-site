@@ -24,7 +24,7 @@ module.exports = {
   program: {
     priceMonthly: 497,
     currency: "USD",
-    setupFee: null, // TODO: one-time setup fee amount (number), e.g. 997
+    setupFee: 1997, // one-time setup fee (USD)
     foundation: { name: "Foundation", courses: 9 },
     growthModules: ["Optimization Lab"], // add other growth module names here
   },
