@@ -73,7 +73,6 @@ const privacy = {
   <h2>Third-party services</h2>
   <ul>
     <li><strong>Google Fonts</strong> delivers the site's typefaces; your browser requests them from Google.</li>
-    <li><strong>YouTube</strong> videos are embedded in privacy-enhanced mode (youtube-nocookie.com). YouTube may set cookies if you play a video.</li>
     <li><strong>Enrollment</strong> happens on our training platform at <a href="${site.enrollUrl}" rel="noopener">${site.enrollUrl.replace("https://", "")}</a>, which has its own privacy terms covering account, payment, and course data.</li>
   </ul>
 

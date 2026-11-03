@@ -82,22 +82,8 @@ module.exports = {
 
   published: "2026-11-02",
 
-  // Videos embedded on the site. TODO: add uploadDate (YYYY-MM-DD) for each
-  // so Google can show video rich results.
-  videos: [
-    {
-      id: "Kgcmi70xZYE",
-      name: "AI SEO Live Training with Cory Long: Day 1",
-      description:
-        "Recording of day 1 of Cory Long's live AI training event, presented by AI Authority Engine.",
-    },
-    {
-      id: "JvPC7tDTjb8",
-      name: "AI SEO Live Training with Cory Long: Day 2",
-      description:
-        "Recording of day 2 of Cory Long's live AI training event, presented by AI Authority Engine.",
-    },
-  ],
+  // Videos embedded on the site (none currently).
+  videos: [],
 
   // TODO: add official AI Authority Engine social / directory profiles.
   orgSameAs: [],

@@ -1,4 +1,4 @@
-const { faqHtml, cta, videosHtml, programHtml, curriculumHtml, priceText, site } = require("../layout");
+const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("../layout");
 const { simulatorHtml, quizHtml, enginesHtml } = require("../components");
 
 const faqs = [
@@ -40,7 +40,6 @@ module.exports = {
   h1: "AI Authority Engine",
   course: true,
   faqs,
-  videos: true,
   body: `
 <section class="hero">
   <canvas class="hero-net" aria-hidden="true"></canvas>
@@ -170,7 +169,6 @@ module.exports = {
   </div>
 </section>
 
-<div class="wrap">${videosHtml()}</div>
 <div class="wrap">${faqHtml(faqs)}</div>
 ${cta()}
 `,

@@ -9,6 +9,9 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [L,R=301]
 
+# Retired pages
+Redirect 301 /videos/ https://aiauthorityengine.org/ai-seo-training/
+
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
 Options -Indexes

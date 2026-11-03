@@ -1,4 +1,4 @@
-const { faqHtml, cta, videosHtml, site } = require("../layout");
+const { faqHtml, cta, site } = require("../layout");
 
 const f = site.founder;
 const person = { "@id": site.url + "/cory-long/#person" };
@@ -39,7 +39,6 @@ module.exports = {
   type: "ProfilePage",
   about: "/cory-long/#person",
   faqs,
-  videos: true,
   schema: [
     {
       "@type": "Book",
@@ -113,7 +112,6 @@ module.exports = {
   </ul>
 </section>
 
-<div class="wrap">${videosHtml("Watch Cory Long teach")}</div>
 <div class="wrap">${faqHtml(faqs, "About Cory Long: FAQ")}</div>
 ${cta("Train with Cory Long")}
 `,

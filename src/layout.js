@@ -445,7 +445,6 @@ ${sourcesHtml(page)}
         <li><a href="/contact/">Contact</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/ai-seo-glossary/">AI SEO Glossary</a></li>
-        <li><a href="/videos/">Videos</a></li>
         <li><a href="/ai-visibility-quiz/">AI Visibility Quiz</a></li>
         <li><a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a></li>
       </ul>

@@ -64,21 +64,7 @@ Every profile should use the descriptions above **and link to https://aiauthorit
 
 Skip local listings like Google Business Profile; this is not a local business.
 
-## 5. YouTube fixes for the two training videos
-
-YouTube titles and descriptions are read by Google and AI systems. Rename them:
-
-| Video | Current title | Suggested title |
-|---|---|---|
-| youtu.be/Kgcmi70xZYE | edited ai event 1 | AI SEO Live Training with Cory Long: Day 1, AI Authority Engine |
-| youtu.be/JvPC7tDTjb8 | edited ai event day 2 | AI SEO Live Training with Cory Long: Day 2, AI Authority Engine |
-
-Suggested description opening (first 2 lines matter most):
-> Day [1/2] of Cory Long's live AI training from AI Authority Engine, the AI SEO certification program. Learn more: https://aiauthorityengine.org
->
-> [Then 2–4 sentences summarizing what's covered, plus chapter timestamps.]
-
-Also add chapters (timestamps) and upload captions/transcripts. AI systems read transcripts. Send the upload dates to Claude so they can be added to the site's video schema.
+## 5. (Removed: training videos are no longer embedded on the site)
 
 ## 6. Link snippets for your other sites
 
