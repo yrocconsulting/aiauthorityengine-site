@@ -36,5 +36,10 @@ module.exports = [
     website: "https://about.me/andrea.katen",
     socials: ["https://www.linkedin.com/in/andreakaten"],
   },
-  { name: "Brian Driggs", slug: "brian-driggs", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0004", kit: "84644a844087" },
+  {
+    name: "Brian Driggs", slug: "brian-driggs", level: 1, issued: "2026-11-03", id: "AIAE-L1-2026-0004", kit: "84644a844087",
+    photo: "/assets/graduates/brian-driggs.jpg",
+    agency: { name: "Social Funnel Marketing", url: "https://socialfunnelmarketing.com/" },
+    socials: ["https://www.linkedin.com/in/brian-driggs-995409173/"],
+  },
 ];
