@@ -46,6 +46,11 @@ module.exports = [
     socials: ["https://www.linkedin.com/in/brian-driggs-995409173/"],
   },
   // TODO: add photo, agency, website, and socials when received.
-  { name: "Jason Keirstein", slug: "jason-keirstein", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0005", kit: "d896a7163e68" },
+  {
+    name: "Jason Keirstein", slug: "jason-keirstein", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0005", kit: "d896a7163e68",
+    photo: "/assets/graduates/jason-keirstein.jpg",
+    agency: { name: "5 Talents Services", url: "https://www.facebook.com/5TalentsServices/" },
+    socials: ["https://www.linkedin.com/in/jason-kierstein-138866/"],
+  },
   { name: "Aaron Johnson", slug: "aaron-johnson", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0006", kit: "bdf73acdd48d" },
 ];
