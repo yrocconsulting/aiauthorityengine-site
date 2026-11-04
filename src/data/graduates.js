@@ -42,4 +42,7 @@ module.exports = [
     agency: { name: "Social Funnel Marketing", url: "https://socialfunnelmarketing.com/" },
     socials: ["https://www.linkedin.com/in/brian-driggs-995409173/"],
   },
+  // TODO: add photo, agency, website, and socials when received.
+  { name: "Jason Keirstein", slug: "jason-keirstein", level: 1, issued: "2026-11-04", id: "AIAE-L1-2026-0005", kit: "d896a7163e68" },
+  { name: "Aaron Johnson", slug: "aaron-johnson", level: 1, issued: "2026-11-04", id: "AIAE-L1-2026-0006", kit: "bdf73acdd48d" },
 ];
