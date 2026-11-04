@@ -47,8 +47,8 @@ module.exports = [
   },
   // TODO: add photo, agency, website, and socials when received.
   {
-    name: "Jason Keirstein", slug: "jason-keirstein", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0005", kit: "d896a7163e68",
-    photo: "/assets/graduates/jason-keirstein.jpg",
+    name: "Jason Kierstein", slug: "jason-kierstein", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0005", kit: "d896a7163e68",
+    photo: "/assets/graduates/jason-kierstein.jpg",
     agency: { name: "5 Talents Services", url: "https://www.facebook.com/5TalentsServices/" },
     socials: ["https://www.linkedin.com/in/jason-kierstein-138866/"],
   },

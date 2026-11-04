@@ -11,6 +11,9 @@ RewriteRule ^(.*)$ /$1/ [L,R=301]
 
 # Retired pages
 Redirect 301 /videos/ https://aiauthorityengine.org/ai-seo-training/
+# Name spelling corrected: Keirstein -> Kierstein (covers the kit page too)
+Redirect 301 /certified/jason-keirstein/ https://aiauthorityengine.org/certified/jason-kierstein/
+Redirect 301 /certificates/jason-keirstein-d896a7163e68.pdf https://aiauthorityengine.org/certificates/jason-kierstein-d896a7163e68.pdf
 
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
