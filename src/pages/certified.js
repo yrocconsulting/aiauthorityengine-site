@@ -168,7 +168,7 @@ const profiles = graduates.map((g) => {
 
 <section class="wrap answer-box">
   <h2>Credential status: active</h2>
-  <p><strong>${g.name}${g.agency ? ` of ${esc(g.agency.name)}` : ""} is a ${credential} (Level ${g.level}), credentialed by ${site.name} on ${nice(g.issued)}.</strong> This credential was awarded after completing the AI Authority Engine AI SEO certification program taught by Cory Long, including all required coursework.</p>
+  <p><strong>${g.name}${g.agency ? ` of ${esc(g.agency.name)}` : ""} is a ${credential} (Level ${g.level}), credentialed by ${site.name} on ${nice(g.issued)}.</strong> This credential was awarded after fulfilling the Level ${g.level} certification requirements of AI Authority Engine, demonstrating practical knowledge in AI search visibility, business authority assessment, and evidence-based optimization strategies. The program is taught by Cory Long.</p>
 </section>
 
 <section class="section">
@@ -238,7 +238,7 @@ const kits = graduates.map((g) => ({
     <div class="share-card">
       <p class="eyebrow">Step 1</p>
       <h2>Download your certificate</h2>
-      <p>A print-ready PDF certificate with your name, credential ID, and verification link.</p>
+      <p>Your official Certified AI Authority Specialist certificate, signed by Cory Long. Your credential ID (${g.id}) and verification page are shown above.</p>
       <a class="btn btn-glow" href="${certPath(g)}" download>Download certificate (PDF)</a>
     </div>
     <div class="share-card">

@@ -1,3 +1,6 @@
+// PLACEHOLDER certificate generator. Official certificates are designed separately and copied into
+// public/certificates/<slug>-<kit>.pdf; this script only fills gaps and skips existing files.
+// Do NOT use --force once official certificates are in place: it overwrites them.
 // Generates a print-ready certificate PDF for every graduate in src/data/graduates.js
 // Output: public/certificates/<slug>.pdf (deployed with the site).
 // Usage: node scripts/make-certificates.js            (all graduates, skips existing)
