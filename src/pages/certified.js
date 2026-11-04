@@ -110,7 +110,7 @@ ${cta("Become a Certified AI Authority Specialist")}
 const profiles = graduates.map((g) => {
   const url = pageUrl(g);
   const links = [
-    ...(g.website ? [[g.website, "Website"]] : []),
+    ...(g.website ? [[g.website, host(g.website).startsWith("about.me") ? "About Me" : "Personal website"]] : []),
     ...(g.socials || []).map((u) => [u, socialLabel(u)]),
   ];
   const sameAs = [g.website, ...(g.socials || [])].filter(Boolean);
