@@ -9,7 +9,7 @@
 //
 // Optional (shown on their public verification page when present):
 //   photo    path to a square headshot in public/assets/graduates/, e.g. "/assets/graduates/stephen-jones.jpg"
-//   agency   { name: "Agency Name", url: "https://agency.com" }
+//   agency   { name: "Agency Name", url: "https://agency.com", socials: [agency social profile URLs] }
 //   website  personal website, if different from the agency
 //   socials  official profile URLs, e.g. ["https://www.linkedin.com/in/...", "https://x.com/..."]
 //
@@ -28,9 +28,16 @@ module.exports = [
   {
     name: "Mark Hadley", slug: "mark-hadley", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0002", kit: "0de9896a9c81",
     photo: "/assets/graduates/mark-hadley.jpg",
-    agency: { name: "Skyrunner Consulting", url: "https://www.skyrunnerpro.com/" },
-    website: "https://about.me/markhadley",
-    socials: ["https://www.linkedin.com/in/markhadley79/"],
+    agency: {
+      name: "Skyrunner Consulting", url: "https://www.skyrunnerpro.com/",
+      socials: [
+        "https://www.facebook.com/skyrunnerconsulting",
+        "https://www.instagram.com/skyrunner_consulting/",
+        "https://www.linkedin.com/company/skyrunner-consulting-llc",
+      ],
+    },
+    website: "https://about.me/markhadley/",
+    socials: ["https://www.facebook.com/markrhadley", "https://www.linkedin.com/in/markhadley79/"],
   },
   {
     name: "Andrea Katen", slug: "andrea-katen", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0003", kit: "b0a7620399df",

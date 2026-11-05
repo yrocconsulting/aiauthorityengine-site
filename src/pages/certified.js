@@ -113,6 +113,10 @@ const profiles = graduates.map((g) => {
     ...(g.website ? [[g.website, host(g.website).startsWith("about.me") ? "About Me" : "Personal website"]] : []),
     ...(g.socials || []).map((u) => [u, socialLabel(u)]),
   ];
+  const agencyLinks = g.agency
+    ? [...(g.agency.url ? [[g.agency.url, host(g.agency.url).includes("facebook.com") ? "Facebook" : "Website"]] : []),
+       ...(g.agency.socials || []).map((u) => [u, socialLabel(u)])]
+    : [];
   const sameAs = [g.website, ...(g.socials || [])].filter(Boolean);
   const hasProfile = g.photo || g.agency || g.website || (g.socials && g.socials.length);
 
@@ -133,7 +137,7 @@ const profiles = graduates.map((g) => {
         name: g.name,
         url,
         ...(g.photo ? { image: site.url + g.photo } : {}),
-        ...(g.agency ? { worksFor: { "@type": "Organization", name: g.agency.name, ...(g.agency.url ? { url: g.agency.url } : {}) } } : {}),
+        ...(g.agency ? { worksFor: { "@type": "Organization", name: g.agency.name, ...(g.agency.url ? { url: g.agency.url } : {}), ...(g.agency.socials && g.agency.socials.length ? { sameAs: g.agency.socials } : {}) } } : {}),
         ...(sameAs.length ? { sameAs } : {}),
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
@@ -191,7 +195,8 @@ const profiles = graduates.map((g) => {
         ? `<div class="share-card">
       <h2>Professional profile</h2>
       ${g.agency ? `<p class="agency"><span>Agency</span><b>${g.agency.url ? `<a href="${esc(g.agency.url)}" rel="noopener">${esc(g.agency.name)}</a>` : esc(g.agency.name)}</b></p>` : ""}
-      ${links.length ? `<ul class="profile-links">${links.map(([u, l]) => `<li><a href="${esc(u)}" rel="noopener">${esc(l)}<span>${esc(host(u))}</span></a></li>`).join("")}</ul>` : ""}
+      ${agencyLinks.length > 1 || (g.agency && g.agency.socials) ? `<ul class="profile-links">${agencyLinks.map(([u, l]) => `<li><a href="${esc(u)}" rel="noopener">${esc(l)}<span>${esc(host(u))}</span></a></li>`).join("")}</ul>` : ""}
+      ${links.length ? `${g.agency ? `<p class="agency profile-sub"><span>Personal</span></p>` : ""}<ul class="profile-links">${links.map(([u, l]) => `<li><a href="${esc(u)}" rel="noopener">${esc(l)}<span>${esc(host(u))}</span></a></li>`).join("")}</ul>` : ""}
     </div>`
         : ""
     }
