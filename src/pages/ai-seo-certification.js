@@ -1,4 +1,5 @@
 const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("../layout");
+const { testimonialsHtml } = require("../components");
 
 const faqs = [
   [
@@ -93,6 +94,7 @@ module.exports = {
   <p>Answer engine optimization is a core part of the program. If you're specifically looking for AEO training, see the <a href="/answer-engine-optimization-certification/">answer engine optimization certification</a> page. Comparing options? Read our guide to the <a href="/best-ai-seo-certification-programs/">best AI SEO certification programs</a> and what to look for.</p>
 </section>
 
+<div class="wrap">${testimonialsHtml()}</div>
 <div class="wrap">${faqHtml(faqs, "AI SEO certification FAQ")}</div>
 ${cta("Get your AI SEO certification")}
 `,

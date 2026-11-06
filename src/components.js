@@ -100,4 +100,33 @@ function enginesHtml() {
 </div>`;
 }
 
-module.exports = { simulatorHtml, quizHtml, enginesHtml };
+// ---------------------------------------------------------------- testimonials
+function testimonialsHtml(heading = "What Certified AI Authority Specialists say") {
+  const graduates = require("./data/graduates");
+  const items = require("./data/testimonials")
+    .map((t) => ({ ...t, g: graduates.find((x) => x.slug === t.slug) }))
+    .filter((t) => t.g);
+  if (!items.length) return "";
+  const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return `<section class="testimonials">
+  <div class="sec-head reveal">
+    <p class="eyebrow">From our graduates</p>
+    <h2>${heading}</h2>
+  </div>
+  <div class="t-grid${items.length === 1 ? " t-single" : ""}">
+    ${items
+      .map(
+        ({ quote, g }) => `<figure class="t-card reveal">
+      <blockquote>${esc(quote)}</blockquote>
+      <figcaption>
+        ${g.photo ? `<img src="${g.photo}" alt="${g.name}" width="56" height="56" loading="lazy">` : `<img src="/assets/badge-sm.webp" alt="" width="56" height="48" loading="lazy">`}
+        <span><a href="/certified/${g.slug}/"><b>${g.name}</b></a>${g.agency ? `<br>${esc(g.agency.name)}` : ""}<br><small>✓ Verified ${site.certification.credential}</small></span>
+      </figcaption>
+    </figure>`
+      )
+      .join("\n    ")}
+  </div>
+</section>`;
+}
+
+module.exports = { simulatorHtml, quizHtml, enginesHtml, testimonialsHtml };

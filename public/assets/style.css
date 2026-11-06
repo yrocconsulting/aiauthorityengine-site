@@ -450,3 +450,15 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 .verify-form .btn { padding-top: 0; padding-bottom: 0; }
 
 .profile-sub { margin: 18px 0 8px; }
+
+/* Testimonials */
+.testimonials { margin: 64px 0 24px; }
+.t-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 20px; }
+.t-single { max-width: 860px; margin: 0 auto; }
+.t-card { position: relative; margin: 0; padding: 30px 30px 24px; border-radius: 20px; background: linear-gradient(180deg, rgba(25,45,95,.6), rgba(10,18,40,.7)); border: 1px solid var(--line-2); box-shadow: 0 0 40px rgba(31,139,255,.1); }
+.t-card::before { content: "\201C"; position: absolute; top: -6px; left: 22px; font-family: Georgia, serif; font-size: 5rem; line-height: 1; background: var(--electric); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.t-card blockquote { margin: 18px 0 20px; padding: 0; border: 0; background: none; font-style: normal; font-size: 1.08rem; line-height: 1.7; color: #e6eeff; }
+.t-card figcaption { display: flex; align-items: center; gap: 14px; color: var(--ink-soft); font-size: .95rem; line-height: 1.4; }
+.t-card figcaption img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(63,208,255,.5); }
+.t-card figcaption a { color: #fff; text-decoration: none; }
+.t-card figcaption small { color: #6ff0c4; font-size: .8rem; }

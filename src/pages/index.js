@@ -1,5 +1,5 @@
 const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("../layout");
-const { simulatorHtml, quizHtml, enginesHtml } = require("../components");
+const { simulatorHtml, quizHtml, enginesHtml, testimonialsHtml } = require("../components");
 const wheel = require("../data/wheel");
 
 const faqs = [
@@ -211,6 +211,7 @@ module.exports = {
   </div>
 </section>
 
+<div class="wrap">${testimonialsHtml()}</div>
 <div class="wrap">${faqHtml(faqs)}</div>
 ${cta()}
 `,
