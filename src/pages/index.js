@@ -1,5 +1,5 @@
 const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("../layout");
-const { simulatorHtml, quizHtml, enginesHtml, testimonialsHtml } = require("../components");
+const { simulatorHtml, enginesHtml, testimonialsHtml } = require("../components");
 const wheel = require("../data/wheel");
 const results = require("../data/results");
 
@@ -52,7 +52,7 @@ module.exports = {
       <p class="lede reveal"><strong>AI Authority Engine</strong> is an AI SEO certification and training program taught by <a href="/cory-long/">Cory Long</a>. Learn how ChatGPT, Google AI Overviews, Gemini, and Perplexity decide which businesses to recommend, and how to build an agency that delivers those results.</p>
       <div class="hero-actions reveal">
         <a class="btn btn-lg btn-glow" href="${site.enrollUrl}" rel="noopener">Start the certification</a>
-        <a class="btn btn-ghost btn-lg" href="#quiz">Take the AI visibility quiz</a>
+        <a class="btn btn-ghost btn-lg" href="/ai-visibility-calculator/">Get your AI visibility score</a>
       </div>
     </div>
     <div class="hero-badge reveal">
@@ -174,7 +174,20 @@ module.exports = {
 </section>
 
 <section class="section section-alt">
-  <div class="wrap">${quizHtml()}</div>
+  <div class="wrap">
+    <div class="calc-promo reveal">
+      <div>
+        <p class="eyebrow">Free AI Visibility Calculator</p>
+        <h2 id="quiz">Will ChatGPT recommend your business?</h2>
+        <p>Answer 16 quick questions across the five dimensions of the AI Authority Wheel. In about 4 minutes you'll get your AI visibility score out of 100, your tier, your perception gap, and the three fixes that matter most.</p>
+        <a class="btn btn-lg btn-glow" href="/ai-visibility-calculator/">Get my AI visibility score</a>
+      </div>
+      <div class="score-demo">
+        <div class="score-ring" style="margin:0 auto"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="track"/><circle cx="60" cy="60" r="52" class="bar" style="stroke-dashoffset:144"/></svg><div><b>?</b><span>/100</span></div></div>
+        <p>Invisible · Emerging · Recognized · Recommended</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="section">

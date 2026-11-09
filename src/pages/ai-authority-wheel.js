@@ -74,7 +74,7 @@ module.exports = {
     <li><strong>Backed by the Yroc Consulting team</strong>, with hands-on implementation support beyond the fundamentals</li>
     <li><strong>Weekly hot-seat coaching calls, challenge calls, and 30-day sprints</strong> to put each part of the wheel to work</li>
   </ul>
-  <p>See the full <a href="/ai-seo-certification/#curriculum">curriculum</a>, or test a business against the wheel's core signals with the free <a href="/ai-visibility-quiz/">AI visibility quiz</a>.</p>
+  <p>See the full <a href="/ai-seo-certification/#curriculum">curriculum</a>, or test a business against the wheel's core signals with the free <a href="/ai-visibility-calculator/">AI Visibility Calculator</a>.</p>
 </section>
 <div class="wrap">${faqHtml(faqs, "AI Authority Wheel: FAQ")}</div>
 ${cta("Learn the AI Authority Wheel")}

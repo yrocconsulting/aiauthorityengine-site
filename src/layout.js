@@ -6,7 +6,7 @@ const nav = [
   ["/how-to-start-an-ai-seo-agency/", "Start an Agency"],
   ["/how-to-get-clients-for-an-ai-seo-agency/", "Get Clients"],
   ["/cory-long/", "Cory Long"],
-  ["/ai-visibility-quiz/", "AI Score Quiz"],
+  ["/ai-visibility-calculator/", "AI Visibility Score"],
   ["/faq/", "FAQ"],
 ];
 
@@ -458,7 +458,7 @@ ${sourcesHtml(page)}
         <li><a href="https://www.linkedin.com/company/ai-authority-engine-ai-seo-certification-training/" rel="me noopener">LinkedIn</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/ai-seo-glossary/">AI SEO Glossary</a></li>
-        <li><a href="/ai-visibility-quiz/">AI Visibility Quiz</a></li>
+        <li><a href="/ai-visibility-calculator/">AI Visibility Calculator</a></li>
         <li><a href="${site.frameworkUrl}" rel="noopener">AI Search Optimization Framework</a></li>
       </ul>
     </div>

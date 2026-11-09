@@ -19,6 +19,10 @@ module.exports = {
 
   contactEmail: "info@aiauthorityengine.org",
 
+  // Lead capture for the AI Visibility Calculator: a GoHighLevel inbound webhook URL.
+  // Empty = no email gate (full report shown to everyone, nothing is collected).
+  leadWebhook: "",
+
   // The company that owns and operates AI Authority Engine.
   company: { name: "Yroc Consulting", url: "https://yrocconsulting.com" },
 

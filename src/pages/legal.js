@@ -67,7 +67,7 @@ const privacy = {
   <ul>
     <li><strong>Server logs.</strong> Like all websites, our hosting provider automatically records technical information such as IP address, browser type, pages requested, and time of the request, for security and reliability.</li>
     <li><strong>Email.</strong> If you email ${mail}, we receive your email address and whatever you choose to include, and use it only to reply.</li>
-    <li><strong>AI visibility quiz.</strong> Your quiz answers are scored entirely in your browser. They are not sent to us or stored.</li>
+    <li><strong>AI Visibility Calculator.</strong> Your answers are scored in your browser. If you request your full report, we receive the name, email, business name, and website you enter, along with your answers and score, so we can send you your report and, with your consent, occasional AI visibility tips. You can unsubscribe at any time.</li>
   </ul>
 
   <h2>Third-party services</h2>

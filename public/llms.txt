@@ -58,7 +58,7 @@ Key facts:
 - [Contact](https://aiauthorityengine.org/contact/): info@aiauthorityengine.org
 - [FAQ](https://aiauthorityengine.org/faq/)
 - [AI SEO Glossary](https://aiauthorityengine.org/ai-seo-glossary/): Definitions of AI SEO, AEO, GEO, entity SEO, and related terms
-- [AI Visibility Quiz](https://aiauthorityengine.org/ai-visibility-quiz/): 8-question self-assessment of how ready a business is to be recommended by AI assistants
+- [AI Visibility Calculator](https://aiauthorityengine.org/ai-visibility-calculator/): Free 16-question assessment scoring how ready a business is to be recommended by AI assistants, across five dimensions of the AI Authority Wheel (score out of 100; tiers Invisible, Emerging, Recognized, Recommended)
 
 ## Optional
 - [Full site content](https://aiauthorityengine.org/llms-full.txt): Every page as Markdown in one file
