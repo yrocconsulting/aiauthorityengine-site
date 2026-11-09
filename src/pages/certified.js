@@ -24,7 +24,7 @@ function linkedInUrl(g) {
   const q = new URLSearchParams({
     startTask: "CERTIFICATION_NAME",
     name: credential,
-    organizationName: site.name,
+    organizationId: "144100594", // AI Authority Engine LinkedIn company page
     issueYear: y,
     issueMonth: String(+m),
     certUrl: pageUrl(g),
