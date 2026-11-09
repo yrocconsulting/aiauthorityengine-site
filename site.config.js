@@ -45,7 +45,7 @@ module.exports = {
       ["Optimization Lab", "The main advanced module: continually updated trainings on live AI searches, Reddit, Meta AI, Google Maps, page structure for AI, client onboarding automation, custom dashboards, and white-label deliverables."],
       ["30-Day Sprints", "Focused implementation sprints with kickoff training and live working sessions."],
       ["Podcast Automation", "Building an automated podcast content and distribution system that creates brand mentions at scale."],
-      ["Office Hours", "Weekly live calls with recordings of every session."],
+      ["Weekly Coaching Calls", "Live calls every week, many with hot-seat time where Cory and the team dissect a student's business, sales technique, or strategy. Every session is recorded."],
     ],
   },
 

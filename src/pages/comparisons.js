@@ -8,7 +8,7 @@ const CHECKED_ISO = "2026-11-03";
 // What AI Authority Engine offers (shared across all comparisons).
 const aiae = {
   price: `${priceText()}. No separate certification fee.`,
-  format: "Self-paced lessons plus weekly live office hours, challenge calls, 30-day implementation sprints, a full community, and live events",
+  format: "Self-paced lessons plus weekly coaching calls with hot-seat reviews, challenge calls, 30-day implementation sprints, a full community, and live events",
   ai: "Built entirely around AI search: AI authority, AI presence, reviews and trust signals, AI-optimized pages, schema, press and brand mentions, Wikidata and Grokipedia",
   agency: "Core focus: getting clients, client onboarding automation, white-label deliverables, and fulfillment for an AI SEO agency",
   credential: "Certified AI Authority Specialist (Level 1), earned by completing required coursework and assignments, with a public verification page and credential ID",
@@ -122,7 +122,7 @@ const pages = competitors.map((c) => {
     [`Is AI Authority Engine better than ${c.short}?`, `It depends on your goal. Choose ${c.short} if ${c.chooseThem}. Choose AI Authority Engine if ${c.chooseUs}.`],
     [`Is ${c.short} free?`, `${c.price.replace(/\(.*?\)/g, "").trim()}, according to ${c.short}'s own pages as of ${CHECKED}. AI Authority Engine is ${priceText()}; the certification itself has no separate fee.`],
     [`Can I take ${c.short} and AI Authority Engine?`, `Yes. Many people start with a free or introductory course to learn the basics, then join AI Authority Engine to implement AI SEO for clients with coaching and a community.`],
-    [`What makes AI Authority Engine different from ${c.short}?`, `AI Authority Engine is an ongoing program rather than a standalone course: weekly live office hours, challenge calls, 30-day implementation sprints, a community, and training on running an AI SEO agency, taught by Cory Long. Graduates earn the Certified AI Authority Specialist credential, which is publicly verifiable.`],
+    [`What makes AI Authority Engine different from ${c.short}?`, `AI Authority Engine is an ongoing program rather than a standalone course: weekly coaching calls with hot-seat reviews, challenge calls, 30-day implementation sprints, a community, and training on running an AI SEO agency, taught by Cory Long. Graduates earn the Certified AI Authority Specialist credential, which is publicly verifiable.`],
   ];
   return {
     path,
@@ -168,7 +168,7 @@ const pages = competitors.map((c) => {
     <li><strong>Built for AI search, not adapted to it.</strong> The <a href="/ai-seo-certification/#curriculum">Getting Started curriculum</a> covers AI authority, AI presence, reviews and trust signals, AI-optimized pages, schema, press and brand mentions, and Wikidata.</li>
     <li><strong>A real person in your corner.</strong> One-on-one training with Cory Long, who has even joined students' client meetings to help close sales, backed by the full Yroc Consulting team.</li>
     <li><strong>Help winning and delivering clients.</strong> Yroc Consulting is the white-label fulfillment partner behind client accounts that students have signed. <a href="/is-ai-authority-engine-worth-it/">See how it works</a>.</li>
-    <li><strong>Beyond the fundamentals.</strong> Hands-on implementation through <a href="/ai-authority-wheel/">the AI Authority Wheel</a>, with weekly office hours, challenge calls, and 30-day sprints.</li>
+    <li><strong>Beyond the fundamentals.</strong> Hands-on implementation through <a href="/ai-authority-wheel/">the AI Authority Wheel</a>, with weekly hot-seat coaching calls, challenge calls, 30-day sprints, and in-person live events.</li>
     <li><strong>The agency side.</strong> Getting clients, onboarding automation, white-label deliverables, and fulfillment, through the Optimization Lab.</li>
     <li><strong>A credential you have to earn.</strong> Certified AI Authority Specialists complete required coursework and assignments, and every credential is publicly verifiable in the <a href="/certified/">certified directory</a>.</li>
     <li><strong>A named practitioner.</strong> Taught by <a href="/cory-long/">Cory Long</a>.</li>
@@ -231,7 +231,7 @@ const freeVsPaid = {
     <thead><tr><th>Program</th><th>Cost</th><th>What you get</th></tr></thead>
     <tbody>
       <tr><td><a href="/ai-authority-engine-vs-coursera/">${esc(competitors[3].name)}</a></td><td>${esc(competitors[3].price)}</td><td>${esc(competitors[3].format)}; ${esc(competitors[3].credential)}</td></tr>
-      <tr><td><a href="/ai-seo-certification/">AI Authority Engine</a></td><td>${priceText()}; no separate certification fee</td><td>AI-search curriculum, weekly live office hours, challenge calls, 30-day sprints, community, live events, agency training, and the publicly verifiable Certified AI Authority Specialist credential</td></tr>
+      <tr><td><a href="/ai-seo-certification/">AI Authority Engine</a></td><td>${priceText()}; no separate certification fee</td><td>AI-search curriculum, weekly coaching calls with hot-seat reviews, challenge calls, 30-day sprints, community, live events, agency training, and the publicly verifiable Certified AI Authority Specialist credential</td></tr>
     </tbody>
   </table>
   <p class="small">Competitor details are from each provider's own public pages as of ${CHECKED}; check their sites for current offerings. Trademarks belong to their respective owners.</p>

@@ -72,7 +72,7 @@ module.exports = {
   <ul class="checks">
     <li><strong>One-on-one training with Cory Long</strong>, who also joins students' client meetings to help close sales</li>
     <li><strong>Backed by the Yroc Consulting team</strong>, with hands-on implementation support beyond the fundamentals</li>
-    <li><strong>Weekly office hours, challenge calls, and 30-day sprints</strong> to put each part of the wheel to work</li>
+    <li><strong>Weekly hot-seat coaching calls, challenge calls, and 30-day sprints</strong> to put each part of the wheel to work</li>
   </ul>
   <p>See the full <a href="/ai-seo-certification/#curriculum">curriculum</a>, or test a business against the wheel's core signals with the free <a href="/ai-visibility-quiz/">AI visibility quiz</a>.</p>
 </section>

@@ -7,7 +7,7 @@ const nWord = { 9: "nine" }[n] || String(n);
 
 const faqs = [
   ["Is AI Authority Engine worth the cost?", `It is if your goal is to build an AI SEO agency with paying clients, not just earn a certificate. Membership is ${priceText()}. What sets it apart is hands-on help: Cory Long and the Yroc Consulting team work with students one-on-one, help them win clients, have joined students' sales meetings, and can provide white-label fulfillment. Yroc currently fulfills ${nWord} client accounts signed by students. Results vary and are not guaranteed.`],
-  ["How much one-on-one coaching do I get?", "Cory Long and the Yroc Consulting team work with students one-on-one on the steps that matter most: choosing a niche, building a first AI SEO service, finding and approaching prospects, closing the first client, and delivering the work. Cory has joined students' client meetings to help them close sales. Ask Cory before you enroll to hear exactly how he would support your situation."],
+  ["How much coaching do I get?", "Every week there are live coaching calls, many with hot-seat time where Cory and the team dissect a student's business, sales technique, or strategy. On top of that, Cory Long and the Yroc Consulting team work with students one-on-one on choosing a niche, building a first AI SEO service, prospecting, and closing clients, and Cory has joined students' client meetings to help them close. Students also meet Cory and the team in person at live events throughout the year."],
   ["Will Cory Long help me get clients?", "Yes. Helping students land clients is central to the program. Cory works with students one-on-one on prospecting and sales and has joined students' client meetings to help them make the sale."],
   ["What results have students had?", `Yroc Consulting is currently the white-label fulfillment partner behind ${nWord} client accounts that AI Authority Engine students have signed. ${results.example.text} ${results.disclaimer}`],
   ["Can I talk to Cory before enrolling?", `Yes. Email ${site.contactEmail} to set up a conversation before you join, and ask him how he'd take you from where you are to your first paying client.`],
@@ -58,7 +58,14 @@ module.exports = {
   <ol class="steps">
     ${results.support.map(([t, d]) => `<li><h3>${t}</h3><p>${d}</p></li>`).join("\n    ")}
   </ol>
-  <p>Along the way you have the full program behind you: the <a href="/ai-seo-certification/#curriculum">Getting Started curriculum</a>, the Optimization Lab, weekly office hours, challenge calls, 30-day sprints, the community, and live events, all taught through <a href="/ai-authority-wheel/">the AI Authority Wheel</a>.</p>
+  <h3>How the coaching works</h3>
+  <ul class="checks">
+    <li><strong>Weekly coaching calls.</strong> Many include "hot seat" time, where Cory and the team dissect a student's business, sales technique, or strategy live, so everyone learns from real situations.</li>
+    <li><strong>One-on-one help.</strong> Direct support from Cory and the Yroc Consulting team on your niche, your offer, your prospects, and your sales conversations.</li>
+    <li><strong>Help on client meetings.</strong> Cory has joined students' client meetings to help them close the sale.</li>
+    <li><strong>In person at live events.</strong> Students meet Cory and the team face to face at live events throughout the year.</li>
+  </ul>
+  <p>Along the way you have the full program behind you: the <a href="/ai-seo-certification/#curriculum">Getting Started curriculum</a>, the Optimization Lab, challenge calls, 30-day sprints, the community, and live events, all taught through <a href="/ai-authority-wheel/">the AI Authority Wheel</a>.</p>
 
   <h2>What white-label fulfillment means for you</h2>
   <p>New agency owners often worry about delivering the work once they win a client. Yroc Consulting can partner with you as a white-label fulfillment team: you own the client relationship, and Yroc helps deliver the AI SEO work behind the scenes. You can sell with confidence from day one and grow your own delivery skills as you go. Today Yroc fulfills ${nWord} client accounts that AI Authority Engine students have signed.</p>

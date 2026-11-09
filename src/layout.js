@@ -265,9 +265,9 @@ function programHtml(heading = "Program details at a glance") {
       <tr><th scope="row">Format</th><td>Online: self-paced courses plus weekly live calls</td></tr>
       <tr><th scope="row">Core curriculum</th><td>Getting Started module: a kickoff webinar, 6 core lessons, and 2 bonus lessons (<a href="/ai-seo-certification/#curriculum">see curriculum</a>)</td></tr>
       <tr><th scope="row">Growth modules</th><td>${p.modules.slice(0, 3).map(([n]) => n).join(", ")}</td></tr>
-      <tr><th scope="row">Live support</th><td>Weekly live calls and access to all challenge calls</td></tr>
+      <tr><th scope="row">Live coaching</th><td>Weekly coaching calls, many with "hot seat" time where a student's business, sales technique, or strategy is dissected live, plus access to all challenge calls</td></tr>
       <tr><th scope="row">Community</th><td>Full community access</td></tr>
-      <tr><th scope="row">Events</th><td>Live events</td></tr>
+      <tr><th scope="row">Events</th><td>Live events throughout the year, where students meet Cory and the team in person</td></tr>
       <tr><th scope="row">Credential</th><td>${site.certification.credential} (Level 1), with a public <a href="/certified/">verification page</a></td></tr>
       <tr><th scope="row">Personal support</th><td>One-on-one training with Cory Long, who also joins students' client meetings to help close sales, backed by the full <a href="${site.company.url}" rel="noopener">${site.company.name}</a> team</td></tr>
       <tr><th scope="row">Help winning clients</th><td>One-on-one help choosing a niche, building your offer, prospecting, and closing, plus white-label fulfillment from ${site.company.name} (<a href="/is-ai-authority-engine-worth-it/">how it works</a>)</td></tr>
