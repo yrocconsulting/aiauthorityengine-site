@@ -118,7 +118,7 @@ const profiles = graduates.map((g) => {
        ...(g.agency.socials || []).map((u) => [u, socialLabel(u)])]
     : [];
   const sameAs = [g.website, ...(g.socials || [])].filter(Boolean);
-  const hasProfile = g.photo || g.agency || g.website || (g.socials && g.socials.length);
+  const hasProfile = g.photo || g.agency || g.website || (g.socials && g.socials.length) || (g.press && g.press.length);
 
   return {
     path: `/certified/${g.slug}/`,
@@ -137,7 +137,7 @@ const profiles = graduates.map((g) => {
         name: g.name,
         url,
         ...(g.photo ? { image: site.url + g.photo } : {}),
-        ...(g.agency ? { worksFor: { "@type": "Organization", name: g.agency.name, ...(g.agency.url ? { url: g.agency.url } : {}), ...(g.agency.socials && g.agency.socials.length ? { sameAs: g.agency.socials } : {}) } } : {}),
+        ...(g.agency ? { worksFor: { "@type": "Organization", name: g.agency.name, ...(g.agency.url ? { url: g.agency.url } : {}), ...(g.agency.socials && g.agency.socials.length ? { sameAs: g.agency.socials } : {}), ...(g.press && g.press.length ? { subjectOf: g.press.map((x) => ({ "@type": "NewsArticle", headline: x.title, url: x.url, ...(x.outlet ? { publisher: { "@type": "Organization", name: x.outlet } } : {}) })) } : {}) } } : {}),
         ...(sameAs.length ? { sameAs } : {}),
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
@@ -197,6 +197,7 @@ const profiles = graduates.map((g) => {
       ${g.agency ? `<p class="agency"><span>Agency</span><b>${g.agency.url ? `<a href="${esc(g.agency.url)}" rel="noopener">${esc(g.agency.name)}</a>` : esc(g.agency.name)}</b></p>` : ""}
       ${agencyLinks.length > 1 || (g.agency && g.agency.socials) ? `<ul class="profile-links">${agencyLinks.map(([u, l]) => `<li><a href="${esc(u)}" rel="noopener">${esc(l)}<span>${esc(host(u))}</span></a></li>`).join("")}</ul>` : ""}
       ${links.length ? `${g.agency ? `<p class="agency profile-sub"><span>Personal</span></p>` : ""}<ul class="profile-links">${links.map(([u, l]) => `<li><a href="${esc(u)}" rel="noopener">${esc(l)}<span>${esc(host(u))}</span></a></li>`).join("")}</ul>` : ""}
+      ${g.press && g.press.length ? `<p class="agency profile-sub"><span>In the news</span></p><ul class="profile-links">${g.press.map((x) => `<li><a href="${esc(x.url)}" rel="noopener">${esc(x.outlet || "News")}<span>${esc(x.title)}</span></a></li>`).join("")}</ul>` : ""}
     </div>`
         : ""
     }

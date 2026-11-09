@@ -12,6 +12,7 @@
 //   agency   { name: "Agency Name", url: "https://agency.com", socials: [agency social profile URLs] }
 //   website  personal website, if different from the agency
 //   socials  official profile URLs, e.g. ["https://www.linkedin.com/in/...", "https://x.com/..."]
+//   press    news coverage: [{ title, url, outlet }] (shown as "In the news"; marked as being about the agency)
 //
 // Certificates: the OFFICIAL certificate PDF (designed by Yroc Consulting) goes in
 // public/certificates/<slug>-<kit>.pdf. Use the same issued date as the official certificate.
@@ -59,5 +60,17 @@ module.exports = [
     agency: { name: "5 Talents Services", url: "https://www.facebook.com/5TalentsServices/" },
     socials: ["https://www.linkedin.com/in/jason-kierstein-138866/"],
   },
-  { name: "Aaron Johnson", slug: "aaron-johnson", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0006", kit: "bdf73acdd48d" },
+  {
+    name: "Aaron Johnson", slug: "aaron-johnson", level: 1, issued: "2026-11-02", id: "AIAE-L1-2026-0006", kit: "bdf73acdd48d",
+    photo: "/assets/graduates/aaron-johnson.jpg",
+    agency: { name: "JROC Consulting", url: "https://www.facebook.com/share/1Es5MKwpsN/" },
+    socials: ["https://www.linkedin.com/in/aaron-johnson-02a718445/"],
+    press: [
+      {
+        title: "Alabama-Based JROC Consulting Targets AI Search Visibility for Contractors and Service Businesses Nationwide",
+        url: "https://www.issuewire.com/alabama-based-jroc-consulting-targets-ai-search-visibility-for-contractors-and-service-businesses-nationwide-1879678586313537",
+        outlet: "IssueWire",
+      },
+    ],
+  },
 ];
