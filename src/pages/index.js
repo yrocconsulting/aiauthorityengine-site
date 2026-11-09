@@ -179,7 +179,7 @@ module.exports = {
       <div>
         <p class="eyebrow">Free AI Visibility Calculator</p>
         <h2 id="quiz">Will ChatGPT recommend your business?</h2>
-        <p>Answer 16 quick questions across the five dimensions of the AI Authority Wheel. In about 4 minutes you'll get your AI visibility score out of 100, your tier, your perception gap, and the three fixes that matter most.</p>
+        <p>Answer 16 quick questions covering all 8 spokes of the AI Authority Wheel, scored in five areas. In about 4 minutes you'll get your AI visibility score out of 100, your tier, your perception gap, and the three fixes that matter most.</p>
         <a class="btn btn-lg btn-glow" href="/ai-visibility-calculator/">Get my AI visibility score</a>
       </div>
       <div class="score-demo">

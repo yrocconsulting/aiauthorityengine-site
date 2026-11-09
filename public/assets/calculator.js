@@ -43,8 +43,8 @@
     root.innerHTML = `<div class="calc-card calc-intro">
       <p class="eyebrow">AI Visibility Calculator</p>
       <h2>Will AI recommend your business?</h2>
-      <p>${scored} quick questions across the five dimensions of the AI Authority Wheel. About 4 minutes. Get your score, your tier, and the fixes that matter most.</p>
-      <ul class="calc-dims">${Object.values(D.dimensions).map((d) => `<li><b>${esc(d.label)}</b><span>${d.points} pts</span></li>`).join("")}</ul>
+      <p>${scored} quick questions covering all 8 spokes of the AI Authority Wheel, scored in five areas. About 4 minutes. Get your score, your tier, and the fixes that matter most.</p>
+      <ul class="calc-dims">${Object.values(D.dimensions).map((d) => `<li><b>${esc(d.label)}</b><span>${d.points} pts</span>${d.wheel ? `<small>${esc(d.wheel)}</small>` : ""}</li>`).join("")}</ul>
       <button class="btn btn-lg btn-glow" data-start>Start the calculator</button>
     </div>`;
     root.querySelector("[data-start]").onclick = () => go(0);

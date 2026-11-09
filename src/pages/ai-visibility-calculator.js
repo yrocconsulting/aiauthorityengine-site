@@ -17,8 +17,8 @@ const clientData = {
 };
 
 const faqs = [
-  ["What is the AI Visibility Calculator?", `A free assessment from AI Authority Engine that scores how ready a business is to be found, trusted, and recommended by AI assistants such as ChatGPT, Gemini, Perplexity, and Google AI Overviews. It takes about 4 minutes and covers ${scoredCount} scored questions across five dimensions of the AI Authority Wheel.`],
-  ["How is the AI visibility score calculated?", `Each answer scores 0 to 4 and is weighted within five dimensions that add up to 100 points: ${dims.map(([, d]) => `${d.label} (${d.points})`).join(", ")}. To reach the Recommended tier, a business also needs at least 70% in Entity Clarity, Authority & Reputation, and AI Visibility & Engagement.`],
+  ["What is the AI Visibility Calculator?", `A free assessment from AI Authority Engine that scores how ready a business is to be found, trusted, and recommended by AI assistants such as ChatGPT, Gemini, Perplexity, and Google AI Overviews. It takes about 4 minutes and covers ${scoredCount} scored questions on all 8 spokes of the AI Authority Wheel, grouped into five scoring areas.`],
+  ["How is the AI visibility score calculated?", `Each answer scores 0 to 4 and is weighted within five scoring areas that add up to 100 points and together cover all 8 spokes of the AI Authority Wheel: ${dims.map(([, d]) => `${d.label} (${d.points})`).join(", ")}. To reach the Recommended tier, a business also needs at least 70% in Entity Clarity, Authority & Reputation, and AI Visibility & Engagement.`],
   ["What do the AI visibility tiers mean?", calc.tiers.map((t) => `${t.label} (${t.min}+): ${t.text}`).join(" ")],
   ["What is the perception gap?", "The last question asks how visible you think your business is in AI search. We compare that with your calculated score, because many businesses overestimate how often AI recommends them."],
   ["Is the AI Visibility Calculator free?", `Yes. Your score is calculated in your browser.${site.leadWebhook ? " If you request your full report, we receive your name, email, business, and answers so we can send it to you." : ""}`],
@@ -43,7 +43,7 @@ module.exports = {
       isAccessibleForFree: true,
       offers: { "@type": "Offer", price: 0, priceCurrency: "USD" },
       publisher: { "@id": site.url + "/#organization" },
-      description: `A free ${scoredCount}-question assessment that scores a business's readiness to be recommended by AI assistants across five dimensions of the AI Authority Wheel.`,
+      description: `A free ${scoredCount}-question assessment that scores a business's readiness to be recommended by AI assistants across all 8 spokes of the AI Authority Wheel.`,
     },
   ],
   body: `
@@ -57,7 +57,7 @@ module.exports = {
 
 <section class="wrap answer-box">
   <h2>What you'll get</h2>
-  <p><strong>The AI Visibility Calculator scores how ready a business is to be recommended by AI assistants, from 0 to 100.</strong> Answer ${scoredCount} quick questions across the five dimensions of the <a href="/ai-authority-wheel/">AI Authority Wheel</a> to see your tier, your strongest and weakest areas, your perception gap, and the top fixes to make first.</p>
+  <p><strong>The AI Visibility Calculator scores how ready a business is to be recommended by AI assistants, from 0 to 100.</strong> Answer ${scoredCount} quick questions covering all 8 spokes of the <a href="/ai-authority-wheel/">AI Authority Wheel</a>, scored in five areas, to see your tier, your strongest and weakest areas, your perception gap, and the top fixes to make first.</p>
 </section>
 
 <section class="section">

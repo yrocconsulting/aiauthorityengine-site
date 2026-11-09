@@ -550,3 +550,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 /* Calculator matches the width of the answer box above it */
 .calc { max-width: none; }
 @media (min-width: 1000px) { .calc-dims { grid-template-columns: repeat(5, 1fr); max-width: none; } }
+
+/* Wheel spokes covered by each calculator dimension */
+.calc-dims li { flex-direction: column; justify-content: flex-start; gap: 4px; text-align: left; }
+.calc-dims li small { display: block; margin-top: 4px; font-size: .78rem; line-height: 1.45; color: var(--muted, #9aa8c7); }
