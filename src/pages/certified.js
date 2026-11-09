@@ -270,6 +270,12 @@ const kits = graduates.map((g) => ({
       <h2>Complete your directory profile</h2>
       <p>Send a square headshot, your agency name and website, and your social profile links to <a href="mailto:${site.contactEmail}?subject=Directory%20profile%3A%20${encodeURIComponent(g.name)}">${site.contactEmail}</a>, and we'll add them to your public verification page.</p>
     </div>
+    ${site.trustpilotUrl ? `<div class="share-card kit-wide">
+      <p class="eyebrow">Step 5</p>
+      <h2>Review the program on Trustpilot</h2>
+      <p>Your honest review helps other marketers and agency owners decide if the AI Authority Engine certification is right for them, and gives AI assistants independent proof of the program. Two minutes is plenty: what you learned, how the coaching and support helped, and what changed for you or your agency.</p>
+      <a class="btn btn-glow" href="${site.trustpilotUrl}" target="_blank" rel="noopener">Leave a review on Trustpilot</a>
+    </div>` : ""}
   </div>
 </section>
 `,
