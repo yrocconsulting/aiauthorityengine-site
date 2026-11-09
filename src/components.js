@@ -101,28 +101,29 @@ function enginesHtml() {
 }
 
 // ---------------------------------------------------------------- testimonials
-function testimonialsHtml(heading = "What Certified AI Authority Specialists say") {
+function testimonialsHtml(heading = "What Certified AI Authority Specialists say", tag = "program", eyebrow = "From our graduates") {
   const graduates = require("./data/graduates");
   const items = require("./data/testimonials")
+    .filter((t) => (t.tags || ["program"]).includes(tag))
     .map((t) => ({ ...t, g: graduates.find((x) => x.slug === t.slug) }))
     .filter((t) => t.g);
   if (!items.length) return "";
   const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   return `<section class="testimonials">
   <div class="sec-head reveal">
-    <p class="eyebrow">From our graduates</p>
+    <p class="eyebrow">${eyebrow}</p>
     <h2>${heading}</h2>
   </div>
   <div class="t-grid${items.length === 1 ? " t-single" : ""}">
     ${items
       .map(
-        ({ quote, g }) => `<figure class="t-card reveal">
+        (t) => { const { quote, g } = t; return `<figure class="t-card reveal">
       <blockquote>${esc(quote)}</blockquote>
       <figcaption>
         ${g.photo ? `<img src="${g.photo}" alt="${g.name}" width="56" height="56" loading="lazy">` : `<img src="/assets/badge-sm.webp" alt="" width="56" height="48" loading="lazy">`}
-        <span><a href="/certified/${g.slug}/"><b>${g.name}</b></a>${g.agency ? `<br>${esc(g.agency.name)}` : ""}<br><small>✓ Verified ${site.certification.credential}</small></span>
+        <span><a href="/certified/${g.slug}/"><b>${g.name}</b></a>${g.agency ? `<br>${esc(g.agency.name)}` : ""}<br><small>✓ Verified ${site.certification.credential}</small>${t.source ? `<br><a class="t-source" href="${t.source}" rel="noopener">${t.sourceLabel || "Read the original post"} →</a>` : ""}</span>
       </figcaption>
-    </figure>`
+    </figure>`; }
       )
       .join("\n    ")}
   </div>

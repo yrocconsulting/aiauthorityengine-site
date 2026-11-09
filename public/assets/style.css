@@ -472,3 +472,5 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 .stat-note { max-width: 820px; margin: 22px auto 6px; text-align: center; color: #d6e1f7; }
 .disclaimer { max-width: 820px; margin: 10px auto 0; font-size: .82rem; color: var(--ink-dim); text-align: center; }
 .disclaimer.center { margin-top: 16px; }
+
+.t-card .t-source { color: var(--cyan); font-size: .85rem; font-weight: 600; }

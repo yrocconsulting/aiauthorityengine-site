@@ -1,4 +1,5 @@
 const { faqHtml, cta, site } = require("../layout");
+const { testimonialsHtml } = require("../components");
 
 const f = site.founder;
 const person = { "@id": site.url + "/cory-long/#person" };
@@ -115,6 +116,7 @@ module.exports = {
   </ul>
 </section>
 
+<div class="wrap">${testimonialsHtml("What students say about Cory", "cory", "In their words")}</div>
 <div class="wrap">${faqHtml(faqs, "About Cory Long: FAQ")}</div>
 ${cta("Train with Cory Long")}
 `,
