@@ -4,7 +4,6 @@ const nav = [
   ["/ai-seo-certification/", "Certification"],
   ["/ai-seo-training/", "Training"],
   ["/how-to-start-an-ai-seo-agency/", "Start an Agency"],
-  ["/how-to-get-clients-for-an-ai-seo-agency/", "Get Clients"],
   ["/cory-long/", "Cory Long"],
   ["/ai-visibility-calculator/", "AI Visibility Score"],
   ["/faq/", "FAQ"],

@@ -62,7 +62,7 @@ strong { color: #fff; }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-@media (max-width: 1120px) {
+@media (max-width: 990px) {
   .nav-toggle { display: block; }
   .header-inner { flex-wrap: wrap; gap: 12px; }
   .header-inner > .btn { display: none; }
