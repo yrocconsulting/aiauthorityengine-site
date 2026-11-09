@@ -270,6 +270,7 @@ function programHtml(heading = "Program details at a glance") {
       <tr><th scope="row">Events</th><td>Live events</td></tr>
       <tr><th scope="row">Credential</th><td>${site.certification.credential} (Level 1), with a public <a href="/certified/">verification page</a></td></tr>
       <tr><th scope="row">Personal support</th><td>One-on-one training with Cory Long, who also joins students' client meetings to help close sales, backed by the full <a href="${site.company.url}" rel="noopener">${site.company.name}</a> team</td></tr>
+      <tr><th scope="row">Help winning clients</th><td>One-on-one help choosing a niche, building your offer, prospecting, and closing, plus white-label fulfillment from ${site.company.name} (<a href="/is-ai-authority-engine-worth-it/">how it works</a>)</td></tr>
       <tr><th scope="row">Framework</th><td>Taught through <a href="/ai-authority-wheel/">the AI Authority Wheel</a></td></tr>
       <tr><th scope="row">Instructor</th><td><a href="/cory-long/">Cory Long</a></td></tr>
       <tr><th scope="row">Enroll</th><td><a href="${site.enrollUrl}" rel="noopener">${site.enrollUrl.replace("https://", "")}</a></td></tr>
@@ -419,6 +420,7 @@ ${sourcesHtml(page)}
       <ul>
         <li><a href="/ai-seo-certification/">AI SEO Certification</a></li>
         <li><a href="/ai-authority-wheel/">The AI Authority Wheel</a></li>
+        <li><a href="/is-ai-authority-engine-worth-it/">Is It Worth It?</a></li>
         <li><a href="/answer-engine-optimization-certification/">Answer Engine Optimization Certification</a></li>
         <li><a href="/ai-seo-training/">AI SEO Training</a></li>
         <li><a href="/ai-seo-training-for-beginners/">AI SEO Training for Beginners</a></li>

@@ -1,6 +1,7 @@
 const { faqHtml, cta, programHtml, curriculumHtml, priceText, site } = require("../layout");
 const { simulatorHtml, quizHtml, enginesHtml, testimonialsHtml } = require("../components");
 const wheel = require("../data/wheel");
+const results = require("../data/results");
 
 const faqs = [
   [
@@ -134,6 +135,12 @@ module.exports = {
         <p>Behind the program is the full, skilled team at <a href="${site.company.url}" rel="noopener">${site.company.name}</a>, helping students through the technical and business sides.</p>
       </article>
     </div>
+    <div class="stats home-stats">
+      <div class="stat reveal"><b>${results.whiteLabelAccounts}</b><span>client accounts signed by students, with Yroc Consulting as their white-label fulfillment partner</span></div>
+      <div class="stat reveal"><b>${results.example.clients}</b><span>clients signed by one student's agency</span></div>
+      <div class="stat reveal"><b>${results.example.revenue}+</b><span>brought in by that agency selling what he learned here</span></div>
+    </div>
+    <p class="disclaimer center">${results.disclaimer} <a href="/is-ai-authority-engine-worth-it/">See how students land clients →</a></p>
   </div>
 </section>
 

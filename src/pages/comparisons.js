@@ -13,7 +13,7 @@ const aiae = {
   agency: "Core focus: getting clients, client onboarding automation, white-label deliverables, and fulfillment for an AI SEO agency",
   credential: "Certified AI Authority Specialist (Level 1), earned by completing required coursework and assignments, with a public verification page and credential ID",
   instructor: "Cory Long, founder of AI Authority Engine",
-  support: "One-on-one training with Cory Long, who also joins students' client meetings to help close sales, backed by the Yroc Consulting team",
+  support: "One-on-one help from Cory Long and the Yroc Consulting team to choose a niche, build an offer, find prospects, and close clients (Cory has joined students' sales meetings), plus white-label fulfillment from Yroc",
 };
 
 const competitors = [
@@ -167,6 +167,7 @@ const pages = competitors.map((c) => {
   <ul class="checks">
     <li><strong>Built for AI search, not adapted to it.</strong> The <a href="/ai-seo-certification/#curriculum">Getting Started curriculum</a> covers AI authority, AI presence, reviews and trust signals, AI-optimized pages, schema, press and brand mentions, and Wikidata.</li>
     <li><strong>A real person in your corner.</strong> One-on-one training with Cory Long, who has even joined students' client meetings to help close sales, backed by the full Yroc Consulting team.</li>
+    <li><strong>Help winning and delivering clients.</strong> Yroc Consulting is the white-label fulfillment partner behind client accounts that students have signed. <a href="/is-ai-authority-engine-worth-it/">See how it works</a>.</li>
     <li><strong>Beyond the fundamentals.</strong> Hands-on implementation through <a href="/ai-authority-wheel/">the AI Authority Wheel</a>, with weekly office hours, challenge calls, and 30-day sprints.</li>
     <li><strong>The agency side.</strong> Getting clients, onboarding automation, white-label deliverables, and fulfillment, through the Optimization Lab.</li>
     <li><strong>A credential you have to earn.</strong> Certified AI Authority Specialists complete required coursework and assignments, and every credential is publicly verifiable in the <a href="/certified/">certified directory</a>.</li>
