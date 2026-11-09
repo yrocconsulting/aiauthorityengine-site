@@ -167,21 +167,27 @@
         return;
       }
       const r = state.result;
+      // Flat fields map cleanly in GoHighLevel's inbound webhook.
+      const t = r.totals;
+      const fixes = Object.values(t).sort((a, b) => a.pct - b.pct).slice(0, 3);
       const payload = {
         source: "ai-visibility-calculator",
         firstName: f.firstName, email: f.email, business: f.business, website: f.website || "",
-        consent: true,
-        role: state.answers.role || "", businessType: state.answers.business_type || "", size: state.answers.size || "",
-        score: r.overall, tier: r.tier.label,
-        dimensions: Object.fromEntries(Object.values(r.totals).map((t) => [t.label, t.pct])),
+        consent: "yes",
+        role: state.answers.role || "", businessType: state.answers.business_type || "", companySize: state.answers.size || "",
+        score: r.overall, tier: r.tier.label, tierDescription: r.tier.text,
+        entityScore: t.entity.pct, contentScore: t.content.pct, technicalScore: t.technical.pct,
+        authorityScore: t.authority.pct, engagementScore: t.engagement.pct,
         selfAssessment: r.selfLabel || "",
-        answers: state.answers,
+        topFix1: `${fixes[0].label} (${fixes[0].pct}%): ${fixes[0].fix}`,
+        topFix2: `${fixes[1].label} (${fixes[1].pct}%): ${fixes[1].fix}`,
+        topFix3: `${fixes[2].label} (${fixes[2].pct}%): ${fixes[2].fix}`,
         page: location.href, submittedAt: new Date().toISOString(),
       };
       const btn = form.querySelector("button[type=submit]");
       btn.disabled = true; btn.textContent = "Preparing your report…";
       try {
-        await fetch(D.webhook, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=UTF-8" }, body: JSON.stringify(payload), keepalive: true });
+        await fetch(D.webhook, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), keepalive: true });
       } catch (_) { /* still show the report */ }
       state.unlocked = true;
       report();

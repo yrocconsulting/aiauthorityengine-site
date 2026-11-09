@@ -21,7 +21,7 @@ module.exports = {
 
   // Lead capture for the AI Visibility Calculator: a GoHighLevel inbound webhook URL.
   // Empty = no email gate (full report shown to everyone, nothing is collected).
-  leadWebhook: "",
+  leadWebhook: "https://services.leadconnectorhq.com/hooks/y1RtL23kZnvqdhRnJy96/webhook-trigger/49834757-a429-49c0-9a1a-ff9cb806dfbb",
 
   // The company that owns and operates AI Authority Engine.
   company: { name: "Yroc Consulting", url: "https://yrocconsulting.com" },
