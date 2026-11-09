@@ -546,3 +546,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 .calc-promo p { color: var(--ink-soft); }
 .calc-promo .score-demo { text-align: center; }
 @media (max-width: 760px) { .calc-promo { grid-template-columns: 1fr; padding: 26px; } }
+
+/* Calculator matches the width of the answer box above it */
+.calc { max-width: none; }
+@media (min-width: 1000px) { .calc-dims { grid-template-columns: repeat(5, 1fr); max-width: none; } }
