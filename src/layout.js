@@ -455,6 +455,7 @@ ${sourcesHtml(page)}
         <li><a href="/about/">About AI Authority Engine</a></li>
         <li><a href="/certified/">Verify a Certification</a></li>
         <li><a href="/contact/">Contact</a></li>
+        <li><a href="https://www.linkedin.com/company/ai-authority-engine-ai-seo-certification-training/" rel="me noopener">LinkedIn</a></li>
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/ai-seo-glossary/">AI SEO Glossary</a></li>
         <li><a href="/ai-visibility-quiz/">AI Visibility Quiz</a></li>

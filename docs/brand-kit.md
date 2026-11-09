@@ -56,7 +56,7 @@ Every profile should use the descriptions above **and link to https://aiauthorit
 - [ ] Podcast guest appearances: use the long bio; ask hosts to link aiauthorityengine.org
 
 **AI Authority Engine (organization)**
-- [ ] LinkedIn Company Page "AI Authority Engine": long description, website, logo
+- [x] LinkedIn Company Page "AI Authority Engine" (done: linkedin.com/company/ai-authority-engine-ai-seo-certification-training): long description, website, logo
 - [ ] YouTube channel or playlist "AI Authority Engine"
 - [ ] Facebook Page
 - [ ] Crunchbase organization profile (founder: Cory Long)

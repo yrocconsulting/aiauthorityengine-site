@@ -86,5 +86,5 @@ module.exports = {
   videos: [],
 
   // TODO: add official AI Authority Engine social / directory profiles.
-  orgSameAs: [],
+  orgSameAs: ["https://www.linkedin.com/company/ai-authority-engine-ai-seo-certification-training/"],
 };
