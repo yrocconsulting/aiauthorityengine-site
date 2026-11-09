@@ -456,6 +456,7 @@ ${sourcesHtml(page)}
         <li><a href="/certified/">Verify a Certification</a></li>
         <li><a href="/contact/">Contact</a></li>
         <li><a href="https://www.linkedin.com/company/ai-authority-engine-ai-seo-certification-training/" rel="me noopener">LinkedIn</a></li>
+        ${site.trustpilotUrl ? `<li><a href="${site.trustpilotUrl}" rel="noopener">Reviews on Trustpilot</a></li>` : ""}
         <li><a href="/faq/">FAQ</a></li>
         <li><a href="/ai-seo-glossary/">AI SEO Glossary</a></li>
         <li><a href="/ai-visibility-calculator/">AI Visibility Calculator</a></li>

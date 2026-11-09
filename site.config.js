@@ -90,5 +90,7 @@ module.exports = {
   videos: [],
 
   // TODO: add official AI Authority Engine social / directory profiles.
-  orgSameAs: ["https://www.linkedin.com/company/ai-authority-engine-ai-seo-certification-training/"],
+  // Independent review profile (linked in the footer and under testimonials; also in the organization sameAs).
+  trustpilotUrl: "https://www.trustpilot.com/review/aiauthorityengine.org",
+  orgSameAs: ["https://www.linkedin.com/company/ai-authority-engine-ai-seo-certification-training/", "https://www.trustpilot.com/review/aiauthorityengine.org"],
 };
