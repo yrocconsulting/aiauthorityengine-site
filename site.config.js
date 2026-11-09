@@ -18,6 +18,8 @@ module.exports = {
   },
 
   contactEmail: "info@aiauthorityengine.org",
+  // Mailing address (shown on the contact page and in the organization schema).
+  address: { street: "1800 Teague Dr. Ste. 416", city: "Sherman", region: "TX", postalCode: "75090", country: "US" },
 
   // Lead capture for the AI Visibility Calculator: a GoHighLevel inbound webhook URL.
   // Empty = no email gate (full report shown to everyone, nothing is collected).

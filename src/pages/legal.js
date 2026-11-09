@@ -25,10 +25,16 @@ const contact = {
 </section>
 <section class="section">
   <div class="wrap split">
+    <div class="contact-stack">
     <div class="contact-card">
       <p class="eyebrow">Email</p>
       <a class="big" href="mailto:${site.contactEmail}">${site.contactEmail}</a>
       <p>We typically reply within two business days.</p>
+    </div>
+    ${site.address ? `<div class="contact-card">
+      <p class="eyebrow">Mailing address</p>
+      <address>${site.name}<br>${site.address.street}<br>${site.address.city}, ${site.address.region} ${site.address.postalCode}</address>
+    </div>` : ""}
     </div>
     <div class="prose">
       <h2>Common requests</h2>

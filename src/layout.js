@@ -52,6 +52,7 @@ function baseGraph() {
     founder: { "@id": abs("/cory-long/#person") },
     sameAs: [site.frameworkUrl, ...site.orgSameAs],
     email: site.contactEmail,
+    ...(site.address ? { address: { "@type": "PostalAddress", streetAddress: site.address.street, addressLocality: site.address.city, addressRegion: site.address.region, postalCode: site.address.postalCode, addressCountry: site.address.country } } : {}),
     parentOrganization: { "@id": site.company.url + "/#organization" },
     contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: site.contactEmail, availableLanguage: "en" },
   };
