@@ -127,7 +127,7 @@ function testimonialsHtml(heading = "What Certified AI Authority Specialists say
       )
       .join("\n    ")}
   </div>
-  ${site.trustpilotUrl ? `<p class="t-more reveal"><a href="${site.trustpilotUrl}" rel="noopener">Read or leave a review of AI Authority Engine on Trustpilot →</a></p>` : ""}
+  ${site.trustpilotUrl ? `<p class="t-more reveal"><a href="/reviews/">Read all AI Authority Engine reviews →</a></p>` : ""}
 </section>`;
 }
 

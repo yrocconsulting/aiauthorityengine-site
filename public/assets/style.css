@@ -559,3 +559,13 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #cfe3
 
 .contact-card address { font-style: normal; color: #fff; font-size: 1.1rem; line-height: 1.6; }
 .contact-stack { display: grid; gap: 18px; align-content: start; }
+
+/* Reviews page */
+.r-stars { color: #ffc94a; font-size: 1.15rem; letter-spacing: 2px; }
+.r-card h3 { margin: 10px 0 0; font-size: 1.12rem; line-height: 1.35; color: #fff; }
+.r-card blockquote { margin-top: 12px; }
+.r-meta { color: var(--ink-soft); font-size: .85rem; }
+.r-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; margin-bottom: 26px; padding: 20px 24px; border-radius: 18px; background: var(--glass); border: 1px solid var(--line-2); }
+.r-summary p { margin: 0; flex: 1; min-width: 200px; }
+.r-summary .r-stars { font-size: 1.6rem; }
+.r-note { margin-top: 18px; font-size: .85rem; color: var(--ink-soft); }
