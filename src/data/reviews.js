@@ -19,7 +19,7 @@ module.exports = {
       url: "https://www.trustpilot.com/reviews/6af2966c84038196a081e222",
     },
     {
-      source: "Trustpilot", name: "Zachariah Richards", stars: 5, date: "2026-11-09",
+      source: "Trustpilot", name: "Zachariah Richards", stars: 5, date: "2026-11-09", slug: "zach-richards",
       title: "More Than AI SEO Training — A Real Path to Building a Business",
       quote: "I highly recommend Cory Long and the AI Authority Engine training program.",
       url: "https://www.trustpilot.com/reviews/6af283df92657ac9c426a309",
