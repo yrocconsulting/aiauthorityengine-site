@@ -73,4 +73,7 @@ module.exports = [
       },
     ],
   },
+  // TODO: add photo, agency, website, and socials when received.
+  { name: "Zach Richards", slug: "zach-richards", level: 1, issued: "2026-11-06", id: "AIAE-L1-2026-0007", kit: "4d6f4db77109" },
+  { name: "Christian Guzman", slug: "christian-guzman", level: 1, issued: "2026-11-06", id: "AIAE-L1-2026-0008", kit: "ba9e4598f43e" },
 ];
